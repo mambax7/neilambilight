@@ -37,7 +37,7 @@ function jointadtools()
 {
     global $xoopsDB;
  
-    $module_handler = &xoops_gethandler('module');
+    $module_handler = &xoops_getHandler('module');
     $tadtools= &$module_handler->getByDirname('tadtools');
 
 

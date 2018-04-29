@@ -4496,7 +4496,7 @@ class upload
                             $this->imagecopymergealpha($image_dst, $filter, $text_x, $text_y, 0, 0, $t_width, $t_height, $this->image_text_opacity);
                             imagedestroy($filter);
                         } else {
-                            $text_color = imageColorAllocate($image_dst, $red, $green, $blue);
+                            $text_color = imagecolorallocate($image_dst, $red, $green, $blue);
                             foreach ($text as $k => $v) {
                                 if ($this->image_text_direction == 'v') {
                                     imagestringup(

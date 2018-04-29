@@ -2,8 +2,8 @@
       global $xoopsConfig,$xoopsTpl;
 
 
-      $modhandler = xoops_gethandler('module');
-      $config_handler =xoops_gethandler('config');
+      $modhandler = xoops_getHandler('module');
+      $config_handler =xoops_getHandler('config');
 
       $TadLoginXoopsModule = &$modhandler->getByDirname("tad_login");
 
@@ -11,7 +11,7 @@
           include_once XOOPS_ROOT_PATH."/modules/tad_login/function.php";
           include_once XOOPS_ROOT_PATH."/modules/tad_login/language/{$xoopsConfig['language']}/county.php";
 
-          $config_handler =xoops_gethandler('config');
+          $config_handler =xoops_getHandler('config');
           $modConfig= &$config_handler->getConfigsByCat(0, $TadLoginXoopsModule->getVar('mid'));
 
 

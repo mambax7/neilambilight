@@ -307,8 +307,8 @@ function deletefunction($where="", $DBname="")
 //抓取TAD模組中的FB-ID
 function tad_loginappid()
 {
-    $modhandler = xoops_gethandler('module');
-    $config_handler =xoops_gethandler('config');
+    $modhandler = xoops_getHandler('module');
+    $config_handler =xoops_getHandler('config');
     $xoopsModule = &$modhandler->getByDirname("tad_login");
     $modConfig= &$config_handler->getConfigsByCat(0, $xoopsModule->getVar('mid'));
     $xoopsModuleConfig = & $config_handler->getConfigsByCat(0, $mid);

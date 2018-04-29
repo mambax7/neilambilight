@@ -8,7 +8,7 @@ function contactusadminmail($cfid="", $usermane="", $getGroupid="", $timedate=""
     $xoopsMailer = & xoops_getMailer();
     $xoopsMailer->addHeaders("MIME-Version: 1.0");
     $xoopsMailer->useMail();
-    $member_handler =& xoops_gethandler('member');
+    $member_handler =& xoops_getHandler('member');
     $xoopsMailer->setToGroups($member_handler->getGroup($getGroupid));
     $xoopsMailer->setFromEmail();
     $xoopsMailer->setFromName($xoopsConfig['sitename']);

@@ -12,7 +12,7 @@ $httphosturl=httphosturl();
 $xoops_theme = $GLOBALS['xoopsConfig']['theme_set'];
 
 //判斷tadtools有沒有安裝
-$module_handler = &xoops_gethandler('module');
+$module_handler = &xoops_getHandler('module');
 $tadtools= &$module_handler->getByDirname('tadtools');
 
 empty($tadtools) ? $ifinstallation=true : $ifinstallation=false; // get TRUE

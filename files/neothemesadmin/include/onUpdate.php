@@ -177,7 +177,7 @@ function go_update7($xoops_theme)
     global $xoopsDB;
 
     //判斷tadtools有沒有安裝
-    $module_handler = &xoops_gethandler('module');
+    $module_handler = &xoops_getHandler('module');
     $tadtools= &$module_handler->getByDirname('tadtools');
 
     empty($tadtools) ? $ifinstallation=true : $ifinstallation=false; // get TRUE
@@ -442,4 +442,3 @@ function go_update16()
 
 	
 
-	
