@@ -86,86 +86,86 @@ function add_form($fieldsplit = "")
 
     //是否啟用NO-IE6設置
     if ($setting[0] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_YSENOIE6, "field2", "$fieldsplit[1]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用NO-IE6設置 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_YSENOIE6, "field2", (string)$fieldsplit[1], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用NO-IE6設置 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field2", "$fieldsplit[1]"));
+        $form->addElement(new XoopsFormHidden("field2", (string)$fieldsplit[1]));
     }
 
     //是否顯示FLASH上的搜尋區塊
     if ($setting[1] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_SEARCH, "field3", "$fieldsplit[2]", _MA_NEODWADMIN_SHOW, _MA_NEODWADMIN_NSHOW));  //是否顯示FLASH上的搜尋區塊 顯示/不顯示
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_SEARCH, "field3", (string)$fieldsplit[2], _MA_NEODWADMIN_SHOW, _MA_NEODWADMIN_NSHOW));  //是否顯示FLASH上的搜尋區塊 顯示/不顯示
     } else {
-        $form->addElement(new XoopsFormHidden("field3", "$fieldsplit[2]"));
+        $form->addElement(new XoopsFormHidden("field3", (string)$fieldsplit[2]));
     }
 
     //是否解除全站自動錨點功能
     if ($setting[2] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_AUTOMATICANCHOR, "field4", "$fieldsplit[3]", _MA_NEODWADMIN_REMOVE, _MA_NEODWADMIN_NOREMOVE));  //是否解除全站自動錨點功能  解除/不解除
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_AUTOMATICANCHOR, "field4", (string)$fieldsplit[3], _MA_NEODWADMIN_REMOVE, _MA_NEODWADMIN_NOREMOVE));  //是否解除全站自動錨點功能  解除/不解除
     } else {
-        $form->addElement(new XoopsFormHidden("field4", "$fieldsplit[3]"));
+        $form->addElement(new XoopsFormHidden("field4", (string)$fieldsplit[3]));
     }
 
     //是否啟用FB及G+的API按鈕功能
     if ($setting[3] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_FBGAPI, "field11", "$fieldsplit[10]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_FBGAPI, "field11", (string)$fieldsplit[10], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field11", "$fieldsplit[10]"));
+        $form->addElement(new XoopsFormHidden("field11", (string)$fieldsplit[10]));
     }
 
     //輸入LINE帳號
     if ($setting[25] == 1) {
-        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_line, "line", 40, 255, "$line"));
+        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_line, "line", 40, 255, (string)$line));
     } else {
-        $form->addElement(new XoopsFormHidden("line", "$line"));
+        $form->addElement(new XoopsFormHidden("line", (string)$line));
     }
 
     //是否啟用LINE按鈕功能
     if ($setting[26] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_LINEBOTTON, "field22", "$fieldsplit[21]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_LINEBOTTON, "field22", (string)$fieldsplit[21], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field22", "$fieldsplit[21]"));
+        $form->addElement(new XoopsFormHidden("field22", (string)$fieldsplit[21]));
     }
 
     //輸入FB網址
     if ($setting[27] == 1) {
-        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_FBURL, "fburl", 40, 255, "$fburl"));
+        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_FBURL, "fburl", 40, 255, (string)$fburl));
     } else {
-        $form->addElement(new XoopsFormHidden("fburl", "$fburl"));
+        $form->addElement(new XoopsFormHidden("fburl", (string)$fburl));
     }
 
     //是否啟用FB-messages按鈕功能
     if ($setting[28] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_FBNY, "field23", "$fieldsplit[22]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_FBNY, "field23", (string)$fieldsplit[22], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field23", "$fieldsplit[22]"));
+        $form->addElement(new XoopsFormHidden("field23", (string)$fieldsplit[22]));
     }
 
     //輸入FB粉絲團網址
     if ($setting[29] == 1) {
-        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_FBFANSURL, "fbfansurl", 40, 255, "$fbfansurl"));
+        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_FBFANSURL, "fbfansurl", 40, 255, (string)$fbfansurl));
     } else {
-        $form->addElement(new XoopsFormHidden("fbfansurl", "$fbfansurl"));
+        $form->addElement(new XoopsFormHidden("fbfansurl", (string)$fbfansurl));
     }
 
     //是否啟用FB粉絲團按鈕功能
     if ($setting[30] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_FBFANSURLNY, "field24", "$fieldsplit[23]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_FBFANSURLNY, "field24", (string)$fieldsplit[23], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field24", "$fieldsplit[23]"));
+        $form->addElement(new XoopsFormHidden("field24", (string)$fieldsplit[23]));
     }
 
     //輸入聯絡我們網址
     if ($setting[31] == 1) {
-        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_CONTACTUS, "contactus", 40, 255, "$contactus"));
+        $form->addElement(new XoopsFormText(_MA_NEODWADMIN_CONTACTUS, "contactus", 40, 255, (string)$contactus));
     } else {
-        $form->addElement(new XoopsFormHidden("contactus", "$contactus"));
+        $form->addElement(new XoopsFormHidden("contactus", (string)$contactus));
     }
 
     //是否啟用聯絡我們按鈕功能
     if ($setting[32] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_CONTACTUSNY, "field25", "$fieldsplit[24]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_CONTACTUSNY, "field25", (string)$fieldsplit[24], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field25", "$fieldsplit[24]"));
+        $form->addElement(new XoopsFormHidden("field25", (string)$fieldsplit[24]));
     }
 
     //是否啟用網站隨電腦解析度自動放大功能(解析度大於1440時會自動放大)
@@ -174,9 +174,9 @@ function add_form($fieldsplit = "")
     }
 
     if ($setting[35] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_WEBSITEZOOM, "field28", "$fieldsplit[27]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_WEBSITEZOOM, "field28", (string)$fieldsplit[27], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field28", "$fieldsplit[27]"));
+        $form->addElement(new XoopsFormHidden("field28", (string)$fieldsplit[27]));
     }
 
     //是否啟用Xoops內建廣告功能
@@ -185,45 +185,45 @@ function add_form($fieldsplit = "")
     }
 
     if ($setting[36] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_XOOPSAD, "field29", "$fieldsplit[28]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_XOOPSAD, "field29", (string)$fieldsplit[28], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));  //是否啟用FB及G+的API按鈕功能 啟用/不啟用
     } else {
-        $form->addElement(new XoopsFormHidden("field29", "$fieldsplit[28]"));
+        $form->addElement(new XoopsFormHidden("field29", (string)$fieldsplit[28]));
     }
 
     //選擇右區塊顯示方式
     if ($setting[4] == 1) {
-        $select_a[5]    = new XoopsFormSelect(_MA_NEODWADMIN_RIGHTDISPLAY, "field1", "$fieldsplit[0]", 2);  //選擇右區塊顯示方式
+        $select_a[5]    = new XoopsFormSelect(_MA_NEODWADMIN_RIGHTDISPLAY, "field1", (string)$fieldsplit[0], 2);  //選擇右區塊顯示方式
         $optionsa["01"] = _MA_NEODWADMIN_RIGHTSHOWTHERIGHT; //右區塊顯示佈景右方
         $optionsa["02"] = _MA_NEODWADMIN_RIGHTSHOWTHEBOTTOM;  //右區塊顯示佈景下方
         $select_a[5]->addOptionArray($optionsa);
         $form->addElement($select_a[5]);
     } else {
-        $form->addElement(new XoopsFormHidden("field1", "$fieldsplit[0]"));
+        $form->addElement(new XoopsFormHidden("field1", (string)$fieldsplit[0]));
     }
 
     //如$fieldsplit[15]為空值時，$fieldsplit[15]="1";
-    $asjsValue = ($fieldsplit[15] == "") ? "1" : "$fieldsplit[15]";
+    $asjsValue = ($fieldsplit[15] == "") ? "1" : (string)$fieldsplit[15];
 
     //選擇佈景外框判斷程式配置
     if ($setting[19] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_SETSFRAMEJUDGMENT, "field16", "$asjsValue", _MA_NEODWADMIN_AS3, _MA_NEODWADMIN_JS));  //選擇佈景外框判斷程式配置  AS3程式/JS程式
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_SETSFRAMEJUDGMENT, "field16", (string)$asjsValue, _MA_NEODWADMIN_AS3, _MA_NEODWADMIN_JS));  //選擇佈景外框判斷程式配置  AS3程式/JS程式
     } else {
-        $form->addElement(new XoopsFormHidden("field16", "$asjsValue"));
+        $form->addElement(new XoopsFormHidden("field16", (string)$asjsValue));
     }
 
     //如$fieldsplit[15]為空值時，$fieldsplit[15]="1";
-    $asjsValue = ($fieldsplit[16] == "") ? "1" : "$fieldsplit[16]"; //假/真
+    $asjsValue = ($fieldsplit[16] == "") ? "1" : (string)$fieldsplit[16]; //假/真
 
     //選擇是否啟用寬版功能(USER瀏覽器大於及等於1280時版面會切換成寬版)
     if ($setting[20] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_SELECTENABLEWIDE, "field17", "$asjsValue", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_SELECTENABLEWIDE, "field17", (string)$asjsValue, _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
     } else {
-        $form->addElement(new XoopsFormHidden("field17", "$asjsValue"));
+        $form->addElement(new XoopsFormHidden("field17", (string)$asjsValue));
     }
 
     //選擇顯示佈景顏色
     if ($setting[21] == 1) {
-        $select_b[1]    = new XoopsFormSelect(_MA_NEODWADMIN_THEMESCOLOR, "field18", "$fieldsplit[17]", 2);  //選擇右區塊顯示方式
+        $select_b[1]    = new XoopsFormSelect(_MA_NEODWADMIN_THEMESCOLOR, "field18", (string)$fieldsplit[17], 2);  //選擇右區塊顯示方式
         $optionsa["01"] = _MA_NEODWADMIN_THEMESCOLORBLUE; //藍色版
         $optionsa["02"] = _MA_NEODWADMIN_THEMESCOLORGREEN;  //綠色版
         $optionsa["03"] = _MA_NEODWADMIN_THEMESCOLORPINKPURPLE;  //粉紅紫色版
@@ -232,25 +232,25 @@ function add_form($fieldsplit = "")
 
         $form->addElement($select_b[1]);
     } else {
-        $form->addElement(new XoopsFormHidden("field18", "$fieldsplit[17]"));
+        $form->addElement(new XoopsFormHidden("field18", (string)$fieldsplit[17]));
     }
 
     if ($setting[22] == 1) {
-        $tfValue01 = ($fieldsplit[18] == "") ? "1" : "$fieldsplit[18]"; //假/真
+        $tfValue01 = ($fieldsplit[18] == "") ? "1" : (string)$fieldsplit[18]; //假/真
 
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_ENABLEFLASH, "field19", "{$tfValue01}", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_ENABLEFLASH, "field19", (string)($tfValue01), _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
     } else {
-        $form->addElement(new XoopsFormHidden("field19", "{$tfValue01}"));
+        $form->addElement(new XoopsFormHidden("field19", (string)($tfValue01)));
     }
 
     //是否啟用行動裝置minithemes佈景的自動切換功能!
 
     if ($setting[23] == 1) {
-        $tfValue02 = ($fieldsplit[19] == "") ? "0" : "$fieldsplit[19]"; //假/真
+        $tfValue02 = ($fieldsplit[19] == "") ? "0" : (string)$fieldsplit[19]; //假/真
 
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_MINITHEMES, "field20", "{$tfValue02}", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_MINITHEMES, "field20", (string)($tfValue02), _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
     } else {
-        $form->addElement(new XoopsFormHidden("field20", "{$tfValue02}"));
+        $form->addElement(new XoopsFormHidden("field20", (string)($tfValue02)));
     }
 
     //關鍵字設定 群組B
@@ -258,16 +258,16 @@ function add_form($fieldsplit = "")
 
     //是否於前端顯示關鍵字配置
     if ($setting[5] == 1) {                       //是否於前端顯示關鍵字配置<br />(觀看配置情形)
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_KEYWORDTARGETING, "field8", "$fieldsplit[7]", _MA_NEODWADMIN_SHOW, _MA_NEODWADMIN_NSHOW));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_KEYWORDTARGETING, "field8", (string)$fieldsplit[7], _MA_NEODWADMIN_SHOW, _MA_NEODWADMIN_NSHOW));
     } else {
-        $form->addElement(new XoopsFormHidden("field8", "$fieldsplit[7]"));
+        $form->addElement(new XoopsFormHidden("field8", (string)$fieldsplit[7]));
     }
 
     //是否啟用隨機顯示關鍵字功能
     if ($setting[6] == 1) {                       //是否啟用隨機顯示關鍵字功能
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_RANDOMKEYWORD, "field9", "$fieldsplit[8]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_RANDOMKEYWORD, "field9", (string)$fieldsplit[8], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
     } else {
-        $form->addElement(new XoopsFormHidden("field9", "$fieldsplit[8]"));
+        $form->addElement(new XoopsFormHidden("field9", (string)$fieldsplit[8]));
     }
 
     //JS播放器設定
@@ -275,9 +275,9 @@ function add_form($fieldsplit = "")
 
     //JS播放器設定顯示方式
     if ($setting[34] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_JSPLAYSTYLE, "field27", "$fieldsplit[26]", _MA_NEODWADMIN_JSPLAYSTYLE01, _MA_NEODWADMIN_JSPLAYSTYLE02));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_JSPLAYSTYLE, "field27", (string)$fieldsplit[26], _MA_NEODWADMIN_JSPLAYSTYLE01, _MA_NEODWADMIN_JSPLAYSTYLE02));
     } else {
-        $form->addElement(new XoopsFormHidden("field27", "$fieldsplit[26]"));
+        $form->addElement(new XoopsFormHidden("field27", (string)$fieldsplit[26]));
     }
 
     //按鈕設定  群組C                   //按鈕設定
@@ -285,49 +285,49 @@ function add_form($fieldsplit = "")
 
     //使用自動或手動按鈕對應模組反向功能
     if ($setting[7] == 1) {                            //使用自動或手動按鈕對應模組反向功能
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_BUTTONTOREVERSE, "field12", "$fieldsplit[11]", _MA_NEODWADMIN_AUTOMATIC, _MA_NEODWADMIN_MANUAL));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_BUTTONTOREVERSE, "field12", (string)$fieldsplit[11], _MA_NEODWADMIN_AUTOMATIC, _MA_NEODWADMIN_MANUAL));
     } else {
-        $form->addElement(new XoopsFormHidden("field12", "$fieldsplit[11]"));
+        $form->addElement(new XoopsFormHidden("field12", (string)$fieldsplit[11]));
     }
 
     //是否啟用子按鈕對應模組自動展開功能
     if ($setting[8] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_AUTOMATICALLYEXPAND, "field13", "$fieldsplit[12]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_AUTOMATICALLYEXPAND, "field13", (string)$fieldsplit[12], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
     } else {
-        $form->addElement(new XoopsFormHidden("field13", "$fieldsplit[12]"));
+        $form->addElement(new XoopsFormHidden("field13", (string)$fieldsplit[12]));
     }
 
     //是否啟用子按鈕底圖70%透明效果
     if ($setting[9] == 1) {
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_70TRANSPARENCY, "field14", "$fieldsplit[13]", _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_70TRANSPARENCY, "field14", (string)$fieldsplit[13], _MA_NEODWADMIN_YSE, _MA_NEODWADMIN_NO));
     } else {
-        $form->addElement(new XoopsFormHidden("field14", "$fieldsplit[13]"));
+        $form->addElement(new XoopsFormHidden("field14", (string)$fieldsplit[13]));
     }
 
     //佈景上方主選單樣式選擇
     if ($setting[10] == 1) {
-        $select_c[4]   = new XoopsFormSelect(_MA_NEODWADMIN_MAINMENUSTYLES, "field5", "$fieldsplit[4]", 1);
+        $select_c[4]   = new XoopsFormSelect(_MA_NEODWADMIN_MAINMENUSTYLES, "field5", (string)$fieldsplit[4], 1);
         $optionsb["b"] = _MA_NEODWADMIN_STYLEBDROPDOWNISPLAY;  //樣式B:子選單下拉顯示
         $select_c[4]->addOptionArray($optionsb);
         $form->addElement($select_c[4]);
     } else {
-        $XoopsFormHidden[11] = new XoopsFormHidden("field5", "$fieldsplit[4]");
+        $XoopsFormHidden[11] = new XoopsFormHidden("field5", (string)$fieldsplit[4]);
         $form->addElement($XoopsFormHidden[11]);
     }
 
     //選擇右上方網站選單的顯示方式
 
     if ($setting[24] == 1) {
-        $tfValue03 = ($fieldsplit[20] == "") ? "1" : "$fieldsplit[20]"; //假/真
+        $tfValue03 = ($fieldsplit[20] == "") ? "1" : (string)$fieldsplit[20]; //假/真
 
-        $radio[1]     = new XoopsFormRadio("選擇右上方網站選單按鈕的顯示方式", "field21", "{$tfValue03}", '&nbsp;&nbsp;');  //選擇跑馬燈速度
+        $radio[1]     = new XoopsFormRadio("選擇右上方網站選單按鈕的顯示方式", "field21", (string)($tfValue03), '&nbsp;&nbsp;');  //選擇跑馬燈速度
         $options["1"] = "顯示預設選單";
         $options["2"] = "顯示自訂選單(須於後台建立按鈕)";
         $options["3"] = "顯示網站主選單";
         $radio[1]->addOptionArray($options);
         $form->addElement($radio[1]);
     } else {
-        $form->addElement(new XoopsFormHidden("field21", "{$tfValue03}"));
+        $form->addElement(new XoopsFormHidden("field21", (string)($tfValue03)));
     }
 
     //跑馬燈設定 群組D
@@ -335,25 +335,25 @@ function add_form($fieldsplit = "")
 
     //是否啟用引入其他模組的內容顯示於跑馬燈中
     if ($setting[11] == 1) {                        //是否啟用新聞模組的內容顯示於跑馬燈功能
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_THENEWSMODULESHOWATTHEMARQUEE, "field15", "$fieldsplit[14]", _MA_NEODWADMIN_TRUETADNEWS, _MA_NEODWADMIN_FALSETADNEWS));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_THENEWSMODULESHOWATTHEMARQUEE, "field15", (string)$fieldsplit[14], _MA_NEODWADMIN_TRUETADNEWS, _MA_NEODWADMIN_FALSETADNEWS));
     } else {
-        $form->addElement(new XoopsFormHidden("field15", "$fieldsplit[14]"));
+        $form->addElement(new XoopsFormHidden("field15", (string)$fieldsplit[14]));
     }
 
     //跑馬燈樣式選擇
     if ($setting[12] == 1) {
-        $select_d[2]   = new XoopsFormSelect(_MA_NEODWADMIN_MARQUEESTYLEOPTIONS, "field7", "$fieldsplit[6]", 2);   //跑馬燈樣式選擇
+        $select_d[2]   = new XoopsFormSelect(_MA_NEODWADMIN_MARQUEESTYLEOPTIONS, "field7", (string)$fieldsplit[6], 2);   //跑馬燈樣式選擇
         $optionsd["a"] = _MA_NEODWADMIN_STYLEA;      //樣式A:跑馬燈文字右往左
         $optionsd["b"] = _MA_NEODWADMIN_STYLEB;      //樣式B:跑馬燈文字下往上
         $select_d[2]->addOptionArray($optionsd);
         $form->addElement($select_d[2]);
     } else {
-        $form->addElement(new XoopsFormHidden("field7", "$fieldsplit[6]"));
+        $form->addElement(new XoopsFormHidden("field7", (string)$fieldsplit[6]));
     }
 
     //選擇跑馬燈速度
     if ($setting[13] == 1) {
-        $select_d[3]    = new XoopsFormSelect(_MA_NEODWADMIN_MARQUEESPEED, "field10", "$fieldsplit[9]", 1);   //選擇跑馬燈速度
+        $select_d[3]    = new XoopsFormSelect(_MA_NEODWADMIN_MARQUEESPEED, "field10", (string)$fieldsplit[9], 1);   //選擇跑馬燈速度
         $optionse["1"]  = _MA_NEODWADMIN_SPEED1;
         $optionse["2"]  = _MA_NEODWADMIN_SPEED2;
         $optionse["3"]  = _MA_NEODWADMIN_SPEED3;
@@ -367,14 +367,14 @@ function add_form($fieldsplit = "")
         $select_d[3]->addOptionArray($optionse);
         $form->addElement($select_d[3]);
     } else {
-        $form->addElement(new XoopsFormHidden("field10", "$fieldsplit[9]"));
+        $form->addElement(new XoopsFormHidden("field10", (string)$fieldsplit[9]));
     }
 
     //設定跑馬燈顯示方式
     if ($setting[33] == 1) {                        //設定跑馬燈顯示方式
-        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_MARQUEETEYLE, "field26", "$fieldsplit[25]", MARQUEETEYLE01, MARQUEETEYLE02));
+        $form->addElement(new XoopsFormRadioYN(_MA_NEODWADMIN_MARQUEETEYLE, "field26", (string)$fieldsplit[25], MARQUEETEYLE01, MARQUEETEYLE02));
     } else {
-        $form->addElement(new XoopsFormHidden("field26", "$fieldsplit[25]"));
+        $form->addElement(new XoopsFormHidden("field26", (string)$fieldsplit[25]));
     }
 
     //LOGO設定  群組F
@@ -382,13 +382,13 @@ function add_form($fieldsplit = "")
 
     //LOGO樣式選擇
     if ($setting[14] == 1) {
-        $select_f[1]   = new XoopsFormSelect(_MA_NEODWADMIN_LOGOSTYLEOPTIONS, "field6", "$fieldsplit[5]", 2);  //LOGO樣式選擇
+        $select_f[1]   = new XoopsFormSelect(_MA_NEODWADMIN_LOGOSTYLEOPTIONS, "field6", (string)$fieldsplit[5], 2);  //LOGO樣式選擇
         $optionsc["a"] = _MA_NEODWADMIN_STYLEAIMAGETEXT;              //樣式A:圖片+文字顯示
         $optionsc["b"] = _MA_NEODWADMIN_STYLEBIMAGEDISPLAYS;          //樣式B:圖片顯示
         $select_f[1]->addOptionArray($optionsc);
         $form->addElement($select_f[1]);
     } else {
-        $form->addElement(new XoopsFormHidden("field6", "$fieldsplit[5]"));
+        $form->addElement(new XoopsFormHidden("field6", (string)$fieldsplit[5]));
     }
 
     //上傳LOGO圖檔
@@ -401,7 +401,7 @@ function add_form($fieldsplit = "")
     //圖檔樣式說明
     if ($setting[16] == 1) {
         //$filelistest[a] =_MA_NEODWADMIN_JPGEA;
-        $filelistesta = "<span>" . _MA_NEODWADMIN_MAKEA . "{$imgwh}" . _MA_NEODWADMIN_THESIZEOFTHE . "</span>";    //<span>製作1張{$imgwh}大小的{$imgfileok}圖檔</span>
+        $filelistesta = "<span>" . _MA_NEODWADMIN_MAKEA . (string)($imgwh) . _MA_NEODWADMIN_THESIZEOFTHE . "</span>";    //<span>製作1張{$imgwh}大小的{$imgfileok}圖檔</span>
 
         $fieldn = $fieldsplit[5];
 
@@ -415,7 +415,7 @@ function add_form($fieldsplit = "")
             $filelist = "<img  src='" . XOOPS_URL . "/themes/$xoops_theme/default/logoimg.png' ><br />$filelistesta";
         }
 
-        $form->addElement(new XoopsFormLabel(_MA_NEODWADMIN_EXPLAIN, "$filelist"));  //說明
+        $form->addElement(new XoopsFormLabel(_MA_NEODWADMIN_EXPLAIN, (string)$filelist));  //說明
     }
     $form->addElement(new XoopsFormHidden("filenane", 'settings.php'));
 
@@ -431,7 +431,7 @@ function add_form($fieldsplit = "")
 
     //圖檔樣式說明
     if ($setting[18] == 1) {   //<span>製作1張{$imgwh2}大小的{$imgfileok2}圖檔</span>
-        $filelistestb = "<span>" . _MA_NEODWADMIN_MAKEA . "{$imgwh2}" . _MA_NEODWADMIN_THESIZEOFTHE . "</span>";
+        $filelistestb = "<span>" . _MA_NEODWADMIN_MAKEA . (string)($imgwh2) . _MA_NEODWADMIN_THESIZEOFTHE . "</span>";
 
         if (file_exists(XOOPS_ROOT_PATH . '/uploads/' . $xoops_theme . '/icon.png')) {
             $filelist = "<img  src='" . XOOPS_URL . "/uploads/$xoops_theme/icon.png?state={$img_date}' ><br />$filelistestb";
@@ -440,7 +440,7 @@ function add_form($fieldsplit = "")
         }
 
         $fieldn        = $fieldsplit[5];
-        $FormFile_f[5] = new XoopsFormLabel(_MA_NEODWADMIN_EXPLAIN, "$filelist");
+        $FormFile_f[5] = new XoopsFormLabel(_MA_NEODWADMIN_EXPLAIN, (string)$filelist);
         $form->addElement(new XoopsFormHidden("fielda", "logo2{$imgfileok2}"));
         $form->addElement($FormFile_f[5]);
     }

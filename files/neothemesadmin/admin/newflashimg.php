@@ -46,15 +46,15 @@ function add_form($nsn = "", $turnsimg = "", $imgb = "")
         $selectneothemesflash = neothemesflash::publicselectdb4($kset, $nsn, $number, $content, $url, $target, $post_date, $imgid, $themesid);
         list($nsn, $number, $content, $url, $target, $post_date, $imgid, $themesid) = $selectneothemesflash;
 
-        $imgb       = "$number";
-        $title1     = "$content";
-        $title2     = "$url";
-        $targetop   = "$target";
-        $nsna       = "$number";
+        $imgb       = (string)$number;
+        $title1     = (string)$content;
+        $title2     = (string)$url;
+        $targetop   = (string)$target;
+        $nsna       = (string)$number;
         $opture     = "newmarquee02";
-        $dbswitch   = "$nsn";
+        $dbswitch   = (string)$nsn;
         $title3     = _MA_NEODWADMIN_EDITORA;  //新增
-        $flashtexta = "$themesid";
+        $flashtexta = (string)$themesid;
     } else {
         //新增內容
 
@@ -67,7 +67,7 @@ function add_form($nsn = "", $turnsimg = "", $imgb = "")
         $title2     = "";
         $targetop   = "self";
         $nsna       = $nsn + 1;
-        $fnsnid     = "$nsna";
+        $fnsnid     = (string)$nsna;
         $opture     = "newmarquee01";
         $dbswitch   = "";
         $title3     = _MA_NEODWADMIN_NEW;
@@ -79,7 +79,7 @@ function add_form($nsn = "", $turnsimg = "", $imgb = "")
     $XoopsFormText[1] = new XoopsFormText(_MA_NEODWADMIN_FLASHIMAGECAPTION, "content", 60, 255, $title1);
     $XoopsFormText[2] = new XoopsFormText(_MA_NEODWADMIN_FLASHIMAGELINK, "url", 60, 255, $title2);
     //$formTextArea[1] = new XoopsFormTextArea (_MA_NEODWADMIN_ENTERTHEFLASHHELP, "themesid", $flashtexta, 6, 100);
-    $select[1]     = new XoopsFormSelect(_MA_NEODWADMIN_FLASHIMAGEOPEN, "target", "$targetop", 2);
+    $select[1]     = new XoopsFormSelect(_MA_NEODWADMIN_FLASHIMAGEOPEN, "target", (string)$targetop, 2);
     $optionsa["0"] = "self";
     $optionsa["1"] = "blank";
     $select[1]->addOptionArray($optionsa);
@@ -95,10 +95,10 @@ function add_form($nsn = "", $turnsimg = "", $imgb = "")
     $img_date = date("H:i:s");
 
     $xoops_theme = $GLOBALS['xoopsConfig']['theme_set'];
-    $FormFile[1] = new XoopsFormFile("{$flashimgwh}", "upfile[]", 2048000);
+    $FormFile[1] = new XoopsFormFile((string)($flashimgwh), "upfile[]", 2048000);
 
     $filelist           = "<div style='width: 400px' ><img  style='width: 400px''  src='" . XOOPS_URL . "/uploads/$xoops_theme/p{$imgid}.jpg?state={$img_date}' ></div><br />";
-    $FormFile[2]        = new XoopsFormLabel(_MA_NEODWADMIN_FLASHTHUMBNAIL, "$filelist");
+    $FormFile[2]        = new XoopsFormLabel(_MA_NEODWADMIN_FLASHTHUMBNAIL, (string)$filelist);
     $time_date          = date("Y-m-d H:i:s", mktime(date(H) + 0, date(i), date(s), date(m), date(d), date(Y)));
     $XoopsFormHidden[1] = new XoopsFormHidden("post_date", $time_date);
     $XoopsFormHidden[2] = new XoopsFormHidden("fnsnid", $fnsnid);
@@ -108,7 +108,7 @@ function add_form($nsn = "", $turnsimg = "", $imgb = "")
     $XoopsFormHidden[6] = new XoopsFormHidden("imgidq", $imgid);
     $XoopsFormHidden[7] = new XoopsFormHidden("themesid", $xoops_theme);
 
-    $title            = "$nsna";
+    $title            = (string)$nsna;
     $XoopsFormText[3] = new XoopsFormText(_MA_NEODWADMIN_ORDER, "nnumber", 1, 255, $imgb);
     $form             = new XoopsThemeForm("<h4>{$title3}" . _MA_NEODWADMIN_NUMBER . "($turnsimg)" . _MA_NEODWADMIN_OFTHEFLASHIMAGE . "</h4>", "form", $_SERVER['PHP_SELF']);
     $form->addElement($XoopsFormText[1]);
@@ -129,7 +129,7 @@ function add_form($nsn = "", $turnsimg = "", $imgb = "")
     $form->addElement($XoopsFormHidden[7]);
     $form->addElement($XoopsFormText[3]);
     $form->setExtra('enctype="multipart/form-data"');
-    $form->addElement(new XoopsFormHidden("op", "$opture"));
+    $form->addElement(new XoopsFormHidden("op", (string)$opture));
     $form->addElement(new XoopsFormButton("", "", _MA_NEODWADMIN_SENT, "submit"));
     $main = $form->render();
     return $main;
@@ -152,7 +152,7 @@ function insert_flashimg($a, $dbswitchok)
   ('{$_POST['nnumber']}'  , '{$_POST['content']}'  ,  '{$_POST['url']}'   ,  '{$_POST['target']}'  ,  '{$_POST['post_date']}' ,  '{$_POST['imgnumber']}' ,  '{$_POST['themesid']}')";
             $xoopsDB->queryF($sql);
 
-            $pimg = p . "{$_POST['imgnumber']}";
+            $pimg = p . (string)($_POST['imgnumber']);
             save_pic($img = $pimg, $width0 = 1275, $height0 = 308, $imageconvert = jpg);
 
             //儲存最後一次新增的nsn
@@ -170,7 +170,7 @@ function insert_flashimg($a, $dbswitchok)
 	post_date= '{$_POST['post_date']}', 
 	themesid= '{$_POST['themesid']}' 				
        where  nsn= '{$dbswitchok}' ";
-            $pimg = p . "{$_POST['imgidq']}";
+            $pimg = p . (string)($_POST['imgidq']);
             save_pic($img = $pimg, $width0 = 1275, $height0 = 308, $imageconvert = jpg);
             $xoopsDB->queryF($sql) or redirect_header($_SERVER['PHP_SELF'], 3, mysql_error());
 

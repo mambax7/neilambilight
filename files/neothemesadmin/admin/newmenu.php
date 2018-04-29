@@ -50,14 +50,14 @@ function menu_form($nsn = "", $menub = "", $menuc = "", $j = "")
         $selectneothemesmenu = neothemesmenu::publicselectdb5($kset, $nsn, $nnumber, $master_slave, $manugroup, $content, $url, $target, $post_date);
         list($nsnid, $nnumber, $master_slave, $manugroup, $content, $url, $target, $post_date) = $selectneothemesmenu;
         $urlsplit = preg_split('/,/', $url);
-        $menub    = "$manugroup";
-        $nnumber  = "$nnumber";
-        $title1   = "$content";
-        $title2   = "$urlsplit[0]";
-        $targetop = "$target";
-        $nsna     = "$number";
+        $menub    = (string)$manugroup;
+        $nnumber  = (string)$nnumber;
+        $title1   = (string)$content;
+        $title2   = (string)$urlsplit[0];
+        $targetop = (string)$target;
+        $nsna     = (string)$number;
         $opture   = "newmenu02";
-        $dbswitch = "$nsn";
+        $dbswitch = (string)$nsn;
         $title3   = _MA_NEODWADMIN_EDITORA;  //編輯
     } else {
         //新增內容
@@ -67,13 +67,13 @@ function menu_form($nsn = "", $menub = "", $menuc = "", $j = "")
         list($nsnid, $nnumber, $master_slave, $manugroup, $content, $url, $target, $post_date) = $selectneothemesmenu;
         $urlsplit = preg_split('/,/', $url);
         $nnumber  = $menub;
-        $menub    = ($menuc == 1) ? "$nnumber" : "";
+        $menub    = ($menuc == 1) ? (string)$nnumber : "";
 
         $title1   = "";
         $title2   = "";
         $targetop = "self";
         $nsna     = $nsn + 1;
-        $menuid   = "$nsna";
+        $menuid   = (string)$nsna;
         $opture   = "newmenu01";
         $dbswitch = "";
         $title3   = _MA_NEODWADMIN_NEW; //新增
@@ -109,7 +109,7 @@ function menu_form($nsn = "", $menub = "", $menuc = "", $j = "")
     //主按鈕及子按鈕的標題字判斷
     $titletext = ($menuc == 1) ? _MA_NEODWADMIN_MAIN : _MA_NEODWADMIN_CHILD;  //主:子
     //排序判斷，主按鈕排序=$nnumber，子按鈕排序=0
-    $nnumber = ($menuc == 1) ? "$nnumber" : "0";
+    $nnumber = ($menuc == 1) ? (string)$nnumber : "0";
 
     $main = "
 <form name='form' id='form' method='post'  action='{$_SERVER['PHP_SELF']}' onsubmit='return xoopsFormValidate_form();' enctype='multipart/form-data'>
@@ -210,7 +210,7 @@ function insert_menu($a, $dbswitchok)
         $manual = (empty($_REQUEST['manual'])) ? "" : $_REQUEST['manual'];
         $urltt  = "{$url},{$manual}";
     } else {
-        $urltt = "{$_POST['url']}";
+        $urltt = (string)($_POST['url']);
     }
 
     $analysis  = $_POST['manugroup'];
@@ -220,7 +220,7 @@ function insert_menu($a, $dbswitchok)
     // $analysisa=strpos ($analysis, '*');
 
     if (strpos("/{$analysis}/i", '*') === false) {//子選單設定
-        $master_slave = "{$_POST['master_slave']}";
+        $master_slave = (string)($_POST['master_slave']);
         $manugroup    = $analysis;
     } else {                                        //子子選單設定
         $snid         = $analysisb;

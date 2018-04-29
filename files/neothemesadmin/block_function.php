@@ -261,7 +261,7 @@ function neilcounselingrecordfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -290,7 +290,7 @@ function menutinyd0($c, $d, $a)
             if (!empty($id)) {
                 $invariable = 'id=' . $id;
             }
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -303,7 +303,7 @@ function menutinyd0($c, $d, $a)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -332,7 +332,7 @@ function menutinyd1($c, $d, $a)
             if (!empty($id)) {
                 $invariable = 'id=' . $id;
             }
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -367,7 +367,7 @@ function menutinyd2($c, $d, $a)
             if (!empty($id)) {
                 $invariable = 'id=' . $id;
             }
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -408,7 +408,7 @@ function tad_lunch2function($c, $d, $a, $b, $f, $e)
 
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -418,7 +418,7 @@ function tad_lunch2function($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -454,7 +454,7 @@ function fileupfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -490,7 +490,7 @@ function tad_webfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -533,13 +533,13 @@ function tad_uploaderfunction($c, $d, $a, $b, $f, $e)
             }
 
             if (!empty($cat_snid)) {
-                array_unshift($cat_snid, "$c");
-                if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+                array_unshift($cat_snid, (string)$c);
+                if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                     $in    = true;
                     $intwo = true;
                 }
             } else {
-                if (in_array("$invariable", $d)) {
+                if (in_array((string)$invariable, $d)) {
                     $in = true;
                 }
                 if ($c == $invariable) {
@@ -549,7 +549,7 @@ function tad_uploaderfunction($c, $d, $a, $b, $f, $e)
 
             break;
         case "z":   //模組全部
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -580,7 +580,7 @@ function tad_linkfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -597,9 +597,9 @@ function tad_linkfunction($c, $d, $a, $b, $f, $e)
             while (list($link_sn) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$link_sn] = 'link_sn=' . $link_sn;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -607,7 +607,7 @@ function tad_linkfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -639,7 +639,7 @@ function tadgalleryfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -656,9 +656,9 @@ function tadgalleryfunction($c, $d, $a, $b, $f, $e)
             while (list($sn, $csn) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$sn] = 'sn=' . $sn;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -666,7 +666,7 @@ function tadgalleryfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -697,7 +697,7 @@ function tad_evaluationfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -710,7 +710,7 @@ function tad_evaluationfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -741,7 +741,7 @@ function tadnewsfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -765,10 +765,10 @@ function tadnewsfunction($c, $d, $a, $b, $f, $e)
             while (list($nsn) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$nsn] = 'nsn=' . $nsn;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
             /*var_dump($cat_snid);exit;*/
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -776,7 +776,7 @@ function tadnewsfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -811,7 +811,7 @@ function neilvideosvotefunction($c, $d, $a, $b, $f, $e)
             if (!empty($item_id)) {
                 $invariable = 'item_id=' . $item_id;
             }
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -839,9 +839,9 @@ function neilvideosvotefunction($c, $d, $a, $b, $f, $e)
             while (list($item_id, $cat_id) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$item_id] = 'item_id=' . $item_id;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -849,7 +849,7 @@ function neilvideosvotefunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -882,7 +882,7 @@ function tad_faqfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -894,7 +894,7 @@ function tad_faqfunction($c, $d, $a, $b, $f, $e)
 
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -904,7 +904,7 @@ function tad_faqfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -941,7 +941,7 @@ function tad_formfunction($c, $d, $a, $b, $f, $e)
                 $invariable = 'ofsn=' . $ofsn;
             }
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -954,7 +954,7 @@ function tad_formfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -987,7 +987,7 @@ function tad_honorfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1000,7 +1000,7 @@ function tad_honorfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1038,7 +1038,7 @@ function tad_idiomsfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1076,7 +1076,7 @@ function tad_rssfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1113,7 +1113,7 @@ function tad_tvfunction($c, $d, $a, $b, $f, $e)
 
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1123,7 +1123,7 @@ function tad_tvfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1157,7 +1157,7 @@ function tad_timelinefunction($c, $d, $a, $b, $f, $e)
 
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1170,7 +1170,7 @@ function tad_timelinefunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1208,7 +1208,7 @@ function tad_sitemapfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1245,7 +1245,7 @@ function tad_calfunction($c, $d, $a, $b, $f, $e)
 
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1255,7 +1255,7 @@ function tad_calfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1286,7 +1286,7 @@ function tad_playerfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1303,9 +1303,9 @@ function tad_playerfunction($c, $d, $a, $b, $f, $e)
             while (list($psn) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$psn] = 'psn=' . $psn;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -1313,7 +1313,7 @@ function tad_playerfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1344,7 +1344,7 @@ function tad_repairfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1371,9 +1371,9 @@ function tad_repairfunction($c, $d, $a, $b, $f, $e)
                 $cat_snid[$repair_sn] = 'repair_sn=' . $repair_sn;
             }
 
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -1381,7 +1381,7 @@ function tad_repairfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1412,7 +1412,7 @@ function tad_book3function($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1437,9 +1437,9 @@ function tad_book3function($c, $d, $a, $b, $f, $e)
             while (list($tbdsn) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$tbdsn] = 'tbdsn=' . $tbdsn;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -1447,7 +1447,7 @@ function tad_book3function($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1478,7 +1478,7 @@ function tad_meetingfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1491,7 +1491,7 @@ function tad_meetingfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1526,7 +1526,7 @@ function tad_discussfunction($c, $d, $a, $b, $f, $e)
                 $invariable = 'DiscussID=' . $DiscussID;
             }
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1551,9 +1551,9 @@ function tad_discussfunction($c, $d, $a, $b, $f, $e)
             while (list($DiscussID) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$DiscussID] = 'DiscussID=' . $DiscussID;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -1561,7 +1561,7 @@ function tad_discussfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1595,7 +1595,7 @@ function tad_assignmentfunction($c, $d, $a, $b, $f, $e)
         case "y":   //分類
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1605,7 +1605,7 @@ function tad_assignmentfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {
@@ -1636,7 +1636,7 @@ function neilhonorlistfunction($c, $d, $a, $b, $f, $e)
         case "n":    //單頁
             $invariable = $_SERVER[QUERY_STRING]; //取得網址變數
 
-            if (in_array("$invariable", $d)) {
+            if (in_array((string)$invariable, $d)) {
                 $in = true;
             }
             if ($c == $invariable) {
@@ -1661,9 +1661,9 @@ function neilhonorlistfunction($c, $d, $a, $b, $f, $e)
             while (list($hc_id) = $xoopsDB->fetchRow($result)) {
                 $cat_snid[$hc_id] = 'hc_id=' . $hc_id;
             }
-            array_unshift($cat_snid, "$c"); //吧$C加到陣列開頭
+            array_unshift($cat_snid, (string)$c); //吧$C加到陣列開頭
 
-            if (in_array("$invariable", $cat_snid)) {  //單值-> 陣列
+            if (in_array((string)$invariable, $cat_snid)) {  //單值-> 陣列
                 $in    = true;
                 $intwo = true;
             }
@@ -1671,7 +1671,7 @@ function neilhonorlistfunction($c, $d, $a, $b, $f, $e)
             break;
         case "z":   //模組全部
 
-            if (in_array("$f", $e)) {
+            if (in_array((string)$f, $e)) {
                 $in = true;
             }
             if ($b == $f) {

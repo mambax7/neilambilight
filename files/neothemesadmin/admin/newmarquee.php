@@ -40,12 +40,12 @@ function add_form($nsn = "", $mnsnida)
         $selectmarquee = neothemesmarquee::publicselectdb3($kset, $nsn, $number, $content, $url, $target, $post_date);
         list($nsn, $number, $content, $url, $target, $post_date) = $selectmarquee;
 
-        $title1   = "$content";
-        $title2   = "$url";
-        $targetop = "$target";
-        $nsna     = "$number";
+        $title1   = (string)$content;
+        $title2   = (string)$url;
+        $targetop = (string)$target;
+        $nsna     = (string)$number;
         $opture   = "newmarquee02";
-        $dbswitch = "$nsn";
+        $dbswitch = (string)$nsn;
     } else {   //新增
 
         $kset = '1'; //switch條件
@@ -56,16 +56,16 @@ function add_form($nsn = "", $mnsnida)
         $title2   = "";
         $targetop = "self";
         $nsna     = $nsn + 1;
-        $mnsnid   = "$nsna";
+        $mnsnid   = (string)$nsna;
         $opture   = "newmarquee01";
-        $dbswitch = "$nsn";
+        $dbswitch = (string)$nsn;
     }
 
     //新增與編輯跑馬燈共用表格欄位
     include_once(XOOPS_ROOT_PATH . "/class/xoopsformloader.php");
     $XoopsFormText[1] = new XoopsFormText(_MA_NEODWADMIN_MARQUEETITLE, "content", 60, 255, $title1);   //跑馬燈標題
     $XoopsFormText[2] = new XoopsFormText(_MA_NEODWADMIN_MARQUEELINKS, "url", 60, 255, $title2);  //跑馬燈連結
-    $select[1]        = new XoopsFormSelect(_MA_NEODWADMIN_LINKOPEN, "target", "$targetop", 2);   //跑馬燈連結開啟方式
+    $select[1]        = new XoopsFormSelect(_MA_NEODWADMIN_LINKOPEN, "target", (string)$targetop, 2);   //跑馬燈連結開啟方式
     $optionsa["0"]    = "self";
     $optionsa["1"]    = "blank";
     $select[1]->addOptionArray($optionsa);
@@ -74,7 +74,7 @@ function add_form($nsn = "", $mnsnida)
     $XoopsFormHidden[2] = new XoopsFormHidden("mnsnid", $mnsnid);
     $XoopsFormHidden[3] = new XoopsFormHidden("dbswitch", $dbswitch);
     $XoopsFormHidden[4] = new XoopsFormHidden("mnsnidb", $mnsnida);
-    $title              = "$nsna";
+    $title              = (string)$nsna;
     $XoopsFormText[3]   = new XoopsFormText(_MA_NEODWADMIN_ORDER, "nnumber", 1, 255, $title);  //順序
     $form               = new XoopsThemeForm(_MA_NEODWADMIN_ADDMARQUEE, "form", $_SERVER['PHP_SELF']);
     $form->addElement($XoopsFormText[1]);
@@ -86,7 +86,7 @@ function add_form($nsn = "", $mnsnida)
     $form->addElement($XoopsFormHidden[4]);
     $form->addElement($XoopsFormText[3]);
     $form->setExtra('enctype="multipart/form-data"');
-    $form->addElement(new XoopsFormHidden("op", "$opture"));
+    $form->addElement(new XoopsFormHidden("op", (string)$opture));
     $form->addElement(new XoopsFormButton("", "", _MA_NEODWADMIN_SENT, "submit"));  //送出
     $main = $form->render();
     return $main;

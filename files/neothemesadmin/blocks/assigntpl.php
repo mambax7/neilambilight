@@ -1,9 +1,9 @@
 <?php
 
-if ($noie6 ==  0) {
+if ($noie6 == 0) {
     $this->assign('ie6chrome', "");
 } else {
-    $this->assign('ie6chrome', "$ie6chrome");
+    $this->assign('ie6chrome', (string)$ie6chrome);
 }
 $this->assign("ifminithemes", $ifminithemes);
 $this->assign("removerightdiv3", $removerightdiv3);

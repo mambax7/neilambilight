@@ -89,7 +89,7 @@ for ($k = 1; $k <= $y; $k++) {
             if (strtoupper($urla) != '#NO') {
                 $menua[$w]['topic_name'] = "<a class='nemu2c ' title='$contenta'  target='$targeta' href='$urla'>$contenta</a>";
             } else {
-                $menua[$w]['topic_name'] = "$contenta";
+                $menua[$w]['topic_name'] = (string)$contenta;
             }
 
             $item_topic[$w] = $menua[$w];
@@ -145,7 +145,7 @@ for ($k = 1; $k <= $y; $k++) {
         if (strtoupper($urlsplit[0]) != '#NO') {
             $menu[$k]['category_name'] = "<a class='buttomtop' title='$content' target='$target'  href='{$urlsplit[0]}'>$content</a>";
         } else {
-            $menu[$k]['category_name'] = "$content";
+            $menu[$k]['category_name'] = (string)$content;
         }
 
         $item_category[$k] = $menu[$k];

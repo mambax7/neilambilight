@@ -223,7 +223,7 @@ class neothemesmenu
                 $result = $xoopsDB->query($sql) or die($sql);
                 while (list($manugroupa, $content) = $xoopsDB->fetchRow($result)) { //第一層按鈕迴圈
 
-                    $trueValue = ($nsn != '' && $j != "1" && $manugroupa == "$manugroup") ? "selected='selected'" : "";  //$j為判斷是否為第三層之變數，1=是，此項判斷式主要用於編輯按鈕的焦點反向顯示用途。
+                    $trueValue = ($nsn != '' && $j != "1" && $manugroupa == (string)$manugroup) ? "selected='selected'" : "";  //$j為判斷是否為第三層之變數，1=是，此項判斷式主要用於編輯按鈕的焦點反向顯示用途。
                     $t1[$k]    .= "<option value={$manugroupa} {$trueValue}>{$content}</option>";
 
                     $sqla = "select  nsn,content  from  $dbnane  where `master_slave`='2'  and  `manugroup`=$manugroupa  order by  nsn  asc";
@@ -231,7 +231,7 @@ class neothemesmenu
                     while (list($nsna, $contenta) = $xoopsDB->fetchRow($resulta)) {  //第二層按鈕迴圈
 
                         if ($nsna != $nsn) { //將所點擊編輯的按鈕給隱藏起來。
-                            $trueValuea = ($nsn != '' && $j == "1" && $nsna == "$nsnid") ? "selected='selected'" : "";  //$j為判斷是否為第三層之變數，1=是，此項判斷式主要用於編輯按鈕的焦點反向顯示用途。
+                            $trueValuea = ($nsn != '' && $j == "1" && $nsna == (string)$nsnid) ? "selected='selected'" : "";  //$j為判斷是否為第三層之變數，1=是，此項判斷式主要用於編輯按鈕的焦點反向顯示用途。
                             $t2[$k]     .= "<option value=*{$nsna}  {$trueValuea}>-->{$contenta}</option>";
                         }
                     }

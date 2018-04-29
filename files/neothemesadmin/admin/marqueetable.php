@@ -168,7 +168,7 @@ function leftmenusetup($config = "")
             foreach ($modulesDB as $key => $val) {
                 //比對陣列
                 $modulesdirname = $modulesDB[$key]['dirname'];
-                if (in_array("$modulesdirname", $modulesArr)) {  //單值-> 陣列
+                if (in_array((string)$modulesdirname, $modulesArr)) {  //單值-> 陣列
                     $modulesselect[$key]['dirname'] = $modulesDB[$key]['dirname'];
                     $modulesselect[$key]['name']    = $modulesDB[$key]['name'];
                 }

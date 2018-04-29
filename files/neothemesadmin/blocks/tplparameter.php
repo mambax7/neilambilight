@@ -83,7 +83,7 @@ $this->assign("marqueesdirection", $marqueesdirection);
 //JS播放器樣式
 $this->assign("jsplaystyle", $fieldsplit[26]);
 
-$enableawide = ($fieldsplit[16] == "") ? "1" : "$fieldsplit[16]";
+$enableawide = ($fieldsplit[16] == "") ? "1" : (string)$fieldsplit[16];
 
 //判斷模組版本是否比現在的版本新
 

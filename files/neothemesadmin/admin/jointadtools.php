@@ -50,7 +50,7 @@ function jointadtools()
 
     $themesname = $variablesplit[10];
 
-    if (in_array("$themesname", $tt_themeok)) {
+    if (in_array((string)$themesname, $tt_themeok)) {
         redirect_header(XOOPS_URL . '/modules/neothemesadmin/admin/index.php', 0, "{$themesname}佈景已經加入tadtools模組中了");
     } else {
         $divcenter .= "	<div id='themesname'><form method='post'  action='{$_SERVER['PHP_SELF']}'> 

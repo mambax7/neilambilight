@@ -65,7 +65,7 @@ class PageBar
         $this->used_query = array($this->url_page, $this->url_loadtime);
         $this->query_str  = $this->processQuery($this->used_query);
         $this->glue       = ($this->query_str == "") ? '?' : '&';
-        $this->current    = (isset($_GET["$this->url_page"])) ? $_GET["$this->url_page"] : 1;
+        $this->current    = (isset($_GET[(string)$this->url_page])) ? $_GET[(string)$this->url_page] : 1;
         $this->pTotal     = ceil($this->total / $this->limit);
         $this->pCurrent   = ceil($this->current / $this->pLimit);
     }
