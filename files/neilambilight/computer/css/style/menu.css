@@ -1,0 +1,202 @@
+#menutbl {
+	position: absolute;
+	width: 1440px;
+	margin-top: 163px;
+	z-index: 2000;
+	height: 87px;
+	left: 0px;
+	background: url(../../img/menu/neilambilight_27.png) no-repeat left top;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+ @keyframes slidein1 {
+ 0% {
+ margin-top: -100px;
+ opacity: 0;
+}
+ 70% {
+ margin-top: 30px;
+ opacity: 0.5;
+}
+ 100% {
+ margin-top: 0px;
+ opacity: 1;
+}
+}
+
+
+
+/*============1366調整============*/
+@media screen and (min-width: 1366px) and (max-width: 1399px) {
+#menutbl {
+	position: absolute;
+	width: 1366px;
+
+}
+}
+
+
+
+
+
+/*============1360調整============*/
+@media screen and (min-width: 1360px) and (max-width: 1365px) {
+#menutbl {
+	position: absolute;
+	width: 1360px;
+
+}
+}
+
+
+
+
+
+
+
+/*============1280調整============*/
+@media screen and (min-width: 1280px) and (max-width: 1359px) {
+#menutbl {
+	position: absolute;
+	width: 1280px;
+
+}
+}
+
+
+
+
+
+#menutbl #himglc {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+}
+/* Reset */
+.menu, .menu ul, .menu li, .menu a {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+/* Menu */
+.menu {
+	position: relative;
+}
+.menu li {
+	position: relative;
+	float: left;
+	height: 80px;
+}
+/* Links */
+
+.menu li a {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	height: 60px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 150%;
+	color: #ffffff;
+	-webkit-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-ms-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+	text-align: center;
+	text-shadow: 1px 1px 1px #333333;
+	width: 182px;
+	word-break: break-all;
+	padding: 25px 0px 20px 0px;
+	overflow: hidden;
+	line-height: 150%;
+	font-family: 'cwTeXHei', sans-serif !important;		
+}
+.menu li ul li a {
+	font-size: 120%;
+	padding: 5px 0px 0px 0px;
+	margin: 0px 0;
+	height: 38px;
+	transition: background-color 0.5s ease;
+	background-color: none;
+	color: #FFFFFF;
+}
+.menu li ul li a:hover {
+	color: #FFFFFF;
+	height: 38px;
+	background-color: #5B7F13;
+}
+.menu li:first-child a {
+	border-left: none;
+}
+.menu li:last-child a {
+	border-right: none;
+}
+.menu li:hover > div a {
+	color: #E82D47;
+}
+.menu a:hover {
+	color: #E82D47;
+}
+.menu li ul li:hover > a {
+	color: #FFFFFF;
+}
+#menutbl ul li ul li.parenta ul {
+	display: none;
+}
+#menutbl ul li ul li.parentaOn ul {
+	display: block;
+}
+.menu ul {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	opacity: 0;
+	overflow: hidden;
+	background: #911A2C;
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}
+.menu li:hover > ul {
+	opacity: 0.9;
+	overflow: visible;
+}
+.menu ul li {
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+	-webkit-transition: height .25s ease .1s;
+	-moz-transition: height .25s ease .1s;
+	-o-transition: height .25s ease .1s;
+	-ms-transition: height .25s ease .1s;
+	transition: height .25s ease .1s;
+}
+.menu li:hover > ul li {
+	height: 38px;
+	overflow: visible;
+	padding: 0;
+}
+.menu ul li a {
+	width: 220px;
+	padding: 5px 0px 0px 0px !important;
+	margin: 0;
+	overflow: hidden;
+	border: none;
+	border-bottom: 1px solid #FFFFFF;
+	text-align: center;
+}
+.menu ul li:last-child a {
+	border: none;
+}
+.menu #separated {
+	background: url(../../img/menu/neilambilight_29.png) no-repeat left top;
+	height: 48px;
+	position: absolute;
+	width: 3px;
+	right: 0px;
+	top: 19px;
+}

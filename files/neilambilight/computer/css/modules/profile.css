@@ -1,0 +1,20 @@
+/* 4.6. Profile Module */
+ul.profile-values {
+	margin-top: 10px;
+}
+ul.profile-values > li {
+	margin-bottom: 5px;
+}
+ul.profile-values > li.profile-category-title {
+	font-size: 1.2em;
+	font-weight: 600;
+	border-bottom: 1px dashed #999;
+	margin-bottom: 0;
+	color: #09C;
+}
+table.profile-form {
+	width: 100%;
+}
+.profile-form td.head {
+	width: 20%;
+}

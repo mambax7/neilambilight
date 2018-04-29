@@ -1,0 +1,4 @@
+Version 2.49 2011/04/12:
+=================================
+- added new Admin Menu Class 
+

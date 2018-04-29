@@ -1,0 +1,68 @@
+/* CSS Document */
+
+* {
+	outline: none !important;
+	outline: 0 !important;
+}
+a, a:hover, a:focus, a:link, a:visited {
+	text-decoration: none;
+}
+.label-default a, .label-primary a, .label-success a, .label-info a, .label-warning a, .label-danger a {
+	color: #ffffff;
+}
+.btn-primary a {
+	color: inherit;
+}
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, canvas, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	font-weight: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+	background: transparent;
+	line-height: inherit;
+	font-size: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-size: inherit;
+	line-height: inherit;
+}
+aside, em, address {
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-size: inherit;
+	line-height: 150%;
+	background: transparent;
+}
+a {
+	transition: color .2s ease-in-out;
+}
+input, select {
+	width: auto !important;
+	line-height: 100% !important;
+	font-size: 95% !important;
+	min-height: 50px !important;
+}
+.blockcontent select{
+	width: 100% !important;
+}
+.row select {
+	width: 100% !important;
+}
+label {
+	line-height: 100% !important;
+}
+input[type="radio"] {
+	background: transparent;
+}
+ input:-webkit-autofill {
+ -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.even input {
+	width: 100% !important;
+}
+input[type='file'] {
+	width: 100%;
+}

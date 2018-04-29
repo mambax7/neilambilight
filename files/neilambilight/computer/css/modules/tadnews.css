@@ -1,0 +1,26 @@
+#tadnews #lrdivtrue  .col-sm-12 img {
+	max-width: 720px;
+		height: auto !important;
+}
+#tadnews #ldivtrue  .col-sm-12 img {
+	max-width: 920px;
+	height: auto !important;
+}
+#tadnews #rdivfalse .col-sm-12 img {
+	max-width: 1170px;
+		height: auto !important;
+}
+#tadnews #rdivtrue  .col-sm-12 img {
+	max-width: 968px;
+	height: auto !important;
+}
+
+.col-sm-6{
+width: 100% !important;
+	font-size: 130% !important;
+
+}
+
+#tadnews  .col-sm-12 table td{
+border: 1px solid #C6C6C6;
+}  

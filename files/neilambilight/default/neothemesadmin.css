@@ -1,0 +1,210 @@
+ul,ol,li {
+	list-style: none;
+		margin: 0px;
+	padding: 0px;
+}
+th, thead {
+    background-color: #003870;
+
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    vertical-align: middle;
+    color: #FFFFFF;
+    white-space:nowrap;
+}
+
+input[type="radio"]{
+background: transparent;
+}
+
+
+#neothemesadmin #buttonbar .current a span {
+	color: #4B7C1A !important;
+}
+/*    ========index===========*/
+/*#neothemesadmin a {
+	text-decoration: none;
+	background-color: transparent;
+	color: #595959;
+  font-size: inherit;
+    font-weight: inherit;
+}
+#neothemesadmin a:hover {
+	color: #549160;
+}*/
+#neothemesadmin #indexstyle {
+	width: 100%;
+}
+#neothemesadmin #indexstyle #l {
+	position:              relative;
+	width: 200px;
+}
+#neothemesadmin #indexstyle #r {
+	border: 1px solid #999999;
+	background:  #FFFFFF url(modules/ui_05.jpg) no-repeat right top;
+	font-size:inherit;
+	padding: 15px 0px;
+}
+
+
+#neothemesadmin #indexstyle #l li {
+	line-height:  250%;
+	padding-top: 3px;
+	border-bottom: 1px solid #999999;
+	padding-left: 30px;
+	background:  url(modules/ui_03.png) no-repeat left 6px;
+}
+
+
+
+
+#neothemesadmin #indexstyle #r li {
+	line-height:  220%;
+	padding-top: 3px;
+	padding-left: 17px;
+}
+#neothemesadmin #indexstyle #l #l1 {
+	background:  url(modules/ui_07.png) no-repeat left 6px;
+}
+#neothemesadmin #indexstyle #l #l2 {
+	background:  url(modules/ui_10.png) no-repeat left top;
+}
+#neothemesadmin #indexstyle #l li a {
+	font-size: inherit;
+}
+#neothemesadmin #indexstyle #l2div {
+	position:              relative;
+}
+#neothemesadmin #indexstyle #imga {
+	position: absolute;
+	width:   25px;
+	height:   26px;
+	top: -5px;
+	left: 250px;
+	background:  url(modules/ui_12.jpg) no-repeat left top;
+}
+#neothemesadmin #indexstyle #imgb {
+	position: absolute;
+	width:   25px;
+	height:   26px;
+	top: -5px;
+	margin-left: 20px;
+	background:  url(modules/ui_14.jpg) no-repeat left top;
+}
+#neothemesadmin #ture {
+	background:  #AADC79 url() repeat-x left bottom;
+}
+#neothemesadmin .focus {
+	background:  #FFDBDB url() repeat-x left bottom;
+}
+
+#neothemesadmin table th {
+	text-align: left;
+	padding-left: 10px !important;
+/*	color: #727272; */
+}
+#neothemesadmin table td {
+	color:  #333333 !important;
+	padding: 10px !important;
+	margin: 0px;
+	border-bottom: 0px solid  #333333;
+	background:   url() repeat-x left bottom;	
+	
+}
+#neothemesadmin .head {
+	width: 25%;
+	line-height: 200% !important;
+	background:  #727272 url() repeat left top !important;
+	color: #FFFFFF !important;
+}
+#neothemesadmin #buttonbar a {
+	font-size: inherit;
+}
+#neothemesadmin #flashdmain h3 {
+	position:              relative;
+	padding-bottom: 10px;
+}
+#neothemesadmin #flashdmain span {
+	color: #961B1B;
+}
+#neothemesadmin #memuadmain #master_slave1 {
+	font-size: inherit;
+}
+#neothemesadmin #memuadmain #nnumber1, #neothemesadmin #memuadmain #master_slave1 {
+	position:              relative;
+	left: 0px;
+	background:  url(modules/right_arrow.png) no-repeat left top;
+	padding: 5px 0px 8px 35px;
+}
+
+#neothemesadmin #memuadmain #nnumber2, #neothemesadmin #memuadmain #master_slave2 {
+	position:              relative;
+	left: 25px;
+	background:  url(modules/icom1.png) no-repeat left top;
+	padding: 5px 0px 8px 25px;
+}
+
+#neothemesadmin #memuadmain #nnumber3, #neothemesadmin #memuadmain #master_slave3 {
+	position:              relative;
+	left: 50px;
+	background:  url(modules/icom2.png) no-repeat left top;
+	padding: 5px 0px 8px 35px;
+}
+
+#neothemesadmin .confirmMsg h4, #neothemesadmin .confirmMsg span {
+	font-size: 100%;
+	height: 30px;
+}
+#neothemesadmin .confirmMsg strong {
+	color:  #DB4343 !important;
+}
+/*==========settings.php============*/
+#neothemesadmin .outer h3 {
+	display: block;
+	background:  url(../dingwayaaa.png) no-repeat right 5px;
+	color:  #ADE278;
+}
+/*===========menu===========*/
+#neothemesadmin #menutable b{
+	color:  #FF0033;
+}
+
+
+/*=========jointadtools.php=============*/
+#neothemesadmin #themesname{
+	text-align: center;
+	color:  #FF0033;
+
+
+}
+#neothemesadmin #themesname h3{
+font-size: 100%;
+margin: 20px 0px;
+}
+
+#neothemesadmin #facebook1{
+	position: absolute;
+	right: 100px;
+	top: 10px;
+
+}
+#neothemesadmin #facebook2{
+	position: absolute;
+	top: 90px;
+	right: 100px;
+
+}
+
+#neothemesadmin   #xo-content {
+	position:              static;
+}
+
+#neothemesadmin  #readtruestyle{
+	background: #FFE7E0 url(modules/) no-repeat left top;
+}
+
+#neothemesadmin #modify a{
+color: #B5330C;
+}

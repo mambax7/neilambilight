@@ -1,0 +1,10 @@
+.col-sm-6 .btn-block{
+	font-size: 55% !important;
+}
+#xo-content .col-sm-12 img {
+	max-width: 500px !important;
+	height: auto !important;
+}
+#tadnews  .col-sm-12 table td{
+border: 1px solid #C6C6C6;
+}  

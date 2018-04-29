@@ -1,0 +1,1569 @@
+#toplayerdiv {
+	width: 1440px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+.FF #toplayerdiv, .Chrome #toplayerdiv {
+	width: 1423px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+#tpl-content {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+/*=============外框=================*/
+#frametopl {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: -80px;
+	width: 80px;
+	height: 579px;
+	background: url(../../img/frame/neilambilight_01.jpg) no-repeat left top;
+}
+#framebottoml {
+	position: absolute;
+	bottom: 0px;
+	left: -80px;
+	width: 80px;
+	height: 471px;
+	background: url(../../img/frame/neilambilight_107.jpg) no-repeat left top;
+	z-index: 20;
+}
+#frametopr {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	right: -80px;
+	width: 80px;
+	height: 579px;
+	background: url(../../img/frame/neilambilight_03.jpg) no-repeat left top;
+}
+#framebottomr {
+	position: absolute;
+	bottom: 0px;
+	right: -80px;
+	width: 80px;
+	height: 471px;
+	background: url(../../img/frame/neilambilight_108.jpg) no-repeat left top;
+	z-index: 20;
+}
+#leftframe {
+	position: absolute;
+	top: 0px;
+	width: 80px;
+	left: -80px;
+	background: url(../../img/frame/neilambilight_09.jpg) repeat-y left top;
+}
+#righttframe {
+	position: absolute;
+	top: 0px;
+	width: 80px;
+	right: -80px;
+	background: url(../../img/frame/neilambilight_11.jpg) repeat-y left top;
+}
+
+/*============1366調整============*/
+@media screen and (min-width: 1366px) and (max-width: 1399px) {
+#toplayerdiv {
+	width: 1366px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+.FF #toplayerdiv, .Chrome #toplayerdiv {
+	width: 1349px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+#tpl-content {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+}
+}
+/*============1360調整============*/
+@media screen and (min-width: 1360px) and (max-width: 1365px) {
+#toplayerdiv {
+	width: 1360px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+.FF #toplayerdiv, .Chrome #toplayerdiv {
+	width: 1343px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+#tpl-content {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+}
+}
+
+
+
+
+
+
+/*============1280調整============*/
+@media screen and (min-width: 1280px) and (max-width: 1359px) {
+#toplayerdiv {
+	width: 1280px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+.FF #toplayerdiv, .Chrome #toplayerdiv {
+	width: 1263px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#tpl-content {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+}
+}
+/*=========初始值設定===========*/
+.box1 #header, .box1 #menutbl,.box1 #frametopl,.box1 #frametopr {
+  visibility:hidden;
+  height: 0px;
+}
+/*.box1 #marqueetop{
+  visibility:hidden;
+}*/
+
+/*========header區塊=================*/
+#header {
+	position: relative;
+	height: 573px;
+}
+#logobottom {
+	position: relative;
+	width: 446px;
+	height: 161px;
+	background: url(../../img/unit/neilambilight_04.jpg) no-repeat left top;
+}
+/*====預設LOGO圖檔=====*/
+#logoimgb {
+	position: relative;
+	width: 429px;
+	height: 149px;
+	left: 6px;
+	border-radius: 0px 0px 10px 10px; /*左上 右上 右下  左下*/
+	overflow: hidden;
+}
+#logoimgb a {
+	background: url(../../../default/logoimg.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 149px;
+}
+#logoimga {
+	position: relative;
+	width: 429px;
+	height: 149px;
+	left: 6px;
+	border-radius: 0px 0px 10px 10px; /*左上 右上 右下  左下*/
+	overflow: hidden;
+}
+#logoimga a {
+	background: url(../../../../../uploads/neilambilight/logoimg.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 149px;
+}
+#logotext {
+	position: absolute;
+	font-size: 120%;
+	top: 40px;
+	padding: 10px;
+	border: 1px solid #FF5E5E;
+	background: #FF995E url(../../../default/) no-repeat left top;
+	z-index: 100;
+	left: 440px;
+	white-space: nowrap;
+	display: none;
+	opacity: 0;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+#logotext:after {
+	content: '';
+	position: absolute;
+	top: 30%;
+	left: 0%;
+	margin-left: -8px;
+	width: 0;
+	height: 0;
+	border-right: 8px solid #FF995E;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	z-index: 100;
+	opacity: 0.9;
+}
+ @keyframes slidein {
+ 0% {
+ margin-left: 100px;
+ opacity: 0;
+}
+ 70% {
+ margin-left: -10px;
+ opacity: 0.5;
+}
+ 100% {
+ margin-left: 0px;
+ opacity: 0.9;
+}
+}
+#header em {
+	position: absolute;
+	top: 5px;
+	left: 450px;
+	font-size: 200%;
+	height: 50px;
+	width: 400px;
+	overflow: hidden;
+	word-break: break-all;
+}
+/*========LINE按鈕=============*/
+#linebutton {
+	position: absolute;
+	top: 80px;
+	left: 450px;
+	width: 188px;
+	height: 62px;
+}
+#linebutton a {
+	background: url(../../img/unit/neilambilight_06.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 62px;
+}
+/*========fb-messages按鈕=============*/
+#fbmessagesbutton {
+	position: absolute;
+	top: 80px;
+	left: 655px;
+	width: 188px;
+	height: 62px;
+}
+#fbmessagesbutton a {
+	background: url(../../img/unit/neilambilight_08.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 62px;
+}
+/*==========USER歡迎區塊==============*/
+#address {
+	position: absolute;
+	top: 100px;
+	left: 850px;
+	background: url(../../img/unit/neilambilight_12.jpg) no-repeat left top;
+	height: 41px;
+	padding: 10px 0px 0px 43px;
+	font-size: 120%;
+}
+#address a {
+	color: #000000;
+}
+#viewpmsg {
+	color: #b60000 !important;
+}
+
+
+/*=============佈景管理按鈕==============*/
+#themesadmin {
+	position: absolute;
+	top: 14px;
+	left: 845px;
+	width: 39px;
+	height: 38px;
+}
+#themesadmin a {
+	background: url(../../img/unit/neilambilight_15.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 38px;
+}
+/*==============SEO按鈕=============*/
+#slowdivbotton0 {
+	position: absolute;
+	top: 14px;
+	left: 900px;
+	width: 38px;
+	height: 39px;
+	background: url(../../img/unit/neilambilight_16.jpg) no-repeat left top;
+}
+/*==========下拉選單==============*/
+#headerform {
+	position: absolute;
+	top: 18px;
+	left: 960px;
+}
+#headerform select {
+	position: relative;
+	padding: 0px 0px 0px 10px;
+	width: 150px;
+	font-size: 110%;
+	border-radius: 6px 0px 0px 6px; /*左上 右上 右下  左下*/
+}
+/*===========搜尋按鈕============*/
+#slowdivbotton2 {
+	position: absolute;
+	top: 0px;
+	left: 1130px;
+	width: 109px;
+	height: 76px;
+	background: url(../../img/search/neilambilight_17.jpg) no-repeat left top;
+}
+/*=========搜尋區塊及關鍵字區塊=============*/
+
+#topheaderdiv {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+}
+/*=======關鍵字區塊===========*/
+#keywordsdiv {
+	position: relative;
+	background: #EDEEEF url(../../img/search/) no-repeat left top;
+	border-radius: 10px 10px 10px 10px; /*左上 右上 右下  左下*/
+	margin: 15px 0px;
+	border: 1px solid #9BA2AA;
+	padding: 10px;
+}
+#keywordsdiv h1 {
+	position: relative;
+	left: 5px;
+	font-size: 110%;
+}
+#keywordsdiv h2 {
+	position: relative;
+	left: 5px;
+}
+#keywordsdiv .kclose {
+	position: absolute;
+	top: -5px;
+	right: 5px;
+	width: 66px;
+	height: 67px;
+	z-index: 100;
+}
+#keywordsdiv .kclose a {
+	background: url(../../../icons/neodw/Close.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 67px;
+}
+#keywordsdiv h3 {
+	background: #F7F8F9 url(../../img/search/) no-repeat left top;
+	border-radius: 10px 10px 10px 10px; /*左上 右上 右下  左下*/
+	padding: 10px;
+	margin: 5px 0px;
+}
+/*==============搜尋區塊=============*/
+#xo-searchdiv {
+	position: relative;
+	background: #EDEEEF url(../../img/search/) no-repeat left top;
+	border-radius: 10px 10px 10px 10px; /*左上 右上 右下  左下*/
+	margin: 15px 0px;
+	border: 1px solid #9BA2AA;
+	padding: 10px;
+	font-size: 150%;
+	display: none;
+}
+#xo-searchdiv input[type="search"] {
+	border-radius: 10px 10px 10px 10px;
+	width: 910px;
+	padding: 2px 10px;
+}
+#xo-searchdiv button[type="submit"] {
+	border-radius: 10px 10px 10px 10px; /*左上 右上 右下  左下*/
+	background: #D35B32 url(../../img/search/) no-repeat left top;
+	border: 1px solid #9BA2AA;
+	padding: 6px 10px;
+	color: #FFFFFF;
+}
+#xo-searchdiv .kclose {
+	position: absolute;
+	top: -3px;
+	right: 5px;
+	width: 66px;
+	height: 67px;
+	z-index: 100;
+}
+#xo-searchdiv .kclose a {
+	background: url(../../../icons/neodw/Close.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 67px;
+}
+/*=============descriptiontpl.tpl=================*/
+#descriptiontpl {
+	position: relative;
+	background: #FFEDED url(../../img/search/) no-repeat left top;
+	border-radius: 10px 10px 10px 10px; /*左上 右上 右下  左下*/
+	margin: 15px 0px;
+	border: 1px solid #9BA2AA;
+	padding: 10px;
+	font-size: 150%;
+}
+#descriptiontpl span{
+color: #E51010;
+}
+
+/*============圖片播放器區塊=================*/
+#playerimgdiv {
+	position: relative;
+	top: 71px;
+	width: 1280px;
+	height: 341px;
+	background: url(../../img/playerimg/neilambilight_29.jpg) no-repeat left top;
+}
+#playerimgdivadmin {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	background: #E56A44 url(../../img/playerimg/) no-repeat left top;
+	z-index: 100;
+	padding: 3px 5px;
+	border-radius: 6px 6px 6px 6px; /*左上 右上 右下  左下*/
+	opacity: 0.9;
+}
+#playerimgdivadmin a {
+	color: #FFFFFF;
+}
+/*=============跑馬燈區塊===============*/
+
+#marqueetop{
+	position: absolute;
+	width: 1276px;
+	height: 43px;
+	bottom: 37px;
+	background: #a81c1c url(../../img/unit/neilambilight_37.png) no-repeat 2px 4px;
+		padding: 2px 10px 0px 50px;
+	border-radius: 0px 0px 10px 10px; 
+	margin: 0px 2px 0px 2px;
+		opacity: 0.9;
+	z-index: 50;
+}
+
+
+.marqueeadmin{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+} 
+
+#marquee{
+	width: 100%;
+	height: 32px;
+overflow:hidden;
+margin: 2px 0px 0px 0px;
+/*margin:0 auto; */
+}
+
+
+/*#marquee{width:600px;height:100px; overflow:hidden;background:#EFEFEF;}*/
+
+
+/*=========上下移動================*/
+.marqueestyle1  ul li{
+padding:0 10px;
+line-height:32px;
+height:32px;
+overflow:hidden;
+text-align:left;
+/*	margin:0px 0px 20px 0px; */
+}
+
+
+
+#marqueebox a{
+color: #FFFFFF;
+}
+
+#marqueebox{
+	position: relative;
+height: 33px;
+	font-size: 125% !important;
+
+}
+#marqueebox div{
+position: relative;
+height: 32px;
+overflow:hidden;
+}
+
+
+
+/*========左右移動================*/
+.marqueestyle0   ul li{
+padding:0 10px;
+line-height:32px;
+height:32px;
+overflow:hidden; 
+float: left;
+
+}
+
+/*===========首頁區塊===========*/
+#xo-page, #bottom-page {
+	position: relative;
+	background: #F2FAFF url(../../img/unit/) no-repeat left top;
+	padding: 0px 0px 20px 0px;
+}
+#xo-page .table {
+	background: inherit;
+}
+/*==============共用================*/
+.blockcontent {
+	position: relative;
+	background: #FFFFFF url(../../img/blocks/) no-repeat left top;
+	padding: 8px 5px 10px 5px;
+	font-size: 110%;
+	line-height: 160%;
+}
+.block-title {
+	font-size: 140%;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 1px #6B6B6B;
+	line-height: 160%;
+}
+.block-title span {
+	display: block;
+	height: 38px;
+	overflow: hidden;
+}
+.block-title a {
+	color: #FFFFFF;
+}
+.block-title a:hover {
+	color: #F4D4D2;
+}
+.left01 .blockcontent, .left02 .blockcontent {
+	position: relative;
+	left: 10px;
+	width: 233px;
+}
+aside.blockdiv {
+	margin: 0px 0px 10px 0px;
+}
+#more {
+	position: absolute;
+	top: 13px;
+	padding: 3px 8px 4px 8px;
+	font-size: 85%;
+	text-shadow: none;
+	box-shadow: inset 2px 2px 2px #8F8D8E;
+	opacity: 0.9;
+	color: #2b2b2b;
+	right: 15px;
+	line-height: 100%;
+	background: #ffffff url(../../img/blocks/) no-repeat left top;
+	border-radius: 10px 10px 10px 10px;
+}
+#bottomcontents #more {
+	top: 17px;
+	right: 20px;
+}
+#toplefttpldiv #more {
+	top: 15px;
+}
+.block-title #more a {
+	color: #2b2b2b;
+}
+#more a:hover {
+	color: #EE1C25;
+}
+/*===========區塊管理==============*/
+#blocksadmin {
+	position: relative;
+	width: inherit;
+	margin: 5px 0px 5px 12px;
+}
+#adminimgbox {
+	position: absolute;
+	top: 0px;
+	left: 45px;
+	background: #CCC62A url(../../img/blocks/) no-repeat left top;
+	border-radius: 6px 6px 6px 6px;
+	display: none;
+	opacity: 0;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+ @keyframes slidein2 {
+ 0% {
+ margin-left: 100px;
+ opacity: 0;
+}
+ 70% {
+ margin-left: -10px;
+ opacity: 0.5;
+}
+ 100% {
+ margin-left: 0px;
+ opacity: 0.9;
+}
+}
+#adminimgbox:after {
+	content: '';
+	position: absolute;
+	top: 28%;
+	left: 0%;
+	margin-left: -8px;
+	width: 0;
+	height: 0;
+	border-right: 8px solid #CCC62A;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	z-index: 100;
+	opacity: 0.9;
+}
+#adminimgbox ul li {
+	float: left;
+	padding: 4px 10px 4px 5px;
+}
+#adminimg01 {
+	position: relative;
+	top: 2px;
+	width: 33px;
+	height: 31px;
+	background: url(../../img/blocks/adminomg01.png) no-repeat left top;
+	z-index: 10;
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+}
+.adminimg-transition {
+	visibility: hidden;
+	height: 0px;
+	opacity: 0;
+}
+#adminimg01a {
+	position: absolute;
+	top: 2px;
+	width: 33px;
+	height: 31px;
+	background: url(../../img/blocks/adminomg01a.png) no-repeat left top;
+	z-index: 0;
+}
+/*======編輯區塊===========*/
+#adminimg02 {
+	position: relative;
+	width: 30px;
+	height: 28px;
+}
+#adminimg02 a {
+	background: url(../../img/blocks/adminomg02.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 28px;
+}
+/*=========複製區塊===========*/
+#adminimg03 {
+	position: relative;
+	width: 30px;
+	height: 28px;
+}
+#adminimg03 a {
+	background: url(../../img/blocks/adminomg03.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 28px;
+}
+/*=========模組管理===========*/
+#adminimg04 {
+	position: relative;
+	width: 30px;
+	height: 28px;
+}
+#adminimg04 a {
+	background: url(../../img/blocks/adminomg04.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 28px;
+}
+/*=========刪除區塊===========*/
+#adminimg05 {
+	position: relative;
+	width: 30px;
+	height: 28px;
+}
+#adminimg05 a {
+	background: url(../../img/blocks/adminomg05.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 28px;
+}
+/*==========FB連結按鈕============*/
+#fbfansbutton {
+	position: relative;
+	width: 236px;
+	height: 69px;
+	margin: 6px 0px 5px 8px;
+}
+#fbfansbutton a {
+	background: url(../../img/blocks/neilambilight_60.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 69px;
+}
+/*==========聯絡我們按鈕============*/
+#contactus {
+	position: relative;
+	width: 236px;
+	height: 69px;
+	margin: 12px 0px 0px 8px;
+}
+#contactus a {
+	background: url(../../img/blocks/neilambilight_65.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 69px;
+}
+/*=============左區塊內容================*/
+#leftdiv {
+	position: relative;
+	width: 251px;
+	padding: 0px 0px 100px 0px;
+}
+.left01 .block-title {
+	position: relative;
+	width: inherit;
+	height: 55px;
+	background: url(../../img/blocks/neilambilight_41.jpg) no-repeat left top;
+	z-index: 20;
+	padding: 8px 0px 0px 68px;
+}
+.left02 .block-title {
+	position: relative;
+	width: inherit;
+	height: 55px;
+	background: url(../../img/blocks/neilambilight_57.jpg) no-repeat left top;
+	z-index: 20;
+	padding: 8px 0px 0px 68px;
+}
+.left01 .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #418EAA;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+}
+.left02 .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #E691DA;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+}
+/*==========中間區塊內容==============*/
+/*============左中右全開===============*/
+#lrdivtrue {
+	position: relative;
+	width: 826px;
+}
+#lrdivtrue .center01 .blockcontent, #lrdivtrue .center02 .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 807px;
+}
+#lrdivtrue #toprighttpldiv, #lrdivtrue #toplefttpldiv, #lrdivtrue #bottomlefttpldiv, #lrdivtrue #bottomrighttpldiv {
+	position: relative;
+	width: 413px;
+}
+#lrdivtrue #toplefttpldiv .blockcontent, #lrdivtrue #toprighttpldiv .blockcontent, #lrdivtrue #bottomlefttpldiv .blockcontent, #lrdivtrue #bottomrighttpldiv .blockcontent {
+	position: relative;
+	left: 11px;
+	width: 390px;
+}
+#lrdivtrue #sponsorshiplist .blockcontent, #lrdivtrue #xo-content .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 807px;
+}
+/*============左中區塊開啟================*/
+#ldivtrue {
+	position: relative;
+	width: 1026px;
+}
+#ldivtrue .center01 .blockcontent, #ldivtrue .center02 .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 1007px;
+}
+#ldivtrue #toprighttpldiv, #ldivtrue #toplefttpldiv, #ldivtrue #bottomlefttpldiv, #ldivtrue #bottomrighttpldiv {
+	position: relative;
+	width: 513px;
+}
+#ldivtrue #toplefttpldiv .blockcontent, #ldivtrue #toprighttpldiv .blockcontent, #ldivtrue #bottomlefttpldiv .blockcontent, #ldivtrue #bottomrighttpldiv .blockcontent {
+	position: relative;
+	left: 11px;
+	width: 490px;
+}
+#ldivtrue #sponsorshiplist .blockcontent, #ldivtrue #xo-content .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 1007px;
+}
+/*============中右區塊開啟================*/
+#rdivtrue {
+	position: relative;
+	width: 1074px;
+	left: 2px;
+}
+#rdivtrue .center01 .blockcontent, #rdivtrue .center02 .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 1055px;
+}
+#rdivtrue #toprighttpldiv, #rdivtrue #toplefttpldiv, #rdivtrue #bottomlefttpldiv, #rdivtrue #bottomrighttpldiv {
+	position: relative;
+	width: 537px;
+}
+#rdivtrue #toplefttpldiv .blockcontent, #rdivtrue #toprighttpldiv .blockcontent, #rdivtrue #bottomlefttpldiv .blockcontent, #rdivtrue #bottomrighttpldiv .blockcontent {
+	position: relative;
+	left: 11px;
+	width: 514px;
+}
+#rdivtrue #sponsorshiplist .blockcontent, #rdivtrue #xo-content .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 1055px;
+}
+/*========左右關閉中間區塊開啟=============*/
+#rdivfalse {
+	position: relative;
+	width: 1276px;
+	left: 2px;
+}
+#rdivfalse .center01 .blockcontent, #rdivfalse .center02 .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 1257px;
+}
+#rdivfalse #toprighttpldiv, #rdivfalse #toplefttpldiv, #rdivfalse #bottomlefttpldiv, #rdivfalse #bottomrighttpldiv {
+	position: relative;
+	width: 638px;
+}
+#rdivfalse #toplefttpldiv .blockcontent, #rdivfalse #toprighttpldiv .blockcontent, #rdivfalse #bottomlefttpldiv .blockcontent, #rdivfalse #bottomrighttpldiv .blockcontent {
+	position: relative;
+	left: 11px;
+	width: 615px;
+}
+#rdivfalse #sponsorshiplist .blockcontent, #rdivfalse #xo-content .blockcontent {
+	position: relative;
+	left: 12px;
+	width: 1257px;
+}
+/*=========內容區============*/
+.center01 .block-title {
+	position: relative;
+	width: inherit;
+	height: 55px;
+	background: url(../../img/blocks/neilambilight_42.jpg) no-repeat left top, url(../../img/blocks/neilambilight_44.jpg) no-repeat right top, url(../../img/blocks/neilambilight_43.jpg) repeat-x left top;
+	z-index: 20;
+	padding: 8px 95px 0px 73px;
+}
+.center02 .block-title {
+	position: relative;
+	width: inherit;
+	height: 55px;
+	background: url(../../img/blocks/neilambilight_62.jpg) no-repeat left top, url(../../img/blocks/neilambilight_63.jpg) no-repeat right top, url(../../img/blocks/neilambilight_61.jpg) repeat-x left top;
+	z-index: 20;
+	padding: 8px 95px 0px 73px;
+}
+.center01 .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #BB6F3D;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+}
+.center02 .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #4D92BE;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+}
+
+
+
+/*============中上左右區塊===============*/
+
+
+#toprighttpldiv .block-title, #toplefttpldiv .block-title {
+	position: relative;
+	width: inherit;
+	height: 62px;
+	background: url(../../img/blocks/neilambilight_59.jpg) no-repeat left top, url(../../img/blocks/neilambilight_66.jpg) no-repeat right top, url(../../img/blocks/neilambilight_64.jpg) repeat-x left top;
+	z-index: 20;
+	padding: 10px 95px 0px 74px;
+}
+#toprighttpldiv .blockcontent, #toplefttpldiv .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #AD5BA7;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+}
+/*============中下左右區塊===============*/
+
+
+#bottomlefttpldiv .block-title, #bottomrighttpldiv .block-title {
+	position: relative;
+	width: inherit;
+	height: 59px;
+	background: url(../../img/blocks/neilambilight_70.jpg) no-repeat left top, url(../../img/blocks/neilambilight_71.jpg) no-repeat right top, url(../../img/blocks/neilambilight_69.jpg) repeat-x left top;
+	z-index: 20;
+	padding: 9px 95px 0px 74px;
+}
+#bottomlefttpldiv .blockcontent, #bottomrighttpldiv .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #9F4F2B;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+}
+/*===========Xoops廣告區塊==============*/
+#xo-bannerfix {
+	width: inherit;
+	position: relative;
+	margin: 10px auto;
+	text-align: center;
+}
+/*==========右區塊內容================*/
+#rightdiv {
+	position: relative;
+	width: 203px;
+	padding: 0px 0px 100px 0px;
+}
+#rightdiv img{
+max-width: 190px !important;
+}
+#rightdiv .img-responsive{
+max-width: 120px !important;
+}
+
+#rightdiv #blocksadmin {
+	position: relative;
+	left: -14px;
+}
+.r1 .block-title {
+	position: relative;
+	width: inherit;
+	height: 55px;
+	background: url(../../img/blocks/neilambilight_72.jpg) no-repeat left top;
+	z-index: 20;
+	padding: 7px 0px 0px 52px;
+}
+.right01 .block-title {
+	position: relative;
+	margin: -25px 0px 0px 0px;
+	width: inherit;
+	height: 52px;
+	background: url(../../img/blocks/neilambilight_73.jpg) no-repeat left top;
+	z-index: 20;
+	padding: 7px 0px 0px 52px;
+}
+.right02 .block-title {
+	position: relative;
+	margin: -25px 0px 0px 0px;
+	width: inherit;
+	height: 52px;
+	background: url(../../img/blocks/neilambilight_74.jpg) no-repeat left top;
+	z-index: 20;
+	padding: 7px 0px 0px 52px;
+}
+.r1 .blockcontent, .right01 .blockcontent, .right02 .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #CAA069;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+}
+.r1 .blockcontent, .right01 .blockcontent, .right02 .blockcontent {
+	position: relative;
+	left: 7px;
+	width: 189px;
+	padding-bottom: 15px;
+}
+/*============頁腳三區塊====================*/
+#bottompage {
+	position: relative;
+	width: inherit;
+	background: url(../../img/blocks/neilambilight_87.jpg) no-repeat left top, url(../../img/blocks/neilambilight_89.jpg) no-repeat left bottom, url(../../img/blocks/neilambilight_86.jpg) repeat-y left top;
+	min-height: 552px;
+}
+#bdtiv01 {
+	position: absolute;
+	background: url(../../img/blocks/neilambilight_102.jpg) no-repeat left top;
+	width: 80px;
+	height: 260px;
+	left: -80px;
+	top: 0px;
+	z-index: 10;
+}
+#bdtiv02 {
+	position: absolute;
+	background: url(../../img/blocks/neilambilight_103.jpg) no-repeat left top;
+	width: 80px;
+	height: 292px;
+	left: -80px;
+	bottom: 0px;
+	z-index: 10;
+}
+#bdtiv03 {
+	position: absolute;
+	background: url(../../img/blocks/neilambilight_101.jpg) repeat-y left top;
+	width: 80px;
+	left: -80px;
+	top: 0px;
+	z-index: 1;
+}
+#bdtiv04 {
+	position: absolute;
+	background: url(../../img/blocks/neilambilight_105.jpg) no-repeat left top;
+	width: 80px;
+	height: 260px;
+	right: -80px;
+	top: 0px;
+	z-index: 10;
+}
+#bdtiv05 {
+	position: absolute;
+	background: url(../../img/blocks/neilambilight_106.jpg) no-repeat left top;
+	width: 80px;
+	height: 292px;
+	right: -80px;
+	bottom: 0px;
+	z-index: 10;
+}
+#bdtiv06 {
+	position: absolute;
+	background: url(../../img/blocks/neilambilight_104.jpg) repeat-y left top;
+	width: 80px;
+	right: -80px;
+	top: 0px;
+	z-index: 1;
+}
+#bottompagelimg {
+	position: absolute;
+	width: 345px;
+	height: 100px;
+	left: -80px;
+	top: -87px;
+	background: url(../../img/blocks/neilambilight_90.png) no-repeat left top;
+	z-index: 20;
+}
+#bottompagerimg {
+	position: absolute;
+	width: 285px;
+	height: 103px;
+	right: -80px;
+	top: -90px;
+	background: url(../../img/blocks/neilambilight_91.png) no-repeat left top;
+	z-index: 20;
+}
+#bottomcontents {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+	left: 12px;
+	margin: 25px 0px 20px 0px;
+}
+#footerleftdiv, #footercenterdiv, #footerrightdiv {
+	position: relative;
+	width: 424px;
+}
+#bottomcontents .block-title {
+	position: relative;
+	width: inherit;
+	height: 64px;
+	background: url(../../img/blocks/neilambilight_94.png) no-repeat left top;
+	z-index: 20;
+	padding: 12px 80px 0px 82px;
+}
+#bottomcontents .blockcontent {
+	position: relative;
+	width: 410px;
+	min-height: 424px;
+	top: -5px;
+	border: 1px solid #B23280;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+	background: #F3F9FF url(../../img/blocks/) no-repeat left top;
+}
+#bottompageimg {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+	height: 106px;
+	background: url(../../img/blocks/footerimg.jpg) no-repeat left top;
+}
+/*=============頁腳區塊================*/
+#footer {
+	position: relative;
+	width: inherit;
+	height: 471px;
+	background: url(../../img/blocks/neilambilight_95.jpg) no-repeat left top;
+}
+#footercontents {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+	background: url(../../img/blocks/) no-repeat left top;
+}
+#d-information {
+	position: relative;
+	width: 96px;
+}
+.di01 {
+	position: relative;
+	width: 96px;
+	height: 118px;
+	z-index: 10;
+	left: 6px;
+	z-index: 100;
+}
+.di01 a {
+	background: url(../../../default/neilambilight_96.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 96px;
+}
+.di02 {
+	position: relative;
+	width: 94px;
+	height: 33px;
+	z-index: 10;
+	top: 6px;
+	left: 8px;
+}
+.di02 a {
+	background: url(../../../default/neilambilight_100.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 33px;
+}
+/*============佈景資訊=================*/
+#neodwbox {
+	position: absolute;
+	bottom: 20px;
+	width: inherit;
+	height: 260px;
+	z-index: 25;
+}
+#neodwboxcentents {
+	position: relative;
+	left: 205px;
+	width: 1040px;
+	background: url(../../../icons/neodw/neodwimg3.png) repeat-x left top;
+	height: 259px;
+	opacity: 0;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+#neodwboxcentents #imgl {
+	position: absolute;
+	left: -28px;
+	width: 28px;
+	background: url(../../../icons/neodw/neodwimg2.png) no-repeat left top;
+	height: 259px;
+}
+#neodwboxcentents #imgr {
+	position: absolute;
+	right: -52px;
+	width: 52px;
+	background: url(../../../icons/neodw/neodwimg4.png) no-repeat left top;
+	height: 259px;
+}
+#neodeweb {
+	position: absolute;
+	width: 196px;
+	height: 259px;
+	z-index: 10;
+	left: -224px;
+}
+#neodeweb a {
+	background: url(../../../icons/neodw/neodwimg01.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 259px;
+}
+#neodwboxcentents #close {
+	position: absolute;
+	right: -13px;
+	top: 40px;
+	width: 66px;
+	height: 67px;
+	z-index: 100;
+}
+#neodwboxcentents #close a {
+	background: url(../../../icons/neodw/Close.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 67px;
+}
+#neodwboxcententstext {
+	position: relative;
+	top: 45px;
+	font-size: 120%;
+	line-height: 165%;
+}
+#neodwboxcententstext a {
+	color: #000000;
+}
+#neodwboxcententstext span {
+	position: relative;
+	margin-left: 30px;
+}
+#sponsorship-list {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background: #C66600 url(../../../icons/neodw/) no-repeat left top;
+	padding: 5px 10px;
+	border-radius: 6px 6px 6px 6px;
+}
+#sponsorship-list a {
+	color: #FFFFFF;
+}
+#neodwtext {
+	position: absolute;
+	left: 100px;
+	top: 30px;
+	white-space: nowrap;
+	background: #C66600 url(../../../icons/neodw/) no-repeat left top;
+	color: #FFFFFF;
+	padding: 5px 10px;
+	border-radius: 6px 6px 6px 6px;
+	opacity: 0;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	z-index: 10;
+}
+#neodwtext:after {
+	content: '';
+	position: absolute;
+	top: 25%;
+	left: 0%;
+	margin-left: -8px;
+	width: 0;
+	height: 0;
+	border-right: 8px solid #C66600;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	z-index: 100;
+	opacity: 0.9;
+}
+#xoopsfooter {
+	position: absolute;
+	width: 68%;
+	top: 7px;
+	left: 120px;
+	height: 145px;
+	overflow: hidden;
+	font-size: 110%;
+	line-height: 140%;
+	z-index: 1;
+}
+#footadmin {
+	position: absolute;
+	top: 175.5px;
+	right: 280px;
+	background: #F2F9FF url(../../../icons/neodw/) no-repeat left top;
+	border-bottom: 1px solid #69A9CE;
+	border-left: 1px solid #69A9CE;
+	border-right: 1px solid #69A9CE;
+	padding: 1px 10px 3px 10px;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 100;
+}
+/* ============返回頂端按鈕================  */
+#bookmark {
+	z-index: 10;
+	position: absolute;
+	top: 14px;
+	right: 0px;
+	width: 135px;
+	height: 135px;
+	background: url(../../img/blocks/neilambilight_98a.jpg) no-repeat left top;
+}
+#bookmark a {
+	background: url(../../img/blocks/neilambilight_98.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 135px;
+	transition: opacity 0.2s ease-in-out;
+}
+#bookmark a:hover {
+	opacity: 0;
+}
+/*==============返回首頁按鈕==============*/
+#gohomg {
+	z-index: 10;
+	position: absolute;
+	width: 136px;
+	height: 135px;
+	top: 14px;
+	right: 135px;
+	background: url(../../img/blocks/neilambilight_97a.jpg) no-repeat left top;
+}
+#gohomg a {
+	background: url(../../img/blocks/neilambilight_97.jpg) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 135px;
+	transition: opacity 0.2s ease-in-out;
+}
+#gohomg a:hover {
+	opacity: 0;
+}
+/*=================內容頁面介面===========================*/
+#xo-content {
+	position: relative;
+	width: inherit;
+}
+#xo-content .block-title {
+	position: relative;
+	width: inherit;
+	height: 55px;
+	background: url(../../img/blocks/neilambilight_42.jpg) no-repeat left top, url(../../img/blocks/neilambilight_44.jpg) no-repeat right top, url(../../img/blocks/neilambilight_43.jpg) repeat-x left top;
+	z-index: 20;
+	padding: 8px 110px 0px 73px;
+}
+#xo-content .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #9F4F2B;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 10;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#modulesort{
+	position: absolute;
+	right: 15px;
+	top: 8px;
+		z-index: 300;
+		opacity: 0.9;
+} 
+
+/*============贊助區內容==============*/
+
+#sponsorshiplist {
+	position: relative;
+	width: inherit;
+}
+#sponsorshiplist .block-title {
+	position: relative;
+	width: inherit;
+	height: 55px;
+	background: url(../../img/blocks/neilambilight_42.jpg) no-repeat left top, url(../../img/blocks/neilambilight_44.jpg) no-repeat right top, url(../../img/blocks/neilambilight_43.jpg) repeat-x left top;
+	z-index: 20;
+	padding: 8px 10px 0px 73px;
+}
+#sponsorshiplist .blockcontent {
+	position: relative;
+	top: -5px;
+	border: 1px solid #9F4F2B;
+	border-radius: 0px 0px 10px 10px;
+	padding-top: 10px;
+	z-index: 10;
+}
+/*====模組說明區塊===========*/
+#instructions {
+	position: relative;
+	border: 1px solid #9F4F2B;
+	border-radius: 10px 10px 10px 10px;
+	padding: 10px;
+	margin: 10px;
+	background: #FFF2F2 url(../../img/blocks/) no-repeat left top;
+}
+
+/*===========自訂按鈕圖片區塊=============*/
+#neilblockmenu .buttonimg{
+	position: relative;
+
+}
+#neilblockmenu #focus{
+color: #E01A1A;
+}
+
+
+.buttonimg img{
+margin: 5px 6px 5px 0px;
+padding: 2px;
+border: 1px solid  #C4C4C4;
+border-radius: 6px 6px  6px 6px;
+}
+/*===中上中下區塊圖片大小=====*/
+#bottomcentertpldiv .buttonimg img,
+#topcentertpldiv .buttonimg img{
+width: 32%;
+}
+
+/*==上左上右下左下右圖片大小===*/
+#bottomrighttpldiv .buttonimg img,
+#bottomlefttpldiv .buttonimg img,
+#toprighttpldiv .buttonimg img,
+#toplefttpldiv .buttonimg img{
+width: 100%;
+}
+
+/*========左區塊圖片大小====*/
+#rightdiv .buttonimg img,
+#leftdiv .buttonimg img{
+width: 100%;
+}
+
+#bottompage .buttonimg img{
+width: 100%;
+}
+
+/*===開啟上方區塊=========*/
+
+
+#topbox{
+	position: absolute;
+	right: 15px;
+	top: 80px;
+	width: 35px;
+	height: 42px;
+	z-index: 50;
+    animation: myfirst 1s infinite;
+    animation-direction: alternate;	 
+  animation-name: topbox;
+	opacity: 1;  
+
+}
+#topbox a {
+	background: url(../../img/unit/topimg.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 42px;
+}
+
+
+ @keyframes topbox {
+ 0% {
+
+ opacity: 1;
+}
+
+ 50% {
+
+ opacity: 0.3;
+}
+
+
+ 100% {
+
+ opacity: 1;
+
+}
+}
+
+
+
+/*=========滑動選單=================*/
+#neilblockmenulayers{
+	position: relative;
+}
+
+#neilblockmenulayers .panel-title{
+font-size: 115%;
+}
+
+#neilblockmenulayers .panel-title a{
+display: block;
+}
+
+
+#neilblockmenulayers #focus{
+color: #D62828;
+}
+
+/*===營養午餐區塊=====*/
+#xo-blocktad_lunch2  .table{
+font-size: 90%;
+} 
+
+/*==========簡介===============*/
+
+.designerlist .designerimg img{
+width: 100%;
+	border-radius: 10px;
+	border: 1px solid #6F6F6F;
+} 
+.designerlist .designerimg{
+	text-align: center;
+}
+
+
+
+.designerlist #pagetable td{
+line-height: 200%;
+}
+
+.designerlist .tdweight{
+width: 70%;
+}
+

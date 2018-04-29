@@ -1,0 +1,345 @@
+
+/*=========災害示警============*/
+/*=========左區塊==============*/
+
+#leftdiv #alertsncdr{
+font-size: 100%; 
+width: 218px;
+min-height: 350px;
+margin: 0px 0px 30px 0px; 
+}
+
+#leftdiv #alertsncdr .alertCAP_banner02{
+width: 218px;
+min-height: 340px;
+box-sizing:content-box;
+padding: 0px 0px 30px 0px!important;
+
+  z-index: 10;
+}
+#leftdiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#leftdiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#leftdiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon{
+width: 218px;
+}
+
+#leftdiv #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#leftdiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited
+{
+	position: relative;
+	top: -15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+font-size: 90%;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #ee1c25;
+  display: inline-block;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  text-decoration-color: currentcolor;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  z-index: 10000;
+  margin-top: -10px;
+}
+
+
+
+#leftdiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover
+{
+  background-color: #333333;
+}
+
+#leftdiv #alertsncdr .alertCAP_banner02 .alertCAP_logo{
+
+	position: absolute;
+	top: 5px;
+	height: 40px;
+	width: 150px;
+	left: 0px;
+	padding-top: 3px;
+
+}
+
+/*=========右區塊==============*/
+#rightdiv #alertsncdr{
+font-size: 100%; 
+width: 175px;
+min-height: 380px;
+margin: 0px 0px 30px 0px; 
+}
+
+#rightdiv #alertsncdr .alertCAP_banner02{
+width: 175px;
+min-height: 370px;
+box-sizing:content-box;
+padding: 0px 0px 30px 0px!important;
+  z-index: 10;
+}
+#rightdiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#rightdiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#rightdiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon{
+width: 175px;
+}
+
+#rightdiv #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#rightdiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited
+{
+	position: relative;
+	top: -15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+font-size: 90%;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #ee1c25;
+  display: inline-block;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  text-decoration-color: currentcolor;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  z-index: 10000;
+  margin-top: -10px;
+}
+
+
+
+#rightdiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover
+{
+  background-color: #333333;
+}
+
+#rightdiv #alertsncdr .alertCAP_banner02 .alertCAP_logo{
+	position: absolute;
+	top: 5px;
+	height: 40px;
+	width: 150px;
+	left: 0px;
+	padding-top: 3px;
+}
+
+/*=========中間區塊(上下)==============*/
+#bottomcentertpldiv #alertsncdr,
+#topcentertpldiv #alertsncdr{
+font-size: 100%; 
+width: 795px;
+min-height: 250px;
+}
+
+#bottomcentertpldiv #alertsncdr .alertCAP_banner02,
+#topcentertpldiv #alertsncdr .alertCAP_banner02{
+width: 795px;
+min-height: 240px;
+padding: 0px 0px 0px 0px!important ;
+  z-index: 10;
+    box-sizing:content-box;
+}
+
+#bottomcentertpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#bottomcentertpldiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#bottomcentertpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon,
+#topcentertpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#topcentertpldiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#topcentertpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon{
+width: 795px;
+}
+
+#bottomcentertpldiv  #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#bottomcentertpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited,
+#topcentertpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#topcentertpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited
+{
+	position: relative;
+	top: -15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+font-size: 90%;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #ee1c25;
+  display: inline-block;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  text-decoration-color: currentcolor;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  z-index: 10000;
+  margin-top: -10px;
+}
+
+
+#bottomcentertpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover,
+#topcentertpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover
+{
+  background-color: #333333;
+}
+#bottomcentertpldiv #alertsncdr .alertCAP_banner02 .alertCAP_logo,
+#topcentertpldiv #alertsncdr .alertCAP_banner02 .alertCAP_logo{
+
+	position: absolute;
+	top: 5px;
+	height: 40px;
+	width: 150px;
+	left: 0px;
+	padding-top: 3px;
+}
+
+
+/*=========中間區塊(左右上下)==============*/
+
+#bottomrighttpldiv #alertsncdr,
+#bottomlefttpldiv #alertsncdr,
+#toprighttpldiv #alertsncdr,
+#toplefttpldiv #alertsncdr{
+font-size: 100%; 
+width: 375px;
+min-height: 270px;
+}
+
+#bottomrighttpldiv #alertsncdr .alertCAP_banner02,
+#bottomlefttpldiv #alertsncdr .alertCAP_banner02,
+#toprighttpldiv #alertsncdr .alertCAP_banner02,
+#toplefttpldiv #alertsncdr .alertCAP_banner02{
+width: 375px;
+min-height: 260px;
+padding: 0px 0px 0px 0px!important ;
+  z-index: 10;
+      box-sizing:content-box;
+}
+
+#bottomrighttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#bottomrighttpldiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#bottomrighttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon,
+#bottomlefttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#bottomlefttpldiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#bottomlefttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon,
+#toprighttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#toprighttpldiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#toprighttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon,
+#toplefttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#toplefttpldiv #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#toplefttpldiv #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon{
+width: 375px;
+}
+
+#bottomrighttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#bottomrighttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited,
+#bottomlefttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#bottomlefttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited,
+#toprighttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#toprighttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited,
+#toplefttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#toplefttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:visited
+{
+	position: relative;
+	top: -15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+font-size: 90%;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #ee1c25;
+  display: inline-block;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  text-decoration-color: currentcolor;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  z-index: 10000;
+  margin-top: -10px;
+}
+#bottomrighttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover,
+#bottomlefttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover,
+#toprighttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover,
+#toplefttpldiv #alertsncdr .alertCAP_banner02 a.BUTmore:hover
+{
+  background-color: #333333;
+}
+#bottomrighttpldiv #alertsncdr .alertCAP_banner02 .alertCAP_logo,
+#bottomlefttpldiv #alertsncdr .alertCAP_banner02 .alertCAP_logo,
+#toprighttpldiv #alertsncdr .alertCAP_banner02 .alertCAP_logo,
+#rightdiv #alertsncdr .alertCAP_banner02 .alertCAP_logo{
+
+	position: absolute;
+	top: 5px;
+	height: 40px;
+	width: 150px;
+	left: 0px;
+	padding-top: 3px;
+}
+
+/*=========下三區塊===============*/
+
+#bottompage #alertsncdr{
+font-size: 100%; 
+width: 395px;
+min-height: 300px;
+}
+
+#bottompage #alertsncdr .alertCAP_banner02{
+width: 395px;
+min-height: 290px;
+padding: 0px 0px 0px 0px!important ;
+  z-index: 10;
+          box-sizing:content-box;
+}
+#bottompage #alertsncdr  .alertCAP_banner02 .alertCAP_title,
+#bottompage #alertsncdr .alertCAP_banner02 .alertCAP_con,
+#bottompage #alertsncdr  .alertCAP_banner02 .alertCAP_titleicon{
+width: 395px;
+}
+
+#bottompage #alertsncdr .alertCAP_banner02 a.BUTmore:link, 
+#bottompage #alertsncdr .alertCAP_banner02 a.BUTmore:visited
+{
+	position: relative;
+	top: -15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+font-size: 90%;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #ee1c25;
+  display: inline-block;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  text-decoration-color: currentcolor;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  z-index: 10000;
+  margin-top: -10px;
+}
+
+
+
+#bottompage #alertsncdr .alertCAP_banner02 a.BUTmore:hover
+{
+  background-color: #333333;
+}
+
+#bottompage #alertsncdr .alertCAP_banner02 .alertCAP_logo{
+	position: absolute;
+	top: 5px;
+	height: 40px;
+	width: 150px;
+	left: 0px;
+	padding-top: 3px;
+}
+

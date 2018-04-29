@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/magnifier.css">
+	<title>放大镜效果</title>
+</head>
+<body >
+	
+	<div class="magnifier" id="magnifier1">
+		<div class="magnifier-container">
+			<div class="images-cover">
+				<img src="images/1.png" />
+			</div>
+			<div class="move-view"></div>
+		</div>
+		<div class="magnifier-assembly">
+			<div class="magnifier-btn">
+				<span>&lt;</span>
+				<span>&gt;</span>
+			</div>
+			<div class="magnifier-line">
+				<ul class="clearfix animation03">
+					<li>
+						<div class="small-img">
+							<img src="images/1.png" />
+						</div>
+					</li>
+					<li>
+						<div class="small-img">
+							<img src="images/2.png" />
+						</div>
+					</li>
+					<li>
+						<div class="small-img">
+							<img src="images/3.png" />
+						</div>
+					</li>
+					<li>
+						<div class="small-img">
+							<img src="images/1.png" />
+						</div>
+					</li>
+					<li>
+						<div class="small-img">
+							<img src="images/2.png" />
+						</div>
+					</li>
+					<li>
+						<div class="small-img">
+							<img src="images/3.png" />
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="magnifier-view"></div>
+	</div>
+</body>
+<script src="jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/magnifier.js"></script>
+<script type="text/javascript">
+$(function() {
+	
+	magnifier({
+
+		width : 500,//主容器宽
+		height : 500,//主容器高
+		magnifier : "#magnifier1",//主容器
+	});
+});
+</script>
+</html>

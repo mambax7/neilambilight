@@ -1,0 +1,56 @@
+ul.profile-values {
+	margin-top: 10px;
+}
+ul.profile-values > li {
+	margin-bottom: 5px;
+}
+ul.profile-values > li.profile-category-title {
+	font-size: 1.2em;
+	font-weight: 600;
+	border-bottom: 1px dashed #999;
+	margin-bottom: 0;
+	color: #09C;
+}
+table.profile-form {
+	width: 100% !important;
+}
+.profile-form td.head {
+	width: 30% !important;
+}
+
+.pad5 {
+	font-size: 80%;
+}
+input[name="xoopscaptcha"] {
+	width: inherit !important;
+}
+.breadcrumbs, .register-steps {
+	font-size: 100%;
+}
+#xo-content textarea, #xo-content select, #xo-content .odd input, #xo-content .even input {
+	width: 100% !important;
+}
+
+
+.pad10 .form-control{
+width: 100%  !important;
+font-size: 130% !important;
+padding: 10px 0px  !important;
+	min-height: 70px !important;
+}
+
+.pad10  .checkbox input[type="checkbox"]{
+width: 50% !important;
+margin-left: 0px !important;
+padding-right: 100px  !important;
+}
+.pad10 .checkbox{
+	position: relative;
+	left: -20px;
+} 
+
+.pad10  .btn{
+width: 100% !important;
+	font-size: 120% !important;
+		padding: 20px 10px !important;
+}

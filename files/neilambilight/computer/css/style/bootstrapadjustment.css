@@ -1,0 +1,98 @@
+#bootstrap-touch-slider,
+#myCarousel {
+	position: relative;
+	width: 1278px;
+	height: 304px;
+	left: 1px;
+	top: 1px;
+	border-radius: 0px 0px 10px 10px; /*左上 右上 右下  左下*/
+	border: 1px solid #FFFFFF;
+	overflow: hidden;
+	background: #FFFFFF url(../../img/playerimg/) no-repeat left top;
+}
+#playerimgdiv .img-responsive, .thumbnail > img, 
+#playerimgdiv .thumbnail a > img, 
+#playerimgdiv .carousel-inner > .item > img, 
+#playerimgdiv .carousel-inner > .item > a > img {
+	display: block;
+	width: 1278px;
+	height: 304px;
+}
+.carousel-inner {
+	position: relative;
+	overflow: hidden;
+	width: 1287px;
+	left: 0px;
+	top: 0px;
+	z-index: 15 !important;
+}
+.carousel-indicators {
+	position: absolute;
+	top: 20px !important;
+	left: 31%!important;
+	z-index: 150 !important;
+	width: 20%;
+	height: 15px !important;
+	margin-left: -30%;
+	padding-left: 0;
+	list-style: none;
+	text-align: left !important;
+}
+.carousel-indicators li {
+	display: inline-block;
+	width: 20px !important;
+	height: 20px !important;
+	margin: 0px !important;
+	text-indent: -999px;
+	border: 1px solid #E5004F !important;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: #000 \9 !important;
+	background-color: rgba(0,0,0,0) !important;
+}
+.carousel-indicators .active {
+	margin: 0 !important;
+	width: 20px !important;
+	height: 20px !important;
+	background-color: #E5004F !important;
+}
+.row {
+	margin: 0px !important;
+}
+.nav .dropdown {
+	padding-left: 25px;
+}
+.lof-slidecontent ul.navigator-wrap-inner li span {
+	display: block;
+	padding: 9px !important;
+	position: relative;
+	line-height: inherit !important;
+}
+.col-sm-3, .radio-inline, .control-label {
+	white-space: nowrap;
+}
+.table-bordered {
+	word-break: break-all;
+}
+.col-sm-12 input[type="text"] {
+	line-height: 100%;
+}
+#rightdiv .list-group-item, #leftdiv .list-group-item {
+	padding: 2px !important;
+}
+#leftdiv #xo-blocktad_web .table td {
+	white-space: nowrap;
+}
+.form-horizontal select {
+width: 100%;
+	font-size: 90%;
+}
+
+.text-center{
+	white-space: nowrap;
+}
+
+.text-center .date{
+font-size: 80%;
+}
+

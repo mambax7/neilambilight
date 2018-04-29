@@ -1,0 +1,11 @@
+#tad_link .col-sm-7 {
+	word-break: break-all;
+}
+#tad_link .btn-primary {
+	overflow: hidden;
+}
+#tad_link .col-sm-2 img {
+	width: 100%;
+}
+
+

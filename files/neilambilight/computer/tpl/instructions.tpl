@@ -1,0 +1,1 @@
+<{if $instructions.text && $xoops_isadmin}><aside id="instructions"><{$instructions.text}></aside><{/if}>
