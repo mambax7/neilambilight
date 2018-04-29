@@ -24,6 +24,9 @@ switch ($op) {
         list($maintable, $maintablea) = flashimg_table();
 }
 
+/**
+ * @return array
+ */
 function flashimg_table()
 {
     $xoops_theme = $GLOBALS['xoopsConfig']['theme_set'];

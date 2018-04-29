@@ -23,6 +23,11 @@ switch ($op) {
         $main = blockmenutable($sortid, $radiogstyle);
 }
 
+/**
+ * @param $sortid
+ * @param $radiogstyle
+ * @return string
+ */
 function blockmenutable($sortid, $radiogstyle)
 {
     $xoopsurl = XOOPS_URL;

@@ -34,6 +34,10 @@ switch ($op) {
         $main = add_form($fieldsplit);
 }
 
+/**
+ * @param string $fieldsplit
+ * @return string
+ */
 function add_form($fieldsplit = "")
 {
     include_once(XOOPS_ROOT_PATH . "/class/xoopsformloader.php");

@@ -10,6 +10,10 @@ include_once XOOPS_ROOT_PATH . "/modules/tadtools/tad_function.php";
 include_once XOOPS_ROOT_PATH . "/modules/neillibrary/function.php";
 
 //關鍵字查詢模組option
+/**
+ * @param string $dirname
+ * @return string
+ */
 function modulesnameoption($dirname = "")
 {
     global $xoopsDB;
@@ -56,6 +60,12 @@ function modulesnameoption($dirname = "")
 }
 
 //關鍵字輸出
+/**
+ * @param string $xoops_meta_description
+ * @param string $image
+ * @param string $xoops_pagetitle
+ * @return bool
+ */
 function keywordsfunction($xoops_meta_description = "", $image = "", $xoops_pagetitle = "")
 {
     global $xoopsTpl;

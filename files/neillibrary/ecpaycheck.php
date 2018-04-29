@@ -5,6 +5,10 @@ include_once XOOPS_ROOT_PATH . "/header.php";
 
 //AIO建立訂單API
 //特殊字元置換
+/**
+ * @param $value
+ * @return mixed
+ */
 function _replaceChar($value)
 {
     $search_list  = array('%2d', '%5f', '%2e', '%21', '%2a', '%2A', '%28', '%29');
@@ -14,6 +18,12 @@ function _replaceChar($value)
 }
 
 //產生檢查碼
+/**
+ * @param $hash_key
+ * @param $hash_iv
+ * @param $form_array
+ * @return string
+ */
 function _getMacValue($hash_key, $hash_iv, $form_array)
 {
     $encode_str = "HashKey=" . $hash_key;
@@ -28,6 +38,11 @@ function _getMacValue($hash_key, $hash_iv, $form_array)
 }
 
 //仿自然排序法
+/**
+ * @param $a
+ * @param $b
+ * @return int
+ */
 function merchantSort($a, $b)
 {
     return strcasecmp($a, $b);
@@ -36,6 +51,15 @@ function merchantSort($a, $b)
 //------------------------------------------交易輸入參數------------------------------------------------------
 
 //金流串接
+/**
+ * @param string $trade_no
+ * @param string $total_amt
+ * @param string $item_name
+ * @param string $choose_payment
+ * @param string $suid
+ * @param string $modules
+ * @return mixed
+ */
 function ecpaycode($trade_no = "", $total_amt = "", $item_name = "", $choose_payment = "", $suid = "", $modules = "")
 {
     global $uid, $xoopsModuleConfig, $xoopsModule, $xoopsConfig;

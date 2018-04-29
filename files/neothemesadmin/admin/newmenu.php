@@ -33,6 +33,13 @@ switch ($op) {
         $main = menu_form($nsn, $menub, $menuc, $j);
 }
 
+/**
+ * @param string $nsn
+ * @param string $menub
+ * @param string $menuc
+ * @param string $j
+ * @return string
+ */
 function menu_form($nsn = "", $menub = "", $menuc = "", $j = "")
 {
     if (!empty($nsn)) {
@@ -187,6 +194,10 @@ return true;
     return $main;
 }
 
+/**
+ * @param $a
+ * @param $dbswitchok
+ */
 function insert_menu($a, $dbswitchok)
 {
     global $xoopsDB;

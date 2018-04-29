@@ -44,6 +44,10 @@ switch ($op) {
 }
 
 //左側選單內容
+/**
+ * @param string $config
+ * @return string
+ */
 function leftmenusetup($config = "")
 {
     global $process, $moduleid;
@@ -197,6 +201,9 @@ function leftmenusetup($config = "")
 }
 
 //播放模組跑馬燈內容
+/**
+ * @return string
+ */
 function modulescontent()
 {
     global $xoopsModule;
@@ -332,6 +339,9 @@ function modulescontent()
 }
 
 //自訂跑馬燈內容
+/**
+ * @return string
+ */
 function custom()
 {
     global $xoopsModule, $nsn;

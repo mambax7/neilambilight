@@ -25,6 +25,11 @@ switch ($op) {
         $main = blockmenusortform($sorting, $sortid);
 }
 
+/**
+ * @param $sorting
+ * @param $sortid
+ * @return string
+ */
 function blockmenusortform($sorting, $sortid)
 {
     $xoopsurl = XOOPS_URL;

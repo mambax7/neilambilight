@@ -21,6 +21,9 @@ switch ($op) {
         $main = rightmenu();
 }
 
+/**
+ * @return string
+ */
 function rightmenu()
 {
     global $xoopsDB;

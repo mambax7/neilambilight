@@ -20,6 +20,9 @@ switch ($op) {
         list($maintable, $maintablea) = menu_table();
 }
 
+/**
+ * @return array
+ */
 function menu_table()
 {
 

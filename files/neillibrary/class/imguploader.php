@@ -1,4 +1,11 @@
 <?php
+/**
+ * @param string $up_id
+ * @param string $width
+ * @param string $height
+ * @param string $modules
+ * @param string $plural
+ */
 function save_pic($up_id = "", $width = "", $height = "", $modules = "", $plural = "")
 {
     require_once TADTOOLS_PATH . '/upload/class.upload.php';

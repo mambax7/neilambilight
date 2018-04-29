@@ -26,6 +26,11 @@ switch ($op) {
         $main = add_form($nsn, $mnsnida);
 }
 
+/**
+ * @param string $nsn
+ * @param        $mnsnida
+ * @return string
+ */
 function add_form($nsn = "", $mnsnida)
 {
     if (!empty($nsn)) {    //編輯
@@ -87,6 +92,10 @@ function add_form($nsn = "", $mnsnida)
     return $main;
 }
 
+/**
+ * @param $a
+ * @param $dbswitchok
+ */
 function insert_marquee($a, $dbswitchok)
 {
     global $xoopsDB;

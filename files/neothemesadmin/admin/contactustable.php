@@ -29,6 +29,9 @@ switch ($op) {
         $main = contactustable();
 }
 
+/**
+ * @return string
+ */
 function contactustable()
 {
     global $roption, $xoopsModule;

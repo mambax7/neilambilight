@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @param $options
+ * @return mixed
+ */
 function alertsncdr_block_show($options)
 {
     global $xoopsDB, $xoTheme, $xoopsModule;
@@ -43,6 +47,10 @@ function alertsncdr_block_show($options)
 }
 
 //區塊編輯函式
+/**
+ * @param $options
+ * @return string
+ */
 function alertsncdr_block_edit($options)
 {
     global $xoopsDB, $xoTheme;

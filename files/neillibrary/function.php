@@ -11,6 +11,10 @@ include_once "phpinput.php";        //引入input函數
 //include "ecpaycheck.php";
 
 //頁面開啟方式
+/**
+ * @param string $types
+ * @return mixed
+ */
 function pagemethod($types = "")
 {
     switch ($types) {
@@ -28,6 +32,10 @@ function pagemethod($types = "")
 }
 
 //黑名單
+/**
+ * @param string $suid
+ * @return bool
+ */
 function blacklistfunction($suid = "")
 {
     //開啟訂購人資料表
@@ -40,6 +48,10 @@ function blacklistfunction($suid = "")
 }
 
 //讀取頁面檢查
+/**
+ * @param string $user_uid
+ * @return bool
+ */
 function readpermission($user_uid = "")
 {
     global $xoopsDB, $xoopsUser, $isAdmin;
@@ -54,6 +66,9 @@ function readpermission($user_uid = "")
 }
 
 //取得客戶端ip位置
+/**
+ * @return bool
+ */
 function get_real_ip()
 {
     $ip = false;
@@ -77,6 +92,11 @@ function get_real_ip()
 }
 
 //陣列轉字串AND字串轉陣列
+/**
+ * @param string $conversion
+ * @param string $type
+ * @return mixed|string
+ */
 function phpconversion($conversion = "", $type = "")
 {
     if ($type == 'serialize') {     //陣列轉字串
@@ -88,6 +108,10 @@ function phpconversion($conversion = "", $type = "")
     return $conversion;
 }
 
+/**
+ * @param string $youtubeurl
+ * @return mixed
+ */
 function youtubeurl($youtubeurl = "")
 {
     //解析youtube網址?v值
@@ -99,6 +123,10 @@ function youtubeurl($youtubeurl = "")
 }
 
 //PHP斷行去HTML標籤
+/**
+ * @param string $notags
+ * @return null|string|string[]
+ */
 function phpstrip_tags($notags = '')
 {            //php去除段行
     $notags = strip_tags($notags);
@@ -112,6 +140,15 @@ function phpstrip_tags($notags = '')
 }
 
 //時間函數
+/**
+ * @param string $datevar
+ * @param string $type
+ * @param string $calculate
+ * @param string $m
+ * @param string $d
+ * @param string $y
+ * @return false|string
+ */
 function timedate($datevar = "", $type = "", $calculate = "", $m = "", $d = "", $y = "")
 {
     switch ($type) {
@@ -143,6 +180,11 @@ function timedate($datevar = "", $type = "", $calculate = "", $m = "", $d = "", 
 }
 
 //切割字串
+/**
+ * @param string $cutting
+ * @param string $sign
+ * @return array[]|false|string[]
+ */
 function cuttingfunction($cutting = "", $sign = "")
 {
     $cuttingfunction = preg_split("/{$sign}/", $cutting);
@@ -150,6 +192,10 @@ function cuttingfunction($cutting = "", $sign = "")
 }
 
 //擷取網址
+/**
+ * @param string $keywordid
+ * @return mixed
+ */
 function httphosturl($keywordid = "")
 {
     //取得網址後方變數
@@ -177,6 +223,11 @@ function httphosturl($keywordid = "")
 }
 
 //查詢資料表while全部數值
+/**
+ * @param string $dbneme
+ * @param string $where
+ * @return mixed
+ */
 function databasetablewhile($dbneme = "", $where = "")
 {
     global $xoopsDB;
@@ -191,6 +242,13 @@ function databasetablewhile($dbneme = "", $where = "")
 }
 
 //查詢資料表while全部數值有bar值
+/**
+ * @param string $dbneme
+ * @param string $where
+ * @param string $onepage
+ * @param string $allpage
+ * @return array
+ */
 function databasetablewhilebar($dbneme = "", $where = "", $onepage = "", $allpage = "")
 {
     global $xoopsDB;
@@ -215,6 +273,11 @@ function databasetablewhilebar($dbneme = "", $where = "", $onepage = "", $allpag
 }
 
 //查詢資料表單一筆數值
+/**
+ * @param string $dbneme
+ * @param string $where
+ * @return array|false
+ */
 function moduledb($dbneme = "", $where = "")
 {
     global $xoopsDB;
@@ -227,6 +290,11 @@ function moduledb($dbneme = "", $where = "")
 }
 
 //更新資料單一筆
+/**
+ * @param string $dbname
+ * @param string $set
+ * @return bool
+ */
 function update($dbname = "", $set = "")
 {
     //$set="set name='var' , name2='var2' where field='$field'";
@@ -237,6 +305,11 @@ function update($dbname = "", $set = "")
 }
 
 //新增一筆資料
+/**
+ * @param string $dbname
+ * @param string $values
+ * @return bool
+ */
 function insert($dbname = "", $values = "")
 {
     global $xoopsDB;
@@ -247,6 +320,10 @@ function insert($dbname = "", $values = "")
 }
 
 //狀態顯示
+/**
+ * @param string $envar
+ * @return string
+ */
 function enable($envar = "")
 {
     switch ($envar) {
@@ -263,6 +340,10 @@ function enable($envar = "")
 }
 
 //刪除資料
+/**
+ * @param string $where
+ * @param string $DBname
+ */
 function deletefunction($where = "", $DBname = "")
 {
     global $xoopsDB;
@@ -271,6 +352,9 @@ function deletefunction($where = "", $DBname = "")
 }
 
 //抓取TAD模組中的FB-ID
+/**
+ * @return mixed
+ */
 function tad_loginappid()
 {
     $modhandler        = xoops_getHandler('module');
@@ -282,6 +366,9 @@ function tad_loginappid()
 }
 
 //瀏覽裝置判斷
+/**
+ * @return false|int
+ */
 function check_mobile()
 {
     $regex_match = "/(nokia|ipod|blackberry|mobile|ipad|windows phone|iphone|android|motorola|^mot\-|softbank|foma|docomo|kddi|up\.browser|up\.link|";

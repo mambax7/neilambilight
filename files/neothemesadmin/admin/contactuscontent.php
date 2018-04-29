@@ -21,6 +21,10 @@ switch ($op) {
         $main = contactuscontent();
 }
 
+/**
+ * @param $cfid
+ * @return string
+ */
 function contactuscontent($cfid)
 {
     global $cfid, $xoopsModule;
@@ -97,6 +101,9 @@ function contactuscontent($cfid)
     return $divcenter;
 }
 
+/**
+ * @return string
+ */
 function replyupdate()
 {
     global $cfid;

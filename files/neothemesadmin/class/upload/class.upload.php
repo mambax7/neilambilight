@@ -1985,6 +1985,8 @@ class upload
 
     /**
      * Constructor, for PHP5+
+     * @param        $file
+     * @param string $lang
      */
     public function __construct($file, $lang = 'en_GB')
     {
@@ -2851,16 +2853,16 @@ class upload
      * If the output format is PNG, then we do it pixel per pixel to retain the alpha channel
      *
      * @access private
-     * @param  resource $dst_img Destination image
-     * @param  resource $src_img Overlay image
-     * @param  int      $dst_x   x-coordinate of destination point
-     * @param  int      $dst_y   y-coordinate of destination point
-     * @param  int      $src_x   x-coordinate of source point
-     * @param  int      $src_y   y-coordinate of source point
-     * @param  int      $src_w   Source width
-     * @param  int      $src_h   Source height
-     * @param  int      $pct     Optional percentage of the overlay, between 0 and 100 (default: 100)
-     * @return resource Destination image
+     * @param      $dst_im
+     * @param      $src_im
+     * @param  int $dst_x x-coordinate of destination point
+     * @param  int $dst_y y-coordinate of destination point
+     * @param  int $src_x x-coordinate of source point
+     * @param  int $src_y y-coordinate of source point
+     * @param  int $src_w Source width
+     * @param  int $src_h Source height
+     * @param  int $pct   Optional percentage of the overlay, between 0 and 100 (default: 100)
+     * @return bool Destination image
      */
     public function imagecopymergealpha(&$dst_im, &$src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h, $pct = 0)
     {
@@ -4877,6 +4879,8 @@ class upload
      * This function has been written by DHKold, and is used with permission of the author
      *
      * @access public
+     * @param $filename
+     * @return bool|resource
      */
     public function imagecreatefrombmp($filename)
     {
@@ -4973,6 +4977,9 @@ class upload
      * This function has been published on the PHP website, and can be used freely
      *
      * @access public
+     * @param        $im
+     * @param string $filename
+     * @return bool
      */
     public function imagebmp(&$im, $filename = "")
     {

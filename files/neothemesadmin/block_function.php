@@ -1,6 +1,11 @@
 <?php
 
 //order函數
+/**
+ * @param $radiogstyle
+ * @param $imgstyle
+ * @return string
+ */
 function orderfunction($radiogstyle, $imgstyle)
 {
     if ($radiogstyle == img) { //判斷按鈕是圖片還是文字
@@ -19,6 +24,10 @@ function orderfunction($radiogstyle, $imgstyle)
 }
 
 //target函數
+/**
+ * @param $target
+ * @return string
+ */
 function target($target)
 {
     switch ($target) {
@@ -34,6 +43,15 @@ function target($target)
 
 //按鈕函數
 //list($in,$intwo) = menufunction($sortyn,$modulesid,$variableid,$variableidarray,$modulesidarray,$moduleid);
+/**
+ * @param string $a
+ * @param string $b
+ * @param string $c
+ * @param string $d
+ * @param string $e
+ * @param string $f
+ * @return array
+ */
 function menufunction($a = '', $b = '', $c = '', $d = '', $e = '', $f = '')
 {
     switch ($b) {
@@ -221,6 +239,15 @@ function menufunction($a = '', $b = '', $c = '', $d = '', $e = '', $f = '')
 }
 
 //學生輔導
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function neilcounselingrecordfunction($c, $d, $a, $b, $f, $e)
 {
     //var_dump($e);exit;
@@ -247,6 +274,12 @@ function neilcounselingrecordfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tinyd0模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @return array
+ */
 function menutinyd0($c, $d, $a)
 {
     switch ($a) {
@@ -283,6 +316,12 @@ function menutinyd0($c, $d, $a)
 }
 
 //tinyd1模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @return array
+ */
 function menutinyd1($c, $d, $a)
 {
     switch ($a) {
@@ -312,6 +351,12 @@ function menutinyd1($c, $d, $a)
 }
 
 //tinyd2模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @return array
+ */
 function menutinyd2($c, $d, $a)
 {
     switch ($a) {
@@ -341,6 +386,15 @@ function menutinyd2($c, $d, $a)
 }
 
 //tad_lunch2模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_lunch2function($c, $d, $a, $b, $f, $e)
 {
 
@@ -377,6 +431,15 @@ function tad_lunch2function($c, $d, $a, $b, $f, $e)
 }
 
 //fileup模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function fileupfunction($c, $d, $a, $b, $f, $e)
 {
 
@@ -404,6 +467,15 @@ function fileupfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_web模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_webfunction($c, $d, $a, $b, $f, $e)
 {
 
@@ -431,6 +503,15 @@ function tad_webfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_uploader模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_uploaderfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -481,6 +562,15 @@ function tad_uploaderfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_link模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_linkfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -530,6 +620,15 @@ function tad_linkfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tadgallery模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tadgalleryfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -580,6 +679,15 @@ function tadgalleryfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_evaluation模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_evaluationfunction($c, $d, $a, $b, $f, $e)
 {
 
@@ -615,6 +723,15 @@ function tad_evaluationfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tadnews模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tadnewsfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -673,6 +790,15 @@ function tadnewsfunction($c, $d, $a, $b, $f, $e)
 
 //neilvideosvote模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function neilvideosvotefunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -737,6 +863,15 @@ function neilvideosvotefunction($c, $d, $a, $b, $f, $e)
 
 //tad_faq模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_faqfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -783,6 +918,15 @@ function tad_faqfunction($c, $d, $a, $b, $f, $e)
 
 //tad_form模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_formfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -824,6 +968,15 @@ function tad_formfunction($c, $d, $a, $b, $f, $e)
 
 //tad_honor模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_honorfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -861,6 +1014,15 @@ function tad_honorfunction($c, $d, $a, $b, $f, $e)
 
 //tad_idioms模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_idiomsfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -890,6 +1052,15 @@ function tad_idiomsfunction($c, $d, $a, $b, $f, $e)
 
 //tad_rss模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_rssfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -919,6 +1090,15 @@ function tad_rssfunction($c, $d, $a, $b, $f, $e)
 
 //tad_tv模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_tvfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -957,6 +1137,15 @@ function tad_tvfunction($c, $d, $a, $b, $f, $e)
 
 //tad_timeline模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_timelinefunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -995,6 +1184,15 @@ function tad_timelinefunction($c, $d, $a, $b, $f, $e)
 
 //tad_sitemap模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_sitemapfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1024,6 +1222,15 @@ function tad_sitemapfunction($c, $d, $a, $b, $f, $e)
 
 //tad_cal模組
 
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_calfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1061,6 +1268,15 @@ function tad_calfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_player模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_playerfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1110,6 +1326,15 @@ function tad_playerfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_repair模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_repairfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1169,6 +1394,15 @@ function tad_repairfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_book3模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_book3function($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1226,6 +1460,15 @@ function tad_book3function($c, $d, $a, $b, $f, $e)
 }
 
 //tad_meeting模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_meetingfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1261,6 +1504,15 @@ function tad_meetingfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_discuss模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_discussfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1322,6 +1574,15 @@ function tad_discussfunction($c, $d, $a, $b, $f, $e)
 }
 
 //tad_assignment模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function tad_assignmentfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;
@@ -1357,6 +1618,15 @@ function tad_assignmentfunction($c, $d, $a, $b, $f, $e)
 }
 
 //neilhonorlist模組
+/**
+ * @param $c
+ * @param $d
+ * @param $a
+ * @param $b
+ * @param $f
+ * @param $e
+ * @return array
+ */
 function neilhonorlistfunction($c, $d, $a, $b, $f, $e)
 {
     global $xoopsDB;

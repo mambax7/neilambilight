@@ -22,6 +22,10 @@ switch ($op) {
         $main = menu_form($nsn);
 }
 
+/**
+ * @param string $nsn
+ * @return string
+ */
 function menu_form($nsn = "")
 {
     global $xoopsDB, $xoopsModule;
@@ -135,6 +139,9 @@ function menu_form($nsn = "")
 }
 
 //儲存最後一次更新的modulesid
+/**
+ * @param string $keywordid
+ */
 function keyword_updatensn($keywordid = "")
 {
     global $xoopsDB;
@@ -166,6 +173,9 @@ function keyword_insert()
 }
 
 //編輯關鍵字
+/**
+ * @param string $nsn
+ */
 function keyword_updated($nsn = "")
 {
     global $xoopsDB;

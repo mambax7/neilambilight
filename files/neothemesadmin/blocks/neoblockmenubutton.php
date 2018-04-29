@@ -1,6 +1,10 @@
 <?php
 include_once XOOPS_ROOT_PATH . "/modules/neothemesadmin/block_function.php";
 
+/**
+ * @param $options
+ * @return mixed
+ */
 function neoblockmenubutton_block_show($options)
 {
     global $xoopsDB, $xoTheme, $xoopsModule;
@@ -200,6 +204,10 @@ function neoblockmenubutton_block_show($options)
 }
 
 //區塊編輯函式
+/**
+ * @param $options
+ * @return string
+ */
 function neoblockmenubutton_block_edit($options)
 {
     global $xoopsDB, $xoTheme;

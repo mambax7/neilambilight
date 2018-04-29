@@ -30,6 +30,9 @@ switch ($op) {
         $contactusform = contactusform();
 }
 
+/**
+ * @return mixed
+ */
 function contactusform()
 {
 

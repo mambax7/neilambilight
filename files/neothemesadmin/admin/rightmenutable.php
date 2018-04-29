@@ -26,6 +26,12 @@ switch ($op) {
         $main = rightmenutable($number, $nsn, $y);
 }
 
+/**
+ * @param $number
+ * @param $nsn
+ * @param $y
+ * @return string
+ */
 function rightmenutable($number, $nsn, $y)
 {
     if ($y == '1') {
@@ -124,6 +130,10 @@ function rightmenutable($number, $nsn, $y)
     return $form;
 }
 
+/**
+ * @param $a
+ * @param $nsn
+ */
 function insert_rightmenu($a, $nsn)
 {
     global $xoopsDB;

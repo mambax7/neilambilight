@@ -27,6 +27,13 @@ switch ($op) {
         $main = blockbitton($bid, $sid, $orderid, $radiogstyle);
 }
 
+/**
+ * @param $bid
+ * @param $sid
+ * @param $orderid
+ * @param $radiogstyle
+ * @return string
+ */
 function blockbitton($bid, $sid, $orderid, $radiogstyle)
 {
     $xoopsurl = XOOPS_URL;

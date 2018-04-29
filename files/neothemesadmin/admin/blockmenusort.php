@@ -22,6 +22,9 @@ switch ($op) {
         $main = blockmenusort();
 }
 
+/**
+ * @return string
+ */
 function blockmenusort()
 {
     $xoopsurl = XOOPS_URL;

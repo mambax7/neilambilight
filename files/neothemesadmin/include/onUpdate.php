@@ -3,6 +3,9 @@
 
 include "../class/themeset.php";
 
+/**
+ * @return bool
+ */
 function xoops_module_update_neothemesadmin()
 {
     include XOOPS_ROOT_PATH . '/modules/neothemesadmin/class/themesset/defaultltheme.php';
@@ -38,6 +41,9 @@ function xoops_module_update_neothemesadmin()
     return true;
 }
 
+/**
+ * @return bool
+ */
 function chk_chk1()
 {
     global $xoopsDB;
@@ -49,6 +55,9 @@ function chk_chk1()
     return true;
 }
 
+/**
+ * @return bool
+ */
 function go_update1()
 {
     global $xoopsDB;
@@ -66,6 +75,9 @@ function go_update1()
     return true;
 }*/
 
+/**
+ * @return bool
+ */
 function go_update2()
 {
     global $xoopsDB;
@@ -75,6 +87,9 @@ function go_update2()
     return true;
 }
 
+/**
+ * @return bool
+ */
 function go_update3()
 {
     global $xoopsDB;
@@ -85,6 +100,9 @@ function go_update3()
 }
 
 //新增neorightmenu資料表
+/**
+ * @return bool
+ */
 function chk_chk4()
 {
     global $xoopsDB;
@@ -110,6 +128,11 @@ function go_update4()
     $xoopsDB->queryF($sql);
 }
 
+/**
+ * @param $xoops_theme
+ * @param $theme_set_allowed
+ * @return bool
+ */
 function go_update5($xoops_theme, $theme_set_allowed)
 {
     global $xoopsDB;
@@ -136,6 +159,10 @@ function go_update5($xoops_theme, $theme_set_allowed)
     return true;
 }
 
+/**
+ * @param $xoops_theme
+ * @return bool
+ */
 function go_update6($xoops_theme)
 {
     //$xoops_theme = $GLOBALS['xoopsConfig']['theme_set'];
@@ -144,6 +171,10 @@ function go_update6($xoops_theme)
     return true;
 }
 
+/**
+ * @param $xoops_theme
+ * @return bool
+ */
 function go_update7($xoops_theme)
 {
     global $xoopsDB;
@@ -173,6 +204,10 @@ function go_update7($xoops_theme)
     return true;
 }
 
+/**
+ * @param $xoops_theme
+ * @return bool
+ */
 function go_update8($xoops_theme)
 {
     global $xoopsDB;
@@ -189,6 +224,9 @@ function go_update8($xoops_theme)
 }
 
 //新增neoblockmenusort資料表
+/**
+ * @return bool
+ */
 function chk_chk9()
 {
     global $xoopsDB;
@@ -214,6 +252,9 @@ function go_update9()
 }
 
 //新增neoblockmenubutton資料表
+/**
+ * @return bool
+ */
 function chk_chk10()
 {
     global $xoopsDB;
@@ -244,6 +285,9 @@ function go_update10()
 }
 
 //新增neocontactusform資料表
+/**
+ * @return bool
+ */
 function chk_chk11()
 {
     global $xoopsDB;
@@ -273,6 +317,9 @@ function go_update11()
     $xoopsDB->queryF($sql);
 }
 
+/**
+ * @return bool
+ */
 function go_update12()
 {
     global $xoopsDB;
@@ -300,6 +347,9 @@ function go_update12()
 
 //新增neoblockmenusort資料表
 
+/**
+ * @return bool
+ */
 function go_update13()
 {
     global $xoopsDB;
@@ -324,6 +374,9 @@ function go_update13()
     return true;
 }
 
+/**
+ * @return bool
+ */
 function go_update14()
 {
     $xoopsversion = preg_replace('/XOOPS /', '', XOOPS_VERSION);
@@ -334,6 +387,9 @@ function go_update14()
     return true;
 }
 
+/**
+ * @return bool
+ */
 function go_update15()
 {
     global $xoopsDB;
@@ -344,6 +400,9 @@ function go_update15()
     return true;
 }
 
+/**
+ * @return bool
+ */
 function go_update16()
 {
     global $xoopsDB;

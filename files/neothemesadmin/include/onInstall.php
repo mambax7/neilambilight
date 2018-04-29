@@ -1,4 +1,8 @@
 <?php
+/**
+ * @param $module
+ * @return bool
+ */
 function xoops_module_install_neothemesadmin(&$module)
 {
     global $xoopsDB;

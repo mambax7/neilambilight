@@ -57,6 +57,17 @@ switch ($op) {
         $main = confirmdeltable($nsn, $urlself, $deldb, $content, $manugroup, $c, $k, $imgid);
 }
 
+/**
+ * @param string $nsn
+ * @param string $urlself
+ * @param string $deldb
+ * @param string $content
+ * @param string $manugroup
+ * @param string $c
+ * @param string $k
+ * @param string $imgid
+ * @return string
+ */
 function confirmdeltable($nsn = "", $urlself = "", $deldb = "", $content = "", $manugroup = "", $c = "", $k = "", $imgid = "")
 {
     switch ($c) {

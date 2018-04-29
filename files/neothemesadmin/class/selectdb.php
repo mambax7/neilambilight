@@ -1,8 +1,21 @@
 <?php
 
 //查詢neothemesconfig資料表
+
+/**
+ * Class neothemesconfig
+ */
 class neothemesconfig
 {
+    /**
+     * @param $nsn
+     * @param $field
+     * @param $modulesid
+     * @param $mnsnid
+     * @param $fnsnid
+     * @param $menuid
+     * @return array
+     */
     public function publicselectdb1($nsn, $field, $modulesid, $mnsnid, $fnsnid, $menuid)
     {
         global $xoopsDB;
@@ -15,8 +28,23 @@ class neothemesconfig
 }
 
 //查詢neothemeskeyword資料表
+
+/**
+ * Class neothemeskeyword
+ */
 class neothemeskeyword
 {
+    /**
+     * @param $kset
+     * @param $nsn
+     * @param $keywordid
+     * @param $keywordcenter
+     * @param $wdescription
+     * @param $title
+     * @param $a
+     * @param $b
+     * @return array
+     */
     public function publicselectdb2($kset, $nsn, $keywordid, $keywordcenter, $wdescription, $title, $a, $b)
     {
         global $xoopsDB;
@@ -67,8 +95,21 @@ class neothemeskeyword
 
 //查詢neothemesmarquee資料表
 
+/**
+ * Class neothemesmarquee
+ */
 class neothemesmarquee
 {
+    /**
+     * @param $kset
+     * @param $nsn
+     * @param $number
+     * @param $content
+     * @param $url
+     * @param $target
+     * @param $post_date
+     * @return array
+     */
     public function publicselectdb3($kset, $nsn, $number, $content, $url, $target, $post_date)
     {
         global $xoopsDB;
@@ -91,8 +132,23 @@ class neothemesmarquee
 
 //查詢neothemesflash資料表
 
+/**
+ * Class neothemesflash
+ */
 class neothemesflash
 {
+    /**
+     * @param $kset
+     * @param $nsn
+     * @param $number
+     * @param $content
+     * @param $url
+     * @param $target
+     * @param $post_date
+     * @param $imgid
+     * @param $flashtext
+     * @return array
+     */
     public function publicselectdb4($kset, $nsn, $number, $content, $url, $target, $post_date, $imgid, $flashtext)
     {
         global $xoopsDB;
@@ -115,8 +171,27 @@ class neothemesflash
 
 //查詢neothemesmenu資料表
 
+/**
+ * Class neothemesmenu
+ */
 class neothemesmenu
 {
+    /**
+     * @param $kset
+     * @param $nsn
+     * @param $nnumber
+     * @param $master_slave
+     * @param $manugroup
+     * @param $content
+     * @param $url
+     * @param $target
+     * @param $post_date
+     * @param $a
+     * @param $b
+     * @param $menulimit
+     * @param $j
+     * @return array
+     */
     public function publicselectdb5($kset, $nsn, $nnumber, $master_slave, $manugroup, $content, $url, $target, $post_date, $a, $b, $menulimit, $j)
     {
         global $xoopsDB;
@@ -188,8 +263,19 @@ class neothemesmenu
 }
 
 //刪除確認頁面的select
+
+/**
+ * Class confirmdel
+ */
 class confirmdel
 {
+    /**
+     * @param $deldb
+     * @param $manugroup
+     * @param $k
+     * @param $nsn
+     * @return string
+     */
     public function publicselectdb6($deldb, $manugroup, $k, $nsn)
     {
         global $xoopsDB;

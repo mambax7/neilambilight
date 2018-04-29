@@ -1,4 +1,8 @@
 <?php
+/**
+ * @param string $fburl
+ * @return mixed|string
+ */
 function analyzefbid($fburl = "")
 {
 

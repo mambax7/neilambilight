@@ -1779,6 +1779,11 @@ $data="error";*/
 
 }
 
+/**
+ * @param string $sort
+ * @param string $oid
+ * @return string
+ */
 function optionbox($sort = "", $oid = "")
 {
     foreach ($sort as $key => $val) {

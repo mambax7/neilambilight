@@ -2,6 +2,10 @@
 
 include_once XOOPS_ROOT_PATH . "/modules/neothemesadmin/block_function.php";
 include_once XOOPS_ROOT_PATH . "/modules/neothemesadmin/glyphicon.php";
+/**
+ * @param $options
+ * @return array
+ */
 function neoblockmenulayers_block_show($options)
 {
     global $xoopsDB, $xoTheme, $xoopsModule;
@@ -137,6 +141,10 @@ function neoblockmenulayers_block_show($options)
     return $category;
 }
 
+/**
+ * @param $options
+ * @return string
+ */
 function neoblockmenulayers_block_edit($options)
 {
     global $xoopsDB, $xoTheme;

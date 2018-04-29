@@ -23,6 +23,9 @@ switch ($op) {
         $main = jointadtools();
 }
 
+/**
+ * @return string
+ */
 function jointadtools()
 {
     global $xoopsDB;
@@ -61,6 +64,9 @@ function jointadtools()
     return $divcenter;
 }
 
+/**
+ * @param $op1
+ */
 function snidup($op1)
 {
     global $xoopsDB;

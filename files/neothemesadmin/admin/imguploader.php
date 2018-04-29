@@ -1,4 +1,13 @@
 <?php
+/**
+ * @param string $up_id0
+ * @param string $width0
+ * @param string $height0
+ * @param string $imageconvert
+ * @param string $up_id1
+ * @param string $width1
+ * @param string $height1
+ */
 function save_pic($up_id0 = "", $width0 = "", $height0 = "", $imageconvert = "", $up_id1 = "", $width1 = "", $height1 = "")
 {
     include_once XOOPS_ROOT_PATH . "/modules/neothemesadmin/class/upload/class.upload.php";

@@ -1,11 +1,17 @@
 <?php
 
 //通知管理員有新的聯絡我們
-function contactusadminmail($cfid="", $usermane="", $getGroupid="", $timedate="")
+/**
+ * @param string $cfid
+ * @param string $usermane
+ * @param string $getGroupid
+ * @param string $timedate
+ */
+function contactusadminmail($cfid = "", $usermane = "", $getGroupid = "", $timedate = "")
 {
-    global $xoopsConfig,$xoopsMailer;
-    $_url = XOOPS_URL . "/modules/neothemesadmin/admin/contactuscontent.php?cfid=".$cfid."";
-    $xoopsMailer = & xoops_getMailer();
+    global $xoopsConfig, $xoopsMailer;
+    $_url        = XOOPS_URL . "/modules/neothemesadmin/admin/contactuscontent.php?cfid=" . $cfid . "";
+    $xoopsMailer = &xoops_getMailer();
     $xoopsMailer->addHeaders("MIME-Version: 1.0");
     $xoopsMailer->useMail();
     $member_handler =& xoops_getHandler('member');
@@ -18,13 +24,19 @@ function contactusadminmail($cfid="", $usermane="", $getGroupid="", $timedate=""
     //define("_MA_MAIL04","%s-收到%s聯絡我們來函,請管理員前往觀看回覆\n\r網址：%s\n\r%s");
     $xoopsMailer->send();
 }
-    
+
 //回覆聯絡我們
-function contactforreplymail($usermail="", $text="", $usermane="", $timedate="")
+/**
+ * @param string $usermail
+ * @param string $text
+ * @param string $usermane
+ * @param string $timedate
+ */
+function contactforreplymail($usermail = "", $text = "", $usermane = "", $timedate = "")
 {
-    global $xoopsConfig,$xoopsMailer;
+    global $xoopsConfig, $xoopsMailer;
     //  $_url = XOOPS_URL . "/neothemesadmin/admin/contactuscontent.php?cfid=".$cfid."";
-    $xoopsMailer = & xoops_getMailer();
+    $xoopsMailer = &xoops_getMailer();
     $xoopsMailer->addHeaders("MIME-Version: 1.0");
     $xoopsMailer->useMail();
     $xoopsMailer->setToEmails($usermail);

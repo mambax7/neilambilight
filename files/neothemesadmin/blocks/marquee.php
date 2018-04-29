@@ -11,6 +11,9 @@ $fieldsplit = cuttingfunction($cutting = $neothemesconfig['field'], $sign = ";")
 $marquee = $fieldsplit[14] == 0 ? custom() : modulescontent();  // 0自訂1播放模組內容
 
 //播放模組跑馬燈內容
+/**
+ * @return mixed
+ */
 function modulescontent()
 {
     //開啟neothemesconfig資料表
@@ -97,6 +100,9 @@ function modulescontent()
 }
 
 //自訂跑馬燈內容
+/**
+ * @return mixed
+ */
 function custom()
 {
     //開啟跑馬燈資料表
@@ -117,6 +123,9 @@ function custom()
 }
 
 //預設空值顯示內容
+/**
+ * @return mixed
+ */
 function defaultmarquee()
 {
     $marqueetext[$key]['title']  = _MB_NEODWADMIN_TITLE;

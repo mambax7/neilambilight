@@ -1,6 +1,10 @@
 <?php
 
 //分頁物件
+
+/**
+ * Class PageBar
+ */
 class PageBar
 {
     // 目前所在頁碼
@@ -32,6 +36,12 @@ class PageBar
     public $act_color = "#990000";
     public $query_str; // 存放 URL 參數列
 
+    /**
+     * PageBar constructor.
+     * @param $total
+     * @param $limit
+     * @param $page_limit
+     */
     public function __construct($total, $limit, $page_limit)
     {
         $mydirname = basename(dirname(__FILE__));
@@ -61,6 +71,11 @@ class PageBar
     }
 
     //初始設定
+
+    /**
+     * @param string $active_color
+     * @param string $buttons
+     */
     public function set($active_color = "none", $buttons = "none")
     {
         if ($active_color != "none") {
@@ -79,6 +94,11 @@ class PageBar
     }
 
     // 處理 URL 的參數，過濾會使用到的變數名稱
+
+    /**
+     * @param $used_query
+     * @return string
+     */
     public function processQuery($used_query)
     {
         // 將 URL 字串分離成二維陣列
@@ -114,6 +134,10 @@ class PageBar
     }
 
     // 製作 sql 的 query 字串 (LIMIT)
+
+    /**
+     * @return string
+     */
     public function sqlQuery()
     {
         $row_start = ($this->current * $this->limit) - $this->limit;
@@ -122,6 +146,11 @@ class PageBar
     }
 
     // 製作 bar
+
+    /**
+     * @param string $url_page
+     * @return mixed
+     */
     public function makeBar($url_page = "none")
     {
         if ($url_page != "none") {
