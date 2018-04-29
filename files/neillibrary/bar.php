@@ -33,7 +33,7 @@ class PageBar
     public $act_color = "#990000";
     public $query_str; // 存放 URL 參數列
 
-    public function PageBar($total, $limit, $page_limit)
+    public function __construct($total, $limit, $page_limit)
     {
         $mydirname = basename(dirname(__FILE__)) ;
         /*	$this->prev = "<img src='".XOOPS_URL."/modules/{$mydirname}/images/1leftarrow.gif' alt='"._BP_BACK_PAGE."' align='absmiddle' hspace=3>"._BP_BACK_PAGE;
