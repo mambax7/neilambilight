@@ -65,7 +65,7 @@
 </form>
 </div>
 
-<div title="<{$smarty.const._THEME_SEARCCH01}>" id="slowdivbotton2" class="eachclass"></div>
+<div title="<{$smarty.const._THEME_SEARCCH00}>" id="slowdivbotton2" class="eachclass"></div>
 <{includeq file="$theme_name/playerimgtpl.tpl"}> 
 
 </header>

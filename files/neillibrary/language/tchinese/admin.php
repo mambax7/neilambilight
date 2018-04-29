@@ -1,8 +1,8 @@
 <?php
-//è¼‰å…¥å…±åŒçš„èªç³»
+//¸ü¤J¦@¦Pªº»y¨t
 include_once "../../tadtools/language/{$xoopsConfig['language']}/admin_common.php";
-//æç¤ºè¼‰å…¥TadTools
-define("_TAD_NEED_TADTOOLS"," éœ€è¦ tadtools æ¨¡çµ„ï¼Œå¯è‡³<a href='http://www.tad0616.net/modules/tad_uploader/index.php?of_cat_sn=50' target='_blank'>Tadæ•™æç¶²</a>ä¸‹è¼‰ã€‚");
+//´£¥Ü¸ü¤JTadTools
+define("_TAD_NEED_TADTOOLS"," »İ­n tadtools ¼Ò²Õ¡A¥i¦Ü<a href='http://www.tad0616.net/modules/tad_uploader/index.php?of_cat_sn=50' target='_blank'>Tad±Ğ§÷ºô</a>¤U¸ü¡C");
 //define("_MA_XXX","");
 
 ?>

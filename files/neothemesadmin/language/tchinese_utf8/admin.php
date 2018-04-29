@@ -90,6 +90,7 @@ define("_MA_NEODWADMIN_CONTACTUS","輸入聯絡我們按鈕網址(可填E-MAIL)"
 define("_MA_NEODWADMIN_CONTACTUSNY","是否啟用聯絡我們按鈕功能");   
 define("_MA_NEODWADMIN_WEBSITEZOOM","是否啟用網站隨電腦解析度自動放大功能(解析度大於1440時會自動放大)");   
 define("_MA_NEODWADMIN_XOOPSAD","是否啟用Xoops內建廣告功能");   
+
 /*===========2012717新增=====================*/
 define("_MA_NEODWADMIN_THEMESCOLOR", "選擇佈景的顏色");
 define("_MA_NEODWADMIN_THEMESCOLORBLUE", "藍色版");
@@ -100,7 +101,6 @@ define("_MA_NEODWADMIN_ORANGEEDITION", "橘色版");
 define("_MA_NEODWADMIN_ENABLEFLASH", "是否啟用JS播放器");
 define("_MA_NEODWADMIN_MINITHEMES", "是否啟用行動裝置minithemes佈景的自動切換功能!");
 define("_MA_NEODWADMIN_RIGHTMENUSTYLE", "選擇右上方網站選單的顯示方式");
-
 
 //keywordmeta.php
 define("_MA_NEODWADMIN_OFALLPAGES","全體頁面");  
@@ -127,6 +127,7 @@ define("_MA_NEODWADMIN_EDITKEYWORDCONFIGURATION","編輯關鍵字配置模組");
 define("_MA_NEODWADMIN_ENTERKEYWORDS","輸入關鍵字");  
 define("_MA_NEODWADMIN_ENTERKEYWORDS3","目前關鍵字模組頁面");  
 define("_MA_NEODWADMIN_ENTERKEYWORDS2","關鍵字與關鍵字之間請用英文小寫,號區隔,例如:關鍵字A,關鍵字B,佈景前端會以標籤方式帶變數呈現。");  
+
 define("_MA_NEODWADMIN_ENTERKEYWORDDESCRIPTION","輸入關鍵字說明");   
 define("_MA_NEODWADMIN_CONFIGURATIONSETTINGS","<h4>關鍵字配置設定</h4>");  
 define("_MA_NEODWADMIN_METATITLE","輸入最主力關鍵字一組");  
@@ -278,6 +279,14 @@ define("_MA_NEODWADMIN_UPLOADSUCCESSFUL","上傳成功！");
 define("_MA_NEODWADMIN_FLASHTHEFILETHEFORMAT","圖檔格式：");  
 define("_MA_NEODWADMIN_FLASHIMAGEFILESIZE","圖檔大小：");  
 
+//menu.php
+define("_MA_NEODWADMIN_MANAGEMENTHOME","Home");  
+define("_MA_NEODWADMIN_SCENESETTING","Scene setting");  
+define("_MA_NEODWADMIN_KEYWORDMANAGEMENTA","Keyword admin");  
+define("_MA_NEODWADMIN_MARQUEEMANAGEMENTA","Marquee admin");  
+define("_MA_NEODWADMIN_FLASHIMAGEMANAGEMENT","Flash admin");  
+define("_MA_NEODWADMIN_SITEMENUMANAGEMENT","menu admin");  
+
 //分頁
 define("_BP_BACK_PAGE","上一頁");
 define("_BP_NEXT_PAGE","下一頁");
@@ -310,4 +319,3 @@ define("_MA_NEODWADMIN_BUTTON","按鈕");
 define("_MA_NEODWADMIN_SENT","送出");   
 define("_MA_WATCHTHECONTENT","觀看詳細內容");   
 define("_MA_CHOOSECATEGORY","請選擇分類"); 
-?>
