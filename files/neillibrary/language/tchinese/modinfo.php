@@ -1,7 +1,6 @@
 <?php
-//¸ü¤J¦@¦Pªº»y¨t
-include_once XOOPS_ROOT_PATH."/modules/tadtools/language/{$xoopsConfig['language']}/modinfo_common.php";
+//è¼‰å…¥å…±åŒçš„èªžç³»
+include_once XOOPS_ROOT_PATH . "/modules/tadtools/language/{$xoopsConfig['language']}/modinfo_common.php";
 
-//³]©wÀÉ»y¨t
+//è¨­å®šæª”èªžç³»
 //define('_MI_XXX' , '');
-?>

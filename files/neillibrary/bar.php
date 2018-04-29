@@ -1,6 +1,5 @@
 <?php
 
-    
 //分頁物件
 class PageBar
 {
@@ -22,7 +21,7 @@ class PageBar
     public $next_layer = ' ';
     public $first;
     public $last;
-    public $bottons = array();
+    public $bottons    = array();
     // 要使用的 URL 頁數參數名？
     public $url_page = "g2p";
     // 要使用的 URL 讀取時間參數名？
@@ -35,33 +34,30 @@ class PageBar
 
     public function __construct($total, $limit, $page_limit)
     {
-        $mydirname = basename(dirname(__FILE__)) ;
+        $mydirname = basename(dirname(__FILE__));
         /*	$this->prev = "<img src='".XOOPS_URL."/modules/{$mydirname}/images/1leftarrow.gif' alt='"._BP_BACK_PAGE."' align='absmiddle' hspace=3>"._BP_BACK_PAGE;
             $this->next = "<img src='".XOOPS_URL."/modules/{$mydirname}/images/1rightarrow.gif' alt='"._BP_NEXT_PAGE."' align='absmiddle' hspace=3>"._BP_NEXT_PAGE;
             $this->first = "<img src='".XOOPS_URL."/modules/{$mydirname}/images/2leftarrow.gif' alt='"._BP_FIRST_PAGE."' align='absmiddle' hspace=3>"._BP_FIRST_PAGE;
             $this->last = "<img src='".XOOPS_URL."/modules/{$mydirname}/images/2rightarrow.gif' alt='"._BP_LAST_PAGE."' align='absmiddle' hspace=3>"._BP_LAST_PAGE;  */
 
-        $this->prev = _BP_BACK_PAGE;
-        $this->next = _BP_NEXT_PAGE;
-        $this->first = "<img src='".XOOPS_URL."/modules/{$mydirname}/images/2leftarrow.gif' alt='"._BP_FIRST_PAGE."' align='absmiddle' hspace=3>"._BP_FIRST_PAGE;
-        $this->last = "<img src='".XOOPS_URL."/modules/{$mydirname}/images/2rightarrow.gif' alt='"._BP_LAST_PAGE."' align='absmiddle' hspace=3>"._BP_LAST_PAGE;
+        $this->prev  = _BP_BACK_PAGE;
+        $this->next  = _BP_NEXT_PAGE;
+        $this->first = "<img src='" . XOOPS_URL . "/modules/{$mydirname}/images/2leftarrow.gif' alt='" . _BP_FIRST_PAGE . "' align='absmiddle' hspace=3>" . _BP_FIRST_PAGE;
+        $this->last  = "<img src='" . XOOPS_URL . "/modules/{$mydirname}/images/2rightarrow.gif' alt='" . _BP_LAST_PAGE . "' align='absmiddle' hspace=3>" . _BP_LAST_PAGE;
 
-
-        $this->limit = $limit;
-        $this->total = $total;
+        $this->limit  = $limit;
+        $this->total  = $total;
         $this->pLimit = $page_limit;
     }
 
     public function init()
     {
         $this->used_query = array($this->url_page, $this->url_loadtime);
-        $this->query_str = $this->processQuery($this->used_query);
-        $this->glue = ($this->query_str == "")?'?':
-        '&';
-        $this->current = (isset($_GET["$this->url_page"]))? $_GET["$this->url_page"]:
-        1;
-        $this->pTotal = ceil($this->total / $this->limit);
-        $this->pCurrent = ceil($this->current / $this->pLimit);
+        $this->query_str  = $this->processQuery($this->used_query);
+        $this->glue       = ($this->query_str == "") ? '?' : '&';
+        $this->current    = (isset($_GET["$this->url_page"])) ? $_GET["$this->url_page"] : 1;
+        $this->pTotal     = ceil($this->total / $this->limit);
+        $this->pCurrent   = ceil($this->current / $this->pLimit);
     }
 
     //初始設定
@@ -72,13 +68,13 @@ class PageBar
         }
 
         if ($buttons != "none") {
-            $this->buttons = $buttons;
-            $this->prev = $this->buttons['prev'];
-            $this->next = $this->buttons['next'];
+            $this->buttons    = $buttons;
+            $this->prev       = $this->buttons['prev'];
+            $this->next       = $this->buttons['next'];
             $this->prev_layer = $this->buttons['prev_layer'];
             $this->next_layer = $this->buttons['next_layer'];
-            $this->first = $this->buttons['first'];
-            $this->last = $this->buttons['last'];
+            $this->first      = $this->buttons['first'];
+            $this->last       = $this->buttons['last'];
         }
     }
 
@@ -108,11 +104,10 @@ class PageBar
         // 合併為一完整的 URL 字串
         $processed_query = "";
         for ($i = 0; $i < count($vars); $i++) {
-            $glue = ($processed_query == "")?'?':
-            '&';
+            $glue = ($processed_query == "") ? '?' : '&';
             // 開頭第一個是 '?' 其餘的才是 '&'
             if ($vars[$i] != "") {
-                $processed_query .= $glue.$vars[$i];
+                $processed_query .= $glue . $vars[$i];
             }
         }
         return $processed_query;
@@ -126,7 +121,6 @@ class PageBar
         return $sql_query;
     }
 
-
     // 製作 bar
     public function makeBar($url_page = "none")
     {
@@ -136,7 +130,7 @@ class PageBar
         $this->init();
 
         // 取得目前時間
-        $loadtime = '&loadtime='.time();
+        $loadtime = '&loadtime=' . time();
 
         // 取得目前頁框(層)的第一個頁數啟始值，如 6 7 8 9 10 = 6
         $i = ($this->pCurrent * $this->pLimit) - ($this->pLimit - 1);
@@ -155,46 +149,46 @@ class PageBar
 
         // 往前跳一頁
         if ($this->current <= 1) {
-            $bar_left = " <li><a href='#no'>{$this->prev}</a> </li>";
+            $bar_left  = " <li><a href='#no'>{$this->prev}</a> </li>";
             $bar_first = " {$this->first} ";
         } else {
-            $i = $this->current-1;
-            $bar_left = "<li> <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='"._BP_BACK_PAGE."'>{$this->prev}</a></li> ";
-            $bar_first = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}=1{$loadtime}' title='"._BP_FIRST_PAGE."'>{$this->first}</a> ";
+            $i         = $this->current - 1;
+            $bar_left  = "<li> <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='" . _BP_BACK_PAGE . "'>{$this->prev}</a></li> ";
+            $bar_first = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}=1{$loadtime}' title='" . _BP_FIRST_PAGE . "'>{$this->first}</a> ";
         }
 
         // 往後跳一頁
         if ($this->current >= $this->pTotal) {
             $bar_right = " <li><a href='#no'>{$this->next}</a></li> ";
-            $bar_last = " {$this->last} ";
+            $bar_last  = " {$this->last} ";
         } else {
-            $i = $this->current + 1;
-            $bar_right = " <li><a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='"._BP_NEXT_PAGE."'>{$this->next}</a></li> ";
-            $bar_last = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$this->pTotal}{$loadtime}' title='"._BP_LAST_PAGE."'>{$this->last}</a> ";
+            $i         = $this->current + 1;
+            $bar_right = " <li><a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='" . _BP_NEXT_PAGE . "'>{$this->next}</a></li> ";
+            $bar_last  = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$this->pTotal}{$loadtime}' title='" . _BP_LAST_PAGE . "'>{$this->last}</a> ";
         }
 
         // 往前跳一整個頁框(層)
         if (($this->current - $this->pLimit) < 1) {
             $bar_l = " {$this->prev_layer} ";
         } else {
-            $i = $this->current - $this->pLimit;
-            $bar_l = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='".sprintf($this->pLimit, _BP_GO_BACK_PAGE)."'>{$this->prev_layer}</a> ";
+            $i     = $this->current - $this->pLimit;
+            $bar_l = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='" . sprintf($this->pLimit, _BP_GO_BACK_PAGE) . "'>{$this->prev_layer}</a> ";
         }
 
         //往後跳一整個頁框(層)
         if (($this->current + $this->pLimit) > $this->pTotal) {
             $bar_r = " {$this->next_layer} ";
         } else {
-            $i = $this->current + $this->pLimit;
-            $bar_r = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='".sprintf($this->pLimit, _BP_GO_NEXT_PAGE)."'>{$this->next_layer}</a> ";
+            $i     = $this->current + $this->pLimit;
+            $bar_r = " <a href='{$_SERVER['PHP_SELF']}{$this->query_str}{$this->glue}{$this->url_page}={$i}{$loadtime}' title='" . sprintf($this->pLimit, _BP_GO_NEXT_PAGE) . "'>{$this->next_layer}</a> ";
         }
 
         $page_bar['center'] = $bar_center;
         //	$page_bar['left'] = $bar_first . $bar_l . $bar_left;
         //	$page_bar['right'] = $bar_right . $bar_r . $bar_last;
-        $page_bar['left'] =   $bar_left;
-        $page_bar['right'] = $bar_right ;
-    
+        $page_bar['left']  = $bar_left;
+        $page_bar['right'] = $bar_right;
+
         //	$page_bar['current'] = $this->current;
         //	$page_bar['total'] = $this->pTotal;
         $page_bar['sql'] = $this->sqlQuery();
