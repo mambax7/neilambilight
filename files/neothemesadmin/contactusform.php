@@ -138,4 +138,3 @@ $xoopsTpl->assign("xoops_pagetitle", _MD_TITLEM) ;
 
 
 include_once XOOPS_ROOT_PATH.'/footer.php';
-?> 

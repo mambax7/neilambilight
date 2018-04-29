@@ -117,18 +117,6 @@ function go_update4()
     $xoopsDB->queryF($sql);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 function go_update5($xoops_theme, $theme_set_allowed)
 {
     global $xoopsDB;
@@ -433,12 +421,4 @@ function go_update16()
     return true;
 }
 
-
-
-?>
-
-
-	
-
-	
 
