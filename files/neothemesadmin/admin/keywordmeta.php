@@ -1,52 +1,50 @@
-<?php  
+<?php 
 
 
 include 'header.php'; //XOOPS檔頭
-include "../function.php";	
+include "../function.php";
 //引入CSS
-include "tplthemescss.php";	
+include "tplthemescss.php";
 
 
 
 $table=keyword_table();
 
-function keyword_table(){
-global $xoopsModule;
-//讀取neothemesconfig資料表
-//引入模組DB函數-初始化設定
-$dbneme="neothemesconfig";
-$where=" ";
-$neothemesconfig=moduledb($dbneme,$where);
+function keyword_table()
+{
+    global $xoopsModule;
+    //讀取neothemesconfig資料表
+    //引入模組DB函數-初始化設定
+    $dbneme="neothemesconfig";
+    $where=" ";
+    $neothemesconfig=moduledb($dbneme, $where);
 
-//讀取neothemeskeyword資料表
+    //讀取neothemeskeyword資料表
 
-$dbneme="neothemeskeyword";
-$where=" order by  nsn DESC";
-$keyword=databasetablewhile($dbneme,$where);
-foreach($keyword as $key=> $val){
+    $dbneme="neothemeskeyword";
+    $where=" order by  nsn DESC";
+    $keyword=databasetablewhile($dbneme, $where);
+    foreach ($keyword as $key=> $val) {
+        if ($neothemesconfig['modulesid']==$keyword[$key]['keywordid']) {
+            $classtrue='focus';
+        }
 
-if($neothemesconfig['modulesid']==$keyword[$key]['keywordid']){
-$classtrue='focus';
-}
+        //模組ID讀取模組名稱
+        //$keywordidname=modulesdb($dirname=$keyword[$key]['keywordid']);
 
-//模組ID讀取模組名稱
-//$keywordidname=modulesdb($dirname=$keyword[$key]['keywordid']);  
-
-//引入模組DB函數-初始化設定
-$dbneme="modules";
-$where=" where `dirname` = '".$keyword[$key]['keywordid']."'";
-$keywordidname=moduledb($dbneme,$where);
+        //引入模組DB函數-初始化設定
+        $dbneme="modules";
+        $where=" where `dirname` = '".$keyword[$key]['keywordid']."'";
+        $keywordidname=moduledb($dbneme, $where);
 
 
-if($keyword[$key]['keywordid']==modules){
-	
-$keywordidname['name']=_MA_NEODWADMIN_DISPLAYALLPAGESKEYWORD;
-}	
-if($keyword[$key]['keywordid']==system){
-
-$keywordidname['name']=_MA_NEODWADMIN_DISPLAYHOMEKEYWORD;
-}
-$tablecenter.="
+        if ($keyword[$key]['keywordid']==modules) {
+            $keywordidname['name']=_MA_NEODWADMIN_DISPLAYALLPAGESKEYWORD;
+        }
+        if ($keyword[$key]['keywordid']==system) {
+            $keywordidname['name']=_MA_NEODWADMIN_DISPLAYHOMEKEYWORD;
+        }
+        $tablecenter.="
    <tr id='deletetr{$key}' class='".$classtrue."'>
         <td >".$keyword[$key]['nsn']."</td>
         <td >".$keyword[$key]['keywordid']."(".$keywordidname['name'].")</td>
@@ -56,11 +54,11 @@ $tablecenter.="
                 <a  id='deletebotton{$key}' class='btn btn-default active deleteeach'  mane='1,".$keyword[$key]['nsn'].",".$keywordidname['name'].","._MA_AJAXDESCRIPTION."'  href='#NO'>"._MA_NEODWADMIN_DELETEA."</a></td>
       </tr>
 ";
-  unset($classtrue);	  
-}
+        unset($classtrue);
+    }
 
 
-$table="
+    $table="
 <div class='container'>
    <div class='page-header'>
   <h2>"._MA_KEYWORDMETAPHP01."<small> &nbsp;Keyword page list</small>&nbsp;&nbsp; <a class='btn btn-primary active'  href='".XOOPS_URL."/modules/".$xoopsModule->getVar("dirname")."/admin/newkeyword.php'' >"._MA_NEODWADMIN_ADDKEYWORD."</a></h2>
@@ -88,7 +86,7 @@ $table="
     </div>";
 
 
-return $table;
+    return $table;
 }
 
 loadModuleAdminMenu(2);
@@ -97,6 +95,4 @@ loadModuleAdminMenu(2);
 
 echo $table;
 
-include "footer.php"; //XOOPS檔尾	
-	
-	?>
+include "footer.php"; //XOOPS檔尾

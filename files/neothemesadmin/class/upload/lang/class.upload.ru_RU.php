@@ -30,7 +30,7 @@
  * Class upload Russian translation
  *
  * @version   0.25
- * @codepage  UTF-8 
+ * @codepage  UTF-8
  * @author    Chup (chupzzz@ya.ru)
  * @license   http://opensource.org/licenses/gpl-license.php GNU Public License
  * @copyright Free to change
@@ -80,6 +80,4 @@
     $translation['file_create']                 = '%s не поддерживается.';
     $translation['no_conversion_type']          = 'Тип конверсии не указан.';
     $translation['copy_failed']                 = 'Ошибка копирования файла на сервер. Команда copy() выполнена с ошибкой.';
-    $translation['reading_failed']              = 'Ошибка чтения файла.';   
-        
-?>
+    $translation['reading_failed']              = 'Ошибка чтения файла.';

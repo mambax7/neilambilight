@@ -33,7 +33,7 @@
  * @version    0.25
  * @author     Paolo Iulita (paolo.iulita@gmail.com)
  * @license    http://opensource.org/licenses/gpl-license.php GNU Public License
- * @copyright  Paolo Iulita 
+ * @copyright  Paolo Iulita
  * @package    cmf
  * @subpackage external
  */
@@ -80,6 +80,4 @@
     $translation['file_create']                 = '%s: nessuna creazione da questo supporto.';
     $translation['no_conversion_type']          = 'Non e stata definito il tipo di conversione.';
     $translation['copy_failed']                 = 'Errore durante la copia del file sul server. copy() fallito.';
-    $translation['reading_failed']              = 'Errore nella lettura del file.';   
-        
-?>
+    $translation['reading_failed']              = 'Errore nella lettura del file.';

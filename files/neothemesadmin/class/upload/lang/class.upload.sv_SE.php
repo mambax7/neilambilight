@@ -79,6 +79,4 @@
     $translation['file_create']                 = 'Inget stöd för skapandet av %s.';
     $translation['no_conversion_type']          = 'Ingen förvandlings typ bestämd.';
     $translation['copy_failed']                 = 'Fel vid kopieringen utav filen. copy() misslyckades.';
-    $translation['reading_failed']              = 'Fel vid inläsningen utav filen.';   
-        
-?>
+    $translation['reading_failed']              = 'Fel vid inläsningen utav filen.';

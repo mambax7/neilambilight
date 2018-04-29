@@ -2,11 +2,11 @@
 /*
 function xoops_module_uninstall_模組目錄(&$module) {
   GLOBAL $xoopsDB;
-	$date=date("Ymd");
+    $date=date("Ymd");
 
- 	rename(XOOPS_ROOT_PATH."/uploads/模組目錄",XOOPS_ROOT_PATH."/uploads/模組目錄_bak_{$date}");
+    rename(XOOPS_ROOT_PATH."/uploads/模組目錄",XOOPS_ROOT_PATH."/uploads/模組目錄_bak_{$date}");
 
-	return true;
+    return true;
 }
 
 
@@ -31,25 +31,24 @@ function delete_directory($dirname) {
 
 //拷貝目錄
 function full_copy( $source="", $target=""){
-	if ( is_dir( $source ) ){
-		@mkdir( $target );
-		$d = dir( $source );
-		while ( FALSE !== ( $entry = $d->read() ) ){
-			if ( $entry == '.' || $entry == '..' ){
-				continue;
-			}
+    if ( is_dir( $source ) ){
+        @mkdir( $target );
+        $d = dir( $source );
+        while ( FALSE !== ( $entry = $d->read() ) ){
+            if ( $entry == '.' || $entry == '..' ){
+                continue;
+            }
 
-			$Entry = $source . '/' . $entry;
-			if ( is_dir( $Entry ) )	{
-				full_copy( $Entry, $target . '/' . $entry );
-				continue;
-			}
-			copy( $Entry, $target . '/' . $entry );
-		}
-		$d->close();
-	}else{
-		copy( $source, $target );
-	}
+            $Entry = $source . '/' . $entry;
+            if ( is_dir( $Entry ) )	{
+                full_copy( $Entry, $target . '/' . $entry );
+                continue;
+            }
+            copy( $Entry, $target . '/' . $entry );
+        }
+        $d->close();
+    }else{
+        copy( $source, $target );
+    }
 }
 */
-?>

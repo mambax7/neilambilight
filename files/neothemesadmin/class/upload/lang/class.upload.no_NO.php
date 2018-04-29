@@ -33,7 +33,7 @@
  * @version   0.25
  * @author    Trond Torkildsen (mymail@ttmin.net)
  * @license   http://opensource.org/licenses/gpl-license.php GNU Public License
- * @copyright Trond Torkildsen 
+ * @copyright Trond Torkildsen
  * @package   cmf
  * @subpackage external
  */
@@ -80,6 +80,4 @@
     $translation['file_create']                 = 'Oppretting av filen %s støttes ikke.';
     $translation['no_conversion_type']          = 'Konverterings-type er ikke satt.';
     $translation['copy_failed']                 = 'Det oppsto en feil ved filkopieringen på serveren. copy() feilet.';
-    $translation['reading_failed']              = 'Det oppsto en feil ved lesing av filen.'; 
-     
-?>
+    $translation['reading_failed']              = 'Det oppsto en feil ved lesing av filen.';

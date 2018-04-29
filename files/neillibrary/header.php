@@ -9,12 +9,11 @@ $isAdmin=false;
 if ($xoopsUser) {
     $module_id = $xoopsModule->getVar('mid');
     $isAdmin=$xoopsUser->isAdmin($module_id);
-    $user_uid=$xoopsUser->getVar('uid');  
+    $user_uid=$xoopsUser->getVar('uid');
 }
 
 //前台選單
 $interface_menu[_TAD_TO_MOD]="index.php";           //回模組首頁
-if($isAdmin){
-  $interface_menu[_TAD_TO_ADMIN]="admin/main.php";  //後台模組管理
+if ($isAdmin) {
+    $interface_menu[_TAD_TO_ADMIN]="admin/main.php";  //後台模組管理
 }
-?>

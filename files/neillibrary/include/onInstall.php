@@ -2,9 +2,9 @@
 /*
 function xoops_module_install_模組目錄(&$module) {
 
-	mk_dir(XOOPS_ROOT_PATH."/uploads/模組目錄");
+    mk_dir(XOOPS_ROOT_PATH."/uploads/模組目錄");
 
-	return true;
+    return true;
 }
 
 //建立目錄
@@ -19,4 +19,3 @@ function mk_dir($dir=""){
     }
 }
 */
-?>

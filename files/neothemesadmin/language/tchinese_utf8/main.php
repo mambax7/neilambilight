@@ -37,4 +37,3 @@ define("_MA_MAIL01","%s您好，您的問題我們已於-%s回覆您了");
 define("_MA_MAIL02","%s您好：\n\r%s\n\r %s敬上");
 define("_MA_MAIL03","%s-收到%s聯絡我們來函");
 define("_MA_MAIL04","%s-收到%s聯絡我們來函,請管理員前往觀看回覆\n\r網址：%s\n\r%s");
-?>

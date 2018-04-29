@@ -1,6 +1,6 @@
 <?php
 
-$xoops_theme = $GLOBALS['xoopsConfig']['theme_set'];	
+$xoops_theme = $GLOBALS['xoopsConfig']['theme_set'];
 
 $xoopsTpl->assign('xoops_module_header', "
 <script>var xoopsjsurl='".XOOPS_URL."';</script>
@@ -14,6 +14,3 @@ $xoopsTpl->assign('xoops_module_header', "
 <link rel='stylesheet' type='text/css' media='screen' href='" . XOOPS_URL . "/modules/neillibrary/js/dist/sweetalert.css'>	
 
 ");
-
-	
-		?>

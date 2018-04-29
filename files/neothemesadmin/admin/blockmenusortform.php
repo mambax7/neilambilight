@@ -2,8 +2,8 @@
 include "../../../include/cp_header.php";
 include "../function.php";
 include "../class/function.php";
-include "../class/themeset.php";	
-include "../class/selectdb.php";	
+include "../class/themeset.php";
+include "../class/selectdb.php";
 include "../glyphicon.php";
 include_once XOOPS_ROOT_PATH."/Frameworks/art/functions.php";
 include_once XOOPS_ROOT_PATH."/Frameworks/art/functions.admin.php";
@@ -13,17 +13,17 @@ $op=(empty($_REQUEST['op']))?"":$_REQUEST['op'];
 $sorting=(empty($_REQUEST['sorting']))?"":$_REQUEST['sorting'];
 $sortid=(empty($_REQUEST['sortid']))?"":$_REQUEST['sortid'];
 
-switch ($op){	
-case "insert":  	  	 
-insert_blocksort(); 
-redirect_header(XOOPS_URL. '/modules/neothemesadmin/admin/blockmenusort.php' ,0 , _MA_NEODWADMIN_ADDDATA);    //資料已新增
-break; 
-case "update":  
-update_blocksort(); 
-redirect_header(XOOPS_URL. '/modules/neothemesadmin/admin/blockmenusort.php' ,0 , _MA_NEODWADMIN_UPDATE);   //資料已更新 
-break; 
+switch ($op) {
+case "insert":
+insert_blocksort();
+redirect_header(XOOPS_URL. '/modules/neothemesadmin/admin/blockmenusort.php', 0, _MA_NEODWADMIN_ADDDATA);    //資料已新增
+break;
+case "update":
+update_blocksort();
+redirect_header(XOOPS_URL. '/modules/neothemesadmin/admin/blockmenusort.php', 0, _MA_NEODWADMIN_UPDATE);   //資料已更新
+break;
 default:
-$main=blockmenusortform($sorting,$sortid);
+$main=blockmenusortform($sorting, $sortid);
 }
 
 
@@ -39,43 +39,44 @@ $main=blockmenusortform($sorting,$sortid);
 
 
 
-function blockmenusortform($sorting,$sortid){
-$xoopsurl=XOOPS_URL;	
+function blockmenusortform($sorting, $sortid)
+{
+    $xoopsurl=XOOPS_URL;
 
-if(!empty($sortid)){
- global $xoopsDB; 
-$sql = "select * from " . $xoopsDB->prefix('neoblockmenusort')   . " where `sortid` = '$sortid'";
-$result = $xoopsDB -> query($sql) or die($sql);  
-  list($sortid,$sorttitle,$sortimg,$sorting,$radiogstyle,$imgstyle) = $xoopsDB -> fetchRow($result);	
-$opvalue="update";
-
-
-
+    if (!empty($sortid)) {
+        global $xoopsDB;
+        $sql = "select * from " . $xoopsDB->prefix('neoblockmenusort')   . " where `sortid` = '$sortid'";
+        $result = $xoopsDB -> query($sql) or die($sql);
+        list($sortid, $sorttitle, $sortimg, $sorting, $radiogstyle, $imgstyle) = $xoopsDB -> fetchRow($result);
+        $opvalue="update";
 
 
-switch ($radiogstyle){	
-case "text":  	  	 
+
+
+
+        switch ($radiogstyle) {
+case "text":
 $inlineRadio1="checked=checked'";
 $sortimgiconbox="";
 $imgstylebox="display:none";
-break; 
-case "img":  
+break;
+case "img":
 $inlineRadio2="checked=checked'";
 $imgstylebox="";
-$sortimgiconbox='display:none';	
-break; 
+$sortimgiconbox='display:none';
+break;
 }
 
 
 
-switch ($imgstyle){	
-case "random":  	  	 
+        switch ($imgstyle) {
+case "random":
 $imgstyle1="checked=checked'";
 
-break; 
-case "sorting":  
+break;
+case "sorting":
 $imgstyle2="checked=checked'";
-break; 
+break;
 }
 
 
@@ -88,64 +89,61 @@ break;
 
 
 
-if($sortimg==0){
-$sortimgselected01="selected='selected'";
-}else if($sortimg==1){
-$sortimgselected02="selected='selected'";
-}else if($sortimg==2){
-$sortimgselected03="selected='selected'";
-}else if($sortimg==3){
-$sortimgselected04="selected='selected'";
-}else if($sortimg==4){
-$sortimgselected05="selected='selected'";
-}else if($sortimg==5){
-$sortimgselected06="selected='selected'";
-}else if($sortimg==6){
-$sortimgselected07="selected='selected'";
-}else if($sortimg==7){
-$sortimgselected08="selected='selected'";
-}else if($sortimg==7){
-$sortimgselected08="selected='selected'";
-}else if($sortimg==8){
-$sortimgselected09="selected='selected'";
-}else if($sortimg==9){
-$sortimgselected10="selected='selected'";
-}else if($sortimg==10){
-$sortimgselected11="selected='selected'";
-}else if($sortimg==11){
-$sortimgselected12="selected='selected'";
-}else if($sortimg==12){
-$sortimgselected13="selected='selected'";
-}else if($sortimg==13){
-$sortimgselected14="selected='selected'";
-}else if($sortimg==14){
-$sortimgselected15="selected='selected'";
-}else if($sortimg==15){
-$sortimgselected16="selected='selected'";
-}else if($sortimg==16){
-$sortimgselected17="selected='selected'";
-}else if($sortimg==17){
-$sortimgselected18="selected='selected'";
-}
+        if ($sortimg==0) {
+            $sortimgselected01="selected='selected'";
+        } elseif ($sortimg==1) {
+            $sortimgselected02="selected='selected'";
+        } elseif ($sortimg==2) {
+            $sortimgselected03="selected='selected'";
+        } elseif ($sortimg==3) {
+            $sortimgselected04="selected='selected'";
+        } elseif ($sortimg==4) {
+            $sortimgselected05="selected='selected'";
+        } elseif ($sortimg==5) {
+            $sortimgselected06="selected='selected'";
+        } elseif ($sortimg==6) {
+            $sortimgselected07="selected='selected'";
+        } elseif ($sortimg==7) {
+            $sortimgselected08="selected='selected'";
+        } elseif ($sortimg==7) {
+            $sortimgselected08="selected='selected'";
+        } elseif ($sortimg==8) {
+            $sortimgselected09="selected='selected'";
+        } elseif ($sortimg==9) {
+            $sortimgselected10="selected='selected'";
+        } elseif ($sortimg==10) {
+            $sortimgselected11="selected='selected'";
+        } elseif ($sortimg==11) {
+            $sortimgselected12="selected='selected'";
+        } elseif ($sortimg==12) {
+            $sortimgselected13="selected='selected'";
+        } elseif ($sortimg==13) {
+            $sortimgselected14="selected='selected'";
+        } elseif ($sortimg==14) {
+            $sortimgselected15="selected='selected'";
+        } elseif ($sortimg==15) {
+            $sortimgselected16="selected='selected'";
+        } elseif ($sortimg==16) {
+            $sortimgselected17="selected='selected'";
+        } elseif ($sortimg==17) {
+            $sortimgselected18="selected='selected'";
+        }
 
-	
+    
 
-$glyphiconicon=glyphiconicon($sortimg);
+        $glyphiconicon=glyphiconicon($sortimg);
+    } else {
+        $opvalue="insert";
+        $imgstylebox="display:none";
+        $sortimgiconbox='display:none';
+        $imgstyle1="checked=checked'";
+    }
+    
 
-
-
-}else{
-$opvalue="insert";
-$imgstylebox="display:none";
-$sortimgiconbox='display:none';	
-$imgstyle1="checked=checked'";
-}
-	
-
-	
-	
-	
-$form="<form name='form' id='form' method='post'  action='{$_SERVER['PHP_SELF']}' onsubmit='return xoopsFormValidate_form();' enctype='multipart/form-data'>
+    
+    
+    
+    $form="<form name='form' id='form' method='post'  action='{$_SERVER['PHP_SELF']}' onsubmit='return xoopsFormValidate_form();' enctype='multipart/form-data'>
 <table width='100%' class='outer' cellspacing='1'>
 <tr><th colspan='2'><h4>新增區塊分類</h4></th></tr>       
 
@@ -251,46 +249,48 @@ $form="<form name='form' id='form' method='post'  action='{$_SERVER['PHP_SELF']}
 
 	
 	
-	";	
-	
-	
-	
-	
-	
-	
-	
-	
+	";
+    
+    
+    
+    
+    
+    
+    
+    
 
 
-return $form;
+    return $form;
 }
 
 
 
 
-function insert_blocksort(){		
-  global $xoopsDB;   
+function insert_blocksort()
+{
+    global $xoopsDB;
 
-//新增內容SQL語法  
-  $sql="insert into " . $xoopsDB->prefix('neoblockmenusort') . "
+    //新增內容SQL語法
+    $sql="insert into " . $xoopsDB->prefix('neoblockmenusort') . "
   (`sorttitle`  ,`sortimg`  ,  `sorting` ,  `radiogstyle` ,  `imgstyle`)
   values
   ('{$_POST['sorttitle']}'  , '{$_POST['sortimg']}'  ,  '{$_POST['sorting']}' ,  '{$_POST['radiogstyle']}' ,  '{$_POST['imgstyle']}')";
-   $xoopsDB -> queryF($sql) ;
+    $xoopsDB -> queryF($sql) ;
 }
 
-function update_blocksort(){		
-  global $xoopsDB;   
+function update_blocksort()
+{
+    global $xoopsDB;
 
-//新增內容SQL語法  
-	$sql = "update ".$xoopsDB->prefix("neoblockmenusort")." set   
+    //新增內容SQL語法
+    $sql = "update ".$xoopsDB->prefix("neoblockmenusort")." set   
 	sorttitle = '{$_POST['sorttitle']}',
 	sortimg = '{$_POST['sortimg']}', 	
 	sorting= '{$_POST['sorting']}',
 	radiogstyle= '{$_POST['radiogstyle']}',
 	imgstyle= '{$_POST['imgstyle']}'
-	where  sortid= '{$_POST['sortid']}' ";	
-	$xoopsDB->queryF($sql) or redirect_header($_SERVER['PHP_SELF'],3, mysql_error());
+	where  sortid= '{$_POST['sortid']}' ";
+    $xoopsDB->queryF($sql) or redirect_header($_SERVER['PHP_SELF'], 3, mysql_error());
 }
 
 
@@ -303,12 +303,9 @@ function update_blocksort(){
 //引入CSS
 xoops_cp_header();
 loadModuleAdminMenu(6);
-include "tplthemescss.php";	
+include "tplthemescss.php";
 
 
 
 echo $main;
 xoops_cp_footer();
-	
-	
-	?>

@@ -107,5 +107,3 @@ $i=1;
 
 //---通知---//
 //$modversion['hasNotification'] = 1;
-
-?>

@@ -46,7 +46,7 @@ $modversion['tables'] =  array(
 'neorightmenu',
 'neoblockmenusort',
 'neoblockmenubutton',
-'neocontactusform'				
+'neocontactusform'
 );
 
 //---管理介面設定---//
@@ -102,7 +102,3 @@ $modversion['blocks'][$i]['template']    = "alertsncdr.tpl";
 $modversion['blocks'][$i]['edit_func']   = "alertsncdr_block_edit";
 $modversion['blocks'][$i]['options']     = "||";
 $i++;
-
-
-
-?>

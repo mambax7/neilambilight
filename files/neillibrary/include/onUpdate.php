@@ -2,28 +2,28 @@
 /*
 function xoops_module_update_模組目錄(&$module, $old_version) {
     GLOBAL $xoopsDB;
-    
-		//if(!chk_chk1()) go_update1();
+
+        //if(!chk_chk1()) go_update1();
 
     return true;
 }
 
 //檢查某欄位是否存在
 function chk_chk1(){
-	global $xoopsDB;
-	$sql="select count(`欄位`) from ".$xoopsDB->prefix("資料表");
-	$result=$xoopsDB->query($sql);
-	if(empty($result)) return false;
-	return true;
+    global $xoopsDB;
+    $sql="select count(`欄位`) from ".$xoopsDB->prefix("資料表");
+    $result=$xoopsDB->query($sql);
+    if(empty($result)) return false;
+    return true;
 }
 
 //執行更新
 function go_update1(){
-	global $xoopsDB;
-	$sql="ALTER TABLE ".$xoopsDB->prefix("資料表")." ADD `欄位` smallint(5) NOT NULL";
-	$xoopsDB->queryF($sql) or redirect_header(XOOPS_URL,3,  mysql_error());
+    global $xoopsDB;
+    $sql="ALTER TABLE ".$xoopsDB->prefix("資料表")." ADD `欄位` smallint(5) NOT NULL";
+    $xoopsDB->queryF($sql) or redirect_header(XOOPS_URL,3,  mysql_error());
 
-	return true;
+    return true;
 }
 
 
@@ -41,25 +41,25 @@ function mk_dir($dir=""){
 
 //拷貝目錄
 function full_copy( $source="", $target=""){
-	if ( is_dir( $source ) ){
-		@mkdir( $target );
-		$d = dir( $source );
-		while ( FALSE !== ( $entry = $d->read() ) ){
-			if ( $entry == '.' || $entry == '..' ){
-				continue;
-			}
+    if ( is_dir( $source ) ){
+        @mkdir( $target );
+        $d = dir( $source );
+        while ( FALSE !== ( $entry = $d->read() ) ){
+            if ( $entry == '.' || $entry == '..' ){
+                continue;
+            }
 
-			$Entry = $source . '/' . $entry;
-			if ( is_dir( $Entry ) )	{
-				full_copy( $Entry, $target . '/' . $entry );
-				continue;
-			}
-			copy( $Entry, $target . '/' . $entry );
-		}
-		$d->close();
-	}else{
-		copy( $source, $target );
-	}
+            $Entry = $source . '/' . $entry;
+            if ( is_dir( $Entry ) )	{
+                full_copy( $Entry, $target . '/' . $entry );
+                continue;
+            }
+            copy( $Entry, $target . '/' . $entry );
+        }
+        $d->close();
+    }else{
+        copy( $source, $target );
+    }
 }
 
 
@@ -94,4 +94,3 @@ function delete_directory($dirname) {
 }
 
 */
-?>

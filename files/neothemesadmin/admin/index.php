@@ -1,10 +1,10 @@
 <?php
 
-	
+    
 include "../../../include/cp_header.php";
-include "../class/themeset.php";	
+include "../class/themeset.php";
 include "../class/selectdb.php";
-include "../xoops_version.php";		
+include "../xoops_version.php";
 include_once XOOPS_ROOT_PATH."/Frameworks/art/functions.php";
 include_once XOOPS_ROOT_PATH."/Frameworks/art/functions.admin.php";
 
@@ -14,12 +14,12 @@ $xoops_theme = $GLOBALS['xoopsConfig']['theme_set'];
 
 
  //先建構class(themesetclass)
-$themesetclass   = new  themesetclass;  
-$topvsplit =$themesetclass-> themespublicb($variableok,$setting); 
-list($variableoka,$settinga) = $topvsplit;
+$themesetclass   = new  themesetclass;
+$topvsplit =$themesetclass-> themespublicb($variableok, $setting);
+list($variableoka, $settinga) = $topvsplit;
 
-$variablesplit=preg_split('/;/',$variableoka); 
-$themeConfirmimg=$variablesplit[5];         
+$variablesplit=preg_split('/;/', $variableoka);
+$themeConfirmimg=$variablesplit[5];
 
 
 $modversion=$modversion['version'];
@@ -80,8 +80,7 @@ $main="
 xoops_cp_header();
 loadModuleAdminMenu(0);
 //引入CSS
-include "tplthemescss.php";	
+include "tplthemescss.php";
 
 echo $main;
 xoops_cp_footer();
-?>

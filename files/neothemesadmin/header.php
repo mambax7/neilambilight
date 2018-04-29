@@ -10,6 +10,3 @@ if ($xoopsUser) {
     $module_id = $xoopsModule->getVar('mid');
     $isAdmin=$xoopsUser->isAdmin($module_id);
 }
-
-
-?>

@@ -1,33 +1,33 @@
 <?php
 include 'header.php'; //XOOPS檔頭
 include_once XOOPS_ROOT_PATH."/modules/neillibrary/class/bar.php";
-include "../function.php";	
+include "../function.php";
 //引入CSS
-include "tplthemescss.php";	
+include "tplthemescss.php";
 
 
 
 $op=(empty($_REQUEST['operating']))?"":$_REQUEST['operating'];
 $roption=(empty($_REQUEST['r']))?"":$_REQUEST['r'];
 
-switch ($op){
- case "operating1":   	  
-snidup(); 
-redirect_header(XOOPS_URL. "/modules/".$xoopsModule->getVar("dirname")."/admin/contactustable.php",0 , _MA_NEODWADMIN_SHBU);    //設定已更新
+switch ($op) {
+ case "operating1":
+snidup();
+redirect_header(XOOPS_URL. "/modules/".$xoopsModule->getVar("dirname")."/admin/contactustable.php", 0, _MA_NEODWADMIN_SHBU);    //設定已更新
 break;
 
 
- case "operating2":   	  
-sniddelete(); 
-redirect_header(XOOPS_URL. "/modules/".$xoopsModule->getVar("dirname")."/admin/contactustable.php",0 , _MA_NEODWADMIN_SHBU);    //設定已更新
+ case "operating2":
+sniddelete();
+redirect_header(XOOPS_URL. "/modules/".$xoopsModule->getVar("dirname")."/admin/contactustable.php", 0, _MA_NEODWADMIN_SHBU);    //設定已更新
 break;
 
 
- case "operating3": 
+ case "operating3":
  updatematters();
-redirect_header(XOOPS_URL. "/modules/".$xoopsModule->getVar("dirname")."/admin/contactustable.php" ,0 , _MS_SHARED02);   
- 	 
- break;	 
+redirect_header(XOOPS_URL. "/modules/".$xoopsModule->getVar("dirname")."/admin/contactustable.php", 0, _MS_SHARED02);
+     
+ break;
 
  default:
 $main=contactustable();
@@ -35,128 +35,129 @@ $main=contactustable();
 
 
 
-function contactustable(){	
-global $roption,$xoopsModule;	
+function contactustable()
+{
+    global $roption,$xoopsModule;
 
-	
-$contactustableArr = array(); //建構陣列
-//顯示全部
-$i=0;
-$contactustableArr[$i]['value']="contactustable.php?r=display";
-$contactustableArr[$i]['title']=_MA_CONTACTUSTABLEPHP03;
-$contactustableArr[$i]['id']="display";
-$i++;
-//已讀取
-$contactustableArr[$i]['value']="contactustable.php?r=haveread";
-$contactustableArr[$i]['title']=_MA_CONTACTUSTABLEPHP04;
-$contactustableArr[$i]['id']="haveread";
-$i++;
-//未讀取
-$contactustableArr[$i]['value']="contactustable.php?r=notread";
-$contactustableArr[$i]['title']=_MA_CONTACTUSTABLEPHP05;
-$contactustableArr[$i]['id']="notread";
+    
+    $contactustableArr = array(); //建構陣列
+    //顯示全部
+    $i=0;
+    $contactustableArr[$i]['value']="contactustable.php?r=display";
+    $contactustableArr[$i]['title']=_MA_CONTACTUSTABLEPHP03;
+    $contactustableArr[$i]['id']="display";
+    $i++;
+    //已讀取
+    $contactustableArr[$i]['value']="contactustable.php?r=haveread";
+    $contactustableArr[$i]['title']=_MA_CONTACTUSTABLEPHP04;
+    $contactustableArr[$i]['id']="haveread";
+    $i++;
+    //未讀取
+    $contactustableArr[$i]['value']="contactustable.php?r=notread";
+    $contactustableArr[$i]['title']=_MA_CONTACTUSTABLEPHP05;
+    $contactustableArr[$i]['id']="notread";
 
-//選擇狀態
-foreach($contactustableArr as $key=> $val){
-$contactustablebox.=optionselect($dataid=$contactustableArr[$key]['id'],$optionname=$contactustableArr[$key]['title'],$oid=$roption,$value=$contactustableArr[$key]['value']);
-}
+    //選擇狀態
+    foreach ($contactustableArr as $key=> $val) {
+        $contactustablebox.=optionselect($dataid=$contactustableArr[$key]['id'], $optionname=$contactustableArr[$key]['title'], $oid=$roption, $value=$contactustableArr[$key]['value']);
+    }
 
-//選擇操作
+    //選擇操作
 $selectArr = array(); //建構陣列
 //顯示全部
 $i=0;
-$selectArr[$i]['value']="operating1";
-$selectArr[$i]['title']=_MA_CONTACTUSTABLEPHP23;
-$selectArr[$i]['id']="operating1";
-$i++;
-$selectArr[$i]['value']="operating2";
-$selectArr[$i]['title']=_MA_CONTACTUSTABLEPHP24;
-$selectArr[$i]['id']="operating2";
-$i++;
+    $selectArr[$i]['value']="operating1";
+    $selectArr[$i]['title']=_MA_CONTACTUSTABLEPHP23;
+    $selectArr[$i]['id']="operating1";
+    $i++;
+    $selectArr[$i]['value']="operating2";
+    $selectArr[$i]['title']=_MA_CONTACTUSTABLEPHP24;
+    $selectArr[$i]['id']="operating2";
+    $i++;
 
-foreach($selectArr as $key=> $val){
-$selectArrbox.=optionselect($dataid=$selectArr[$key]['id'],$optionname=$selectArr[$key]['title'],$oid="",$value=$selectArr[$key]['value']);
-}
-
-
-
-
-
-//讀取neothemesconfig資料表
-$dbneme="neothemesconfig";
-$where="  where `nsn` = '1'";  //where數值
-$neothemesconfig=moduledb($dbneme,$where);
-
-//聯絡事項
-$contactmattersbox=inputtext($class="",$name="contactmatters",$value="".$neothemesconfig['contactmatters']."",$placeholder=""._MA_CONTACTUSTABLEPHP07."");
+    foreach ($selectArr as $key=> $val) {
+        $selectArrbox.=optionselect($dataid=$selectArr[$key]['id'], $optionname=$selectArr[$key]['title'], $oid="", $value=$selectArr[$key]['value']);
+    }
 
 
 
 
 
-//解聯絡我們資料表
-$dbneme="neocontactusform";
+    //讀取neothemesconfig資料表
+    $dbneme="neothemesconfig";
+    $where="  where `nsn` = '1'";  //where數值
+    $neothemesconfig=moduledb($dbneme, $where);
 
-switch ($roption){
- case "haveread":   	  
+    //聯絡事項
+    $contactmattersbox=inputtext($class="", $name="contactmatters", $value="".$neothemesconfig['contactmatters']."", $placeholder=""._MA_CONTACTUSTABLEPHP07."");
+
+
+
+
+
+    //解聯絡我們資料表
+    $dbneme="neocontactusform";
+
+    switch ($roption) {
+ case "haveread":
  $where=" where `readtrue` = '1'  order by  cfid  DESC";   //where數值-修改
 break;
- case "notread":   	  
+ case "notread":
  $where=" where `readtrue` = '0'  order by  cfid  DESC";   //where數值-修改
 break;
- case "display":   	  
+ case "display":
  $where="   order by  cfid  DESC";   //where數值-修改
-break; 
+break;
  default:
  $where="  order by  cfid  DESC";   //where數值-修改
-	 
+     
 }
 
-list($neocontactusformArr,$bar)=databasetablewhilebar($dbneme,$where,$onepage="20",$allpage=10);	
-foreach($neocontactusformArr as $key=> $val){
-//核取按鈕
-$cfid=$neocontactusformArr[$key]['cfid'];
-$checkbox=checkbox($dataid=true,$name="readtrue{$cfid}",$value="1",$optionname="",$oid="");  
+    list($neocontactusformArr, $bar)=databasetablewhilebar($dbneme, $where, $onepage="20", $allpage=10);
+    foreach ($neocontactusformArr as $key=> $val) {
+        //核取按鈕
+        $cfid=$neocontactusformArr[$key]['cfid'];
+        $checkbox=checkbox($dataid=true, $name="readtrue{$cfid}", $value="1", $optionname="", $oid="");
 
-//限制字串輸出長度
-$texe_user = mb_substr($neocontactusformArr[$key]['texe_user'],0,40,'utf8').'....'; 
-//去除HTML
-$texe_user=phpstrip_tags($notags=$texe_user);
+        //限制字串輸出長度
+        $texe_user = mb_substr($neocontactusformArr[$key]['texe_user'], 0, 40, 'utf8').'....';
+        //去除HTML
+        $texe_user=phpstrip_tags($notags=$texe_user);
 
-//性別
-switch ($neocontactusformArr[$key]['radiog']){
- case "male":   	  
+        //性別
+        switch ($neocontactusformArr[$key]['radiog']) {
+ case "male":
 $gender=_MA_CONTACTUSTABLEPHP21;
 break;
- case "female":   	  
+ case "female":
 $gender=_MA_CONTACTUSTABLEPHP22;
 break;
 }
 
-//讀取狀態
-switch ($neocontactusformArr[$key]['readtrue']){
- case "0":   	  
+        //讀取狀態
+        switch ($neocontactusformArr[$key]['readtrue']) {
+ case "0":
 $readtrue=_MA_CONTACTUSTABLEPHP19;
-$readtruestyle="id=readtruestyle"; 
+$readtruestyle="id=readtruestyle";
 break;
- case "1":   	  
+ case "1":
 $readtrue=_MA_CONTACTUSTABLEPHP20;
- $readtruestyle=""; 
+ $readtruestyle="";
 break;
 }
 
-//回覆狀態
+        //回覆狀態
 
-if(!empty($neocontactusformArr[$key]['replytext'])){
-$replytext=_MA_CONTACTUSTABLEPHP17;
-}else{
-$replytext=_MA_CONTACTUSTABLEPHP18;
-}
+        if (!empty($neocontactusformArr[$key]['replytext'])) {
+            $replytext=_MA_CONTACTUSTABLEPHP17;
+        } else {
+            $replytext=_MA_CONTACTUSTABLEPHP18;
+        }
 
-//去除HTML
-$name_user=phpstrip_tags($notags=$neocontactusformArr[$key]['name_user']);
+        //去除HTML
+        $name_user=phpstrip_tags($notags=$neocontactusformArr[$key]['name_user']);
 
-$tdbox.="
+        $tdbox.="
  <tr ".$readtruestyle.">
         <td>".$checkbox."</td>
         <td>".$neocontactusformArr[$key]['cfidtime']."</td>
@@ -169,15 +170,14 @@ $tdbox.="
       </tr>
 
 ";
-
-}
-
+    }
 
 
 
 
 
-$table="
+
+    $table="
 	  <table class='table'>
     <thead>
       <tr>
@@ -200,7 +200,7 @@ $table="
 
 
 
-$main.="<div class='container'>
+    $main.="<div class='container'>
 	
    <div class='page-header'>
   <h2>"._MA_CONTACTUSTABLEPHP01."<small> &nbsp;Contact Us Management</small>&nbsp;&nbsp; <a class='btn btn-warning active' target='_blank' href='" . XOOPS_URL . "/modules/system/admin.php?fct=preferences&op=show&confcat_id=6'>"._MA_XOOPPSMAIL."</a></h2>
@@ -252,65 +252,64 @@ $main.="<div class='container'>
      	 
     <script type=text/javascript src='".XOOPS_URL."/modules/neillibrary/js/menujs/newbase.js'></script>	  	  	 
      ";
- return $main;
+    return $main;
 }
 
 
 
 //更新聯絡事項
-function updatematters(){
-  global $xoopsDB; 
-$setvar="set contactmatters='{$_POST['contactmatters']}'   where nsn='1'";
-update($dbname="neothemesconfig",$set=$setvar);
+function updatematters()
+{
+    global $xoopsDB;
+    $setvar="set contactmatters='{$_POST['contactmatters']}'   where nsn='1'";
+    update($dbname="neothemesconfig", $set=$setvar);
 }
 
 
 
-function snidup(){  //更改為已讀
-  global $xoopsDB; 
+function snidup()
+{  //更改為已讀
+    global $xoopsDB;
 
 
 
-$dbneme="neocontactusform";
-$where="  order by  cfid  DESC";  //where數值
-$neocontactusformArr=databasetablewhile($dbneme,$where);
+    $dbneme="neocontactusform";
+    $where="  order by  cfid  DESC";  //where數值
+    $neocontactusformArr=databasetablewhile($dbneme, $where);
 
 
-foreach($neocontactusformArr as $key=> $val){
-
-$digital= readtrue.$neocontactusformArr[$key]['cfid'];  
-if(!empty($_POST[$digital])){
-$setvar="set readtrue='{$_POST[$digital]}'   where cfid='".$neocontactusformArr[$key]['cfid']."'";
-update($dbname="neocontactusform",$set=$setvar);  
-
- }
-}	}
-
-
-
-
-
-function sniddelete(){  //刪除
-  global $xoopsDB; 
-
-
-$dbneme="neocontactusform";
-$where="  order by  cfid  DESC";  //where數值
-$neocontactusformArr=databasetablewhile($dbneme,$where);	 
-foreach($neocontactusformArr as $key=> $val){
-$digital= readtrue.$neocontactusformArr[$key]['cfid'];  
-if(!empty($_POST[$digital])){
-$where=" where `cfid` = '".$neocontactusformArr[$key]['cfid']."'";
-deletefunction($where,$dbneme);  
- }
+    foreach ($neocontactusformArr as $key=> $val) {
+        $digital= readtrue.$neocontactusformArr[$key]['cfid'];
+        if (!empty($_POST[$digital])) {
+            $setvar="set readtrue='{$_POST[$digital]}'   where cfid='".$neocontactusformArr[$key]['cfid']."'";
+            update($dbname="neocontactusform", $set=$setvar);
+        }
+    }
 }
 
-	}
+
+
+
+
+function sniddelete()
+{  //刪除
+    global $xoopsDB;
+
+
+    $dbneme="neocontactusform";
+    $where="  order by  cfid  DESC";  //where數值
+    $neocontactusformArr=databasetablewhile($dbneme, $where);
+    foreach ($neocontactusformArr as $key=> $val) {
+        $digital= readtrue.$neocontactusformArr[$key]['cfid'];
+        if (!empty($_POST[$digital])) {
+            $where=" where `cfid` = '".$neocontactusformArr[$key]['cfid']."'";
+            deletefunction($where, $dbneme);
+        }
+    }
+}
 
 
 loadModuleAdminMenu(9);
 echo $main;
 
-include "footer.php"; //XOOPS檔尾		
-	
-	?>
+include "footer.php"; //XOOPS檔尾

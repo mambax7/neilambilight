@@ -1,57 +1,58 @@
 <?php
 
 
-function alertsncdr_block_show($options){
-global $xoopsDB, $xoTheme,$xoopsModule;
+function alertsncdr_block_show($options)
+{
+    global $xoopsDB, $xoTheme,$xoopsModule;
 
 
- switch ($options[0]){	
+    switch ($options[0]) {
 case "capinfo":   //一般示警
-	
-switch ($options[1]){	
+    
+switch ($options[1]) {
  case "alltaiwan":   //全台灣
 
-$alertsncdr="CAP300250_CapInfo.js";	 
+$alertsncdr="CAP300250_CapInfo.js";
 $alertsncdrdiv="capInfo300250";
-break;		
+break;
 case "countycity":   //縣市別
 $alertsncdr="CapInfoNormal_{$options[2]}_300250.js";
-$alertsncdrdiv="capInfo300250_Normal_{$options[2]}";	 	 
+$alertsncdrdiv="capInfo300250_Normal_{$options[2]}";
 break;
-}           
+}
 
 
 
-	
-		  	 
-break; 
+    
+             
+break;
 case "capinfoextreme":  //高嚴重示警
-	
+    
 
-switch ($options[1]){	
+switch ($options[1]) {
  case "alltaiwan":   //全台灣
-$alertsncdr="CapInfoExtreme_300250.js";	 
-$alertsncdrdiv="capInfo300250_Extreme";	 
-break;		
-  case "countycity":   //縣市別
-$alertsncdr="CapInfoExtreme_{$options[2]}_300250.js";	 
-$alertsncdrdiv="capInfo300250_Extreme_{$options[2]}";		 	 
+$alertsncdr="CapInfoExtreme_300250.js";
+$alertsncdrdiv="capInfo300250_Extreme";
 break;
-}   	
+  case "countycity":   //縣市別
+$alertsncdr="CapInfoExtreme_{$options[2]}_300250.js";
+$alertsncdrdiv="capInfo300250_Extreme_{$options[2]}";
+break;
+}
 
-break; 
-} 	
-
-
-
-
-
-
-
-  $GLOBALS['xoopsTpl']->assign('alertsncdr', $alertsncdr);  
+break;
+}
 
 
- $block['alertsncdrdiv']=$alertsncdrdiv;	
+
+
+
+
+
+    $GLOBALS['xoopsTpl']->assign('alertsncdr', $alertsncdr);
+
+
+    $block['alertsncdrdiv']=$alertsncdrdiv;
     return $block;
 }
 
@@ -60,102 +61,102 @@ break;
 //區塊編輯函式
 function alertsncdr_block_edit($options)
 {
-  global $xoopsDB, $xoTheme;
+    global $xoopsDB, $xoTheme;
   
   
 
- switch ($options[0]){	
-case "capinfo":  	  	 
+    switch ($options[0]) {
+case "capinfo":
 $inlineRadio1="checked=checked'";
-break; 
-case "capinfoextreme":  
+break;
+case "capinfoextreme":
 $inlineRadio2="checked=checked'";
-break; 
-} 	
+break;
+}
 
- switch ($options[1]){	
-case "alltaiwan":  	  	 
+    switch ($options[1]) {
+case "alltaiwan":
 $rangeRadio1="checked=checked'";
 $stylebox="style='display: none;'";
-break; 
-case "countycity":  
+break;
+case "countycity":
 $rangeRadio2="checked=checked'";
 $stylebox="style='display: bolck;'";
-break; 
+break;
 
 default:
-$stylebox="style='display: none;'";	
-} 
+$stylebox="style='display: none;'";
+}
 
- switch ($options[2]){	
-case "09007":  	  	 
+    switch ($options[2]) {
+case "09007":
 $cityRadio09007="selected='selected'";
-break; 
-case "09020":  
+break;
+case "09020":
 $cityRadio09020="selected='selected'";
-break; 
-case "10002":  
+break;
+case "10002":
 $cityRadio10002="selected='selected'";
-break; 
-case "10007":  
+break;
+case "10007":
 $cityRadio10007="selected='selected'";
-break; 
-case "10008":  
+break;
+case "10008":
 $cityRadio10008="selected='selected'";
-break; 
-case "10009":  
+break;
+case "10009":
 $cityRadio10009="selected='selected'";
-break; 
-case "10013":  
+break;
+case "10013":
 $cityRadio10013="selected='selected'";
-break; 
-case "10014":  
+break;
+case "10014":
 $cityRadio10014="selected='selected'";
-break; 
-case "10015":  
+break;
+case "10015":
 $cityRadio10015="selected='selected'";
-break; 
-case "10016":  
+break;
+case "10016":
 $cityRadio10016="selected='selected'";
-break; 
-case "10017":  
+break;
+case "10017":
 $cityRadio10017="selected='selected'";
-break; 
-case "10018":  
+break;
+case "10018":
 $cityRadio10018="selected='selected'";
-break; 
-case "63":  
+break;
+case "63":
 $cityRadio63="selected='selected'";
-break; 
-case "65":  
+break;
+case "65":
 $cityRadio65="selected='selected'";
-break; 
-case "66":  
+break;
+case "66":
 $cityRadio66="selected='selected'";
-break; 
-case "67":  
+break;
+case "67":
 $cityRadio67="selected='selected'";
-break; 
-case "68":  
+break;
+case "68":
 $cityRadio68="selected='selected'";
-break; 
-case "10005":  
+break;
+case "10005":
 $cityRadio10005="selected='selected'";
-break; 
-case "10004":  
+break;
+case "10004":
 $cityRadio10004="selected='selected'";
-break; 
-case "10020":  
+break;
+case "10020":
 $cityRadio10020="selected='selected'";
-break; 
-case "10010":  
+break;
+case "10010":
 $cityRadio10010="selected='selected'";
-break; 
-case "64":  
+break;
+case "64":
 $cityRadio64="selected='selected'";
-break; 
+break;
 
-} 
+}
 
 
 

@@ -127,7 +127,6 @@ define("_MA_NEODWADMIN_EDITKEYWORDCONFIGURATION","編輯關鍵字配置模組");
 define("_MA_NEODWADMIN_ENTERKEYWORDS","輸入關鍵字");  
 define("_MA_NEODWADMIN_ENTERKEYWORDS3","目前關鍵字模組頁面");  
 define("_MA_NEODWADMIN_ENTERKEYWORDS2","關鍵字與關鍵字之間請用英文小寫,號區隔,例如:關鍵字A,關鍵字B,佈景前端會以標籤方式帶變數呈現。");  
-
 define("_MA_NEODWADMIN_ENTERKEYWORDDESCRIPTION","輸入關鍵字說明");   
 define("_MA_NEODWADMIN_CONFIGURATIONSETTINGS","<h4>關鍵字配置設定</h4>");  
 define("_MA_NEODWADMIN_METATITLE","輸入最主力關鍵字一組");  
